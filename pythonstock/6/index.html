@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《高夏普比率股票組合策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《高夏普比率股票組合策略》
+   </div>
+   <div class="date">
+    2020-06-24
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      1.
+     </strong>
+     上個月整左個「強勢股突破策略」，暫時
+     <strong>
+      forward test
+     </strong>
+     個
+     <strong>
+      sharpe
+     </strong>
+     都有
+     <strong>
+      3
+     </strong>
+     ，個策略嘅
+     <strong>
+      Logic
+     </strong>
+     就係買入不斷創新高嘅股票，就好似眼前有
+     <strong>
+      10
+     </strong>
+     條
+     <strong>
+      backtest
+     </strong>
+     左嘅
+     <strong>
+      strategy
+     </strong>
+     ，我地只揀
+     <strong>
+      Equity Curve
+     </strong>
+     不斷創新高嘅，而棄用不斷創新低嘅。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻強勢股突破策略👇🏻👇🏻
+    </p>
+    <p>
+     <strong>
+     </strong>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      2.
+     </strong>
+     而單獨股票嘅回報本身都可以睇成一條
+     <strong>
+      strategy
+     </strong>
+     ，例如
+     <strong>
+      700
+     </strong>
+     明顯就係一條好嘅
+     <strong>
+      strategy
+     </strong>
+     。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      3.
+     </strong>
+     要
+     <strong>
+      evaluate
+     </strong>
+     一條策略係咪高回報低風險，要睇
+     <strong>
+      annualised sharpe ratio
+     </strong>
+     （夏普比率
+     <strong>
+      )
+     </strong>
+    </p>
+    <p>
+     <strong>
+      {Mean of Daily Return/Standard Deviation of Daily Return * sq root (252) }
+     </strong>
+    </p>
+    <p>
+     而統計上要有
+     <strong>
+      at least 200
+     </strong>
+     個
+     <strong>
+      data point
+     </strong>
+     即
+     <strong>
+      look back 200 trading days
+     </strong>
+     先有意思
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      4.
+     </strong>
+     個策略邏輯好簡單：每日計算每隻股嘅
+     <strong>
+      Sharpe (
+     </strong>
+     用
+     <strong>
+      200
+     </strong>
+     日
+     <strong>
+      look back)
+     </strong>
+     ，買入或
+     <strong>
+      Keep
+     </strong>
+     最高
+     <strong>
+      Sharpe
+     </strong>
+     嘅頭
+     <strong>
+      n
+     </strong>
+     隻股，賣出跌出頭
+     <strong>
+      n
+     </strong>
+     高
+     <strong>
+      Sharpe
+     </strong>
+     嘅股，倉位永遠持有
+     <strong>
+      n
+     </strong>
+     隻股
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      5.
+     </strong>
+     呢個策略嘅
+     <strong>
+      sharpe
+     </strong>
+     因
+     <strong>
+      n
+     </strong>
+     而變化，越多股
+     <strong>
+      sharpe
+     </strong>
+     越低，因為交易次數多，
+     <strong>
+      transaction cost
+     </strong>
+     高，例如持有
+     <strong>
+      10
+     </strong>
+     隻股嘅
+     <strong>
+      sharpe
+     </strong>
+     有
+     <strong>
+      1.8
+     </strong>
+     ，只持有
+     <strong>
+      5
+     </strong>
+     隻可提升到
+     <strong>
+      2.0
+     </strong>
+     以上（
+     <strong>
+      From 2016 to now)
+     </strong>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <strong>
+      6.
+     </strong>
+     以上就係個策略嘅
+     <strong>
+      logic
+     </strong>
+     ，而詳細
+     <strong>
+      scoring
+     </strong>
+     嘅
+     <strong>
+      algorithm
+     </strong>
+     就大家自己研究
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
