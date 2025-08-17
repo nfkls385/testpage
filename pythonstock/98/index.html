@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用Python backtest 配對交易策略part2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《用Python backtest 配對交易策略part2》
+   </div>
+   <div class="date">
+    2020-10-14
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     Pair trade 背後trading logic 係assume 2 assets’ prices are mean-reversion. 呢個例子用左 建行價/工行價 做mean reversion 嘅reference point
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     用python plot 左個圖出黎之後可以見到佢地個Price ratio 一直來回喺1.2上下，姐係如果個ratio升高過1.2，就implied 建行升多左，工行升少左，而我地assume呢個不平衡嘅情況唔會持久，總有一日建行會跌翻，工行會升翻，令個price ratio去翻1.2，所以我地就可以做一pair trade: 買工行，空建行
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     不過pair trade 如果用股票做嘅話個transaction 會好高，如果買賣signal 日日都出現嘅話，基本好難有賺錢嘅機會
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     p.s. 呢個example 當transaction 係0
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     第三part再繼續
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code (Patrons Only)👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

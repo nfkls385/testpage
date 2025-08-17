@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《牛熊數據可做買賣策略嗎？part 1》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《牛熊數據可做買賣策略嗎？part 1》
+   </div>
+   <div class="date">
+    2020-11-06
+   </div>
+   <div class="content">
+    <p>
+     ❗️由於反應熱烈，下個post只會開放比$8 嘅patrons，敬請留意❗️
+    </p>
+    <p>
+     有留意開牛熊分佈圖嘅人唔難觀察到成日會有所謂大戶殺牛殺熊嘅情況，即係邊邊多，就殺邊邊，例如牛仔多，短期內就會大跌收回牛證重貨區
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然呢個只係一個都市傳說，亦係一個假定，如果要令呢個hypothesis 成為一個profitable 嘅買賣策略，就要做做analysis，首先就係睇睇呢個係傳說定係事實
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而最容易睇到牛熊角力嘅指標就係「牛熊證期指張數比例」，因為每隻牛熊嘅股數同佢嘅價值係唔統一，有d牛一手要買10000股，但係佢嘅價值可以同另一隻每手2000股嘅牛一樣，所以我地要用期指張數去standardise 個outstanding 牛熊張數，詳情可以睇code嘅formula
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     HKEX港交所個網其實有免費一年嘅牛熊（CBBC)嘅data，有曬當日每隻仲在生嘅牛/熊數據，今次示範就係去自動download牛熊數據再將佢轉化成我哋想要嘅指標
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Python Code Patrons Only👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
