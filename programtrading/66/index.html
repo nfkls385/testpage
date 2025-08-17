@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   以太幣好嗎？
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+    <img src="m7.jpg"/>
+    <img src="m8.jpg"/>
+    <img src="m9.jpg"/>
+   </div>
+   <div class="title">
+    以太幣好嗎？
+   </div>
+   <div class="date">
+    2021-01-07
+   </div>
+   <div class="content">
+    <p>
+     自大一點說，小弟算是最早提及虛擬貨幣的一批人，早在2018、2019年已在不同媒體提及並看好比特幣，因此寫多點虛擬貨幣的分析絕對合理。繼上幾篇專欄寫了比特幣目標價外，最常遇到的問題是：「以太幣好嗎？」。其實早前已寫了數篇專欄指比特幣會比以太幣安全，其中一大原因是因其「一哥」效應。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以太幣支持者常會以大量基本面因素作理據，指以太幣將取代比特幣。的而且確，技術上以太幣較佳，奈何此時此刻虛擬貨幣的價值還不是由其用途定價，而是由機構投資者及炒家決定。當大量不相信/沒持有虛擬貨幣的人開始相信/持有虛擬貨幣，必先買入比特幣。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我在2017年已開始研究2者的基本面，雖然以太幣真的為「加強版比特幣」，但以太幣3年以來一直沒明顯跑贏比特幣。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Ok，基本面之爭都很主觀，一起來以量化角度分析。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     第一，先看2020年數據，btc回報170%，eth回報253%，看似eth走勢較佳；不過，最大回撒卻是68% vs 83%；再看Sharpe，兩者一樣，為2.6。因此，兩者於數據上表現其實不相伯仲。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     第二，看相關性，兩者r為80%，相關性的確頗高。Regression beta為1.2，解釋了eth回報較高是因為波幅比btc大。你可能會說，若看alpha，eth alpha為0.2%，即假設波動一樣，eth真的仍會跑贏btc。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了直接看overall beta及alpha，我們可以看看beta及alpha的time series，留意有否更多info。Beta大部分時間於1以上，即可以肯定eth的槓桿效應一直存在；alpha卻是一條於0線上下浮動的線，即eth的跑贏並不持續。（即使我把beta hard code成1.2，alpha只會變成一條一直向下的線。）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     若看Price ratio，並不會有大發現，因為eth有大於1的beta，牛市週期中，btc/eth price ratio只會一直向下。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後一張圖，為eth price直接plot against btc price，你會發現很線性，degree of fitness有92%。附上公式，讓大家計算eth相對btc的價格。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     總結：eth是一隻槓桿1.2倍版本的btc，兩者走勢極相似，因為eth market maker / speculator會看著btc來price eth，短期內看太多基本面都只會是徒勞無功。若是如此，我會prefer「一哥」。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     利申：本人有持有btc及eth
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

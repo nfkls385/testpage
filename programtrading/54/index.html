@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   你一定要知的數據
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    你一定要知的數據
+   </div>
+   <div class="date">
+    2020-09-13
+   </div>
+   <div class="content">
+    <p>
+     這個Topic比較初階，我的學生應該都很熟悉，不過新朋友會較陌生。事源Facebook很多新讀者都會不斷問「什麼是Sharpe ratio？什麼是Calmar ratio？什麼是MDD？」等等問題，因此，我打算寫這樣一篇Patreon，確保我的讀者都有same ground，以理解其他更高階的Topic。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     評估一隻股票或一項資產，甚至一個策略好不好，都需要有特定準則。大眾投資者愛看回報，但其實回報是一個陷阱，專業投資者都會看「風險調整後的回報」。因為高回報但極高風險是沒意思的，例如2個炒家：A炒家年回報1成，B炒家年回報1倍，簡單看B炒家很牛B，但其實若果A炒家破產機率只有1%，但B炒家破產機率有50%，那B炒家的回報多高也於是無補。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這個例子中，A炒家就是機構投資者/投資高手，而B炒家就是狂用槓桿的散戶。因此，回報高完全沒意義，只有「風險調整後的回報」才有意思。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那破產機率怎麼量化？最簡單可以看股票/資產的最大回撤（Maximum Drawdown）。例如騰訊曾由460元跌至260元，假設460元買入，最大可能虧損便是57%；即買入100萬，就有可能需忍耐57萬的中途虧損，否則心理壓力會使你持有不了這股票。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以，風險調整後回報的計算方法可以是年回報除以最大回撤，即Annual return / MDD，行內稱之為Calmar ratio。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我拿來了15隻股票/ETF/策略，計算了她們的Calmar ratio。15位健兒都是近年最受歡迎的資產，例如美股的SPY、QQQ、Tesla、Apple、巴郡，亦有港股的盈富、科技指數、ATMX，以及散戶月供愛股領展及煤氣。當然，我亦要加入大家的散戶指數（CFVID）以及我管理的對沖基金。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     拿來了剛好2年數據，第一位當然是散戶指數，有6以上，實在太可怕，我的基金有3，算不錯，然後你會發現近2年升幅最驚人的一眾股票原來Calmar大多只有2以下。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     屈指一算，其實Calmar ratio少於1代表完全不值得持有，Calmar少於1即年回報比最大回撤還小，例如年回報2成，但中途回撤4成，Calmar就只有0.5，即風險與回報完全不成正比，持有者冒1份風險只拿回半份回報，完全不平衡。100萬的投入，為了賺20萬，中途卻要捱40萬的虧損。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而負數Calmar即冒完險更不能獲利，簡直賠了夫人又折兵。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     其實拿來2年數據已經算仁慈，因為2018年為整年的跌市，若拿來3年數據，一眾股票的數值會更差。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     留意，全部股票都已計入所有派息等Corporate action。例如我以ETF取代指數（因為指數沒有包含派息，若用指數表現會較差）；而我的基金已減去管理費及表現費，因此是公平比較。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     唯獨有2項資產時期較短，散戶指數只有7個多月，阿里巴巴只有9個月，因此讀者考量時可以把上述兩者的數字打個折。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     希望這篇Patreon可以擴闊讀者們眼光，讓讀者們多一項工具衡量手上資產是否值得持有，並能作出正確的投資選擇，不要再盲目相信財演推介。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

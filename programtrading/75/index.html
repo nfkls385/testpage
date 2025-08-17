@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   量化預測Bitcoin目標價（四）
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    量化預測Bitcoin目標價（四）
+   </div>
+   <div class="date">
+    2021-03-13
+   </div>
+   <div class="content">
+    <p>
+     比特幣創新高，突破60000美元大關，亦即我2年前提出的目標價。能再升嗎？大家除了可以再讀之前幾篇關於Bitcoin的Patreon外，還可以再多看幾個model。今次打算簡單地再分享多一個量化Model，慶祝一下Bitcoin突破前頂。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Bitcoin為人垢病的是其高波動性。如果Bitcoin的波動率與貨幣一樣，即大約幾% annualized volatility，Bitcoin的普及率一定很高。那Bitcoin有這個可能嗎？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有，但不是5-10年內的事，不過Bitcoin波動率一直下跌是不爭事實，可以看看圖一，顯示了Bitcoin的2年Rolling Annualized Vol，一直由150%跌半至現時的80%。當然80%仍然很高，但大眾接受率已較高，至少使TSLA、Microstrategy、美圖等公司購入。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我有頗大信心Bitcoin波動率將會不斷下降。如果行外人看，可能會誤以為波幅愈來愈大，因為他們看的是Absolute value。但基數愈大，Absolute value change當然愈來愈大，但以% change看則愈來愈小。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Bitcoin vol下跌至多少才能為大家接受？當然最好是大概20-30% vol，即大部分股票/指數的波動率。但以現時80 vol來看，還有一大段距離。初步來看，50 vol是首站目標 — 與一些大波動商品差不多。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那這又與目標價有何關係？事實上，市值愈大，資產波動率便會愈小，可以看看圖二。X軸為Natural Log price，Y軸為年化波動率。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你會發現有明顯反比關係，即如果Bitcoin要達到50 vol的目標，那價格或市值就要更高。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     做個簡單Linear Regression後，Natural Log Price須達到28.76，即還有208%的升幅。以執筆時55000美元計算，即110k美元。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     風險管理：不要allocate超過1成資金買bitcoin，買入用DCA方法為佳
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   量化預測Bitcoin目標價（二）
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    量化預測Bitcoin目標價（二）
+   </div>
+   <div class="date">
+    2020-12-30
+   </div>
+   <div class="content">
+    <p>
+     上星期寫了第一篇，反應非常好，很感謝各位Patreon讀者支持。為了Distinguish有Subscribe及沒Subscribe的朋友們，Facebook post節錄版本沒有寫到目標價，以確保Patreon followers的福利。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然Patreon現時也沒收費，不過大量Facebook朋友瘋狂問「係咪要俾5/10USD？」，令我很想收皮。事實上我已經決定不收費一年多了；OK，若你仍不相信的話，你當作要收費好了。但難道每個月5000字也不值1餐飯嗎？如果不值，我返鄉下耕田算。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     =====
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     延續上一篇內容，Model 1看似很樂觀，不過Model 2更瘋狂，但合理。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Model 1的缺點在於純粹望著歷史Discount Premium圖拉線，一來，對見頂時間只做了簡單Extrapolation；二來，沒有找出過去幾次Bitcoin爆升的原因。事實上，在不同專欄已寫過無數次，Bitcoin爆升很大原因是因爲獎勵減半（Reward halving），對上3次分別為2012年、2016年及今年5月。因此，我們可以把Discount Premium圖以Halving Date拆開來看。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     拆開後，成為圖1。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖1會見到藍紅綠3條線，2012減半後，DP圖走勢就是藍線；2016減半後，就是紅線；2020年5月減半後，就是綠線。Y axis跟上次一樣是Natural Log了的Discount premium幅度，X axis是日數除3（100即300日）。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     因此，第一次減半後用了不足300日見頂（1年內），第二次減半後大約450日見頂（1年餘）。這現象合理，因為市場愈成熟，見頂時間愈長，但超買幅度也愈少。所以，這次減半後，見頂時間理應為200x3=600天（接近2年），即2022年初至2022年中。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     幅度上，第一次為超買3以上，第二次為超買2.5，Linear extrapolation後，這次應為超買1.8。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以，以減半日期去把Discount premium，以及把時間set zero，能夠將Halving這重要因素納入升幅計幅計算中，令幅度及時間的推斷嚴謹一點。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Extrapolate後，成為圖2。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     紫線就是Model 2的預期走勢。有趣的是，Bitcoin這半年走勢非常非常貼近我的預測。我並沒馬後炮，早在一年多之前已經在專欄寫下了我對Bitcoin的目標價。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     把幅度及時間換算後，即2022年中，Bitcoin會到達190000美元。你沒看錯，的確是19萬美元，以25000美元看，即7-8倍。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當年做到這裡，我也被嚇了一下。因此，我決定以Model 1中和一下，把目標價計算一個平均值。7萬美元與19萬美元以Log的Scale平均後，目標價便是12萬美元左右。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     因此，便成為圖3。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖3中，綠線是Model 2，紅線是Model 1，藍線是兩者平均。留意，這是Log scale，因此圖中預測軌跡是直線，而非拋物線。我相信，若Bitcoin爆升，非Log scale圖也會是呈拋物線的，因為Bitcoin的過往升浪都是Exponential形態。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有趣的是，圖3紫線（Bitcoin截至11月底走勢）非常貼近綠線，間接印證走勢一直保持在我的預測模型之中。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     風險管理：Bitcoin歷史上不時大跌90%，因此不要投放過量金額進Bitcoin，5-10%組合資金為理性、合理注碼。假設不幸歸零，損失也有限。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

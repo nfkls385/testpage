@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   量化預測Bitcoin目標價（三）
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    量化預測Bitcoin目標價（三）
+   </div>
+   <div class="date">
+    2021-02-21
+   </div>
+   <div class="content">
+    <p>
+     若在兩年前已經有留意我Page及專欄的朋友會知道我當時寫的目標價為60000美元。眨眼間，Bitcoin已經到了57500美元水平，與目標價只差4%，對我來說已經功德圓滿。以當年10000美元樓下的價格來說，成功為大家帶來6倍回報。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     細心留意，你會發現，我很少談及美股，基本上我一直以來對美股的立場都是一樣：月供指數ETF，因此沒太多討論空間。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     自大一點說，我認為投資比特幣比投資TSLA或其他美股更成功。原因有幾個：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1）比特幣自去年3月股災以來，升幅基本上比9成9美股多（不要拿1值市值的細價股來比較）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2）投資比特幣節省大量時間及心神。你直接相信我提及的60000美元目標價，比你每天跟財演炒出炒入、每分鐘check報價好
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3）比特幣比9成美股有更高Sharpe ratio，即升幅比大部分股票穩定。比特幣Sharpe 2以上，聞名的ARKK只有1.幾
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你可以看看2019、2020年有多少KOL推薦比特幣，我相信「一隻手數得哂」。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     =====
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Okay，那比特幣還有上升空間嗎？近一期經一/經濟一週寫了，還有空間，但值博率已大大降低。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     較早前寫了兩篇Patreon，量化分析過目標價。這次再分享多一個。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這個Model很plain，基本上只有很少factor，適合害怕Overfitting的讀者。這個Model純粹使用Bitcoin一直以來的升幅及速度去預測見頂價格。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Bitcoin上升，某程度因為Reward Halving，因此分析只拿來2020年5月11日後的數據。圖一顯示的是當刻以來的Log price curve，再加一條linear fittest line。只需把Fittest line延伸，再加上你認為會見頂的時間，就能得出結果，非常簡單。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那何時見頂？對上兩次Halving到見頂分別為12及18個月，因此我設計了3個scenarios，分別是12、15(平均)及18個月見頂，即2021年5月、8月及11月。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     延伸Fittest line後，目標價為50k，150k及430k。第3個目標價雖誇張，但也許是連登契媽ARK Cathie Wood的計算方法。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但現價值博嗎？最保守Model為50000美元，執筆時已高於50000美元，因此以安全第一的角度來說，不太值博。未入場的讀者等50000美元樓下才吸納較佳。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     ===
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     說到口臭的風險管理：不要Allocate超過Portfolio 10%資金到Bitcoin去，買入時以DCA方法為佳
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

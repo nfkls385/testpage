@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   震驚13億人的事實！
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+    <img src="m7.jpg"/>
+   </div>
+   <div class="title">
+    震驚13億人的事實！
+   </div>
+   <div class="date">
+    2020-09-18
+   </div>
+   <div class="content">
+    <p>
+     本篇專欄以看圖說故事形式建構，分為5部分，每部分解釋1張圖。一如概往，廢話不多說。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖一：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     是本地總貨幣供應M3以及中原樓價指數的scatter plot。很多人不知道我寫過數篇專欄關於樓價，分享過兩個預測樓價的方法，並且應驗，成功預測10年來最大單月跌幅。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     M3與樓價相關性高，高達95%。美中不足在於圖左位置，M3低時，相關性較低。M3數值較低時，其實正是97-03年，當時經濟低迷，貨幣供應高也不代表樓價會升，因此我拿來第二個數據。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖二：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     是本地失業率與樓價的scatter plot。你會看到我把1除以失業率，因為失業率與樓價關係非線性，為了方便計算，1除後，便能在scatter plot上顯示成線性關係。兩者相關性沒M3與樓價高，但仍有接近0.7的r。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖三：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我試圖以上述兩個因素建構成一個自家製的指標，用以預測樓價。指標建構方法最簡單當然是互乘，不過，上述分析都知道，M3因素較重要，失業率影響較輕，因此公式由「M3 x 1/失業率」變為「M3 x sqrt(1/失業率)」，目的以減低失業率對我這自家指標的影響。從圖中，能看到自家製指標與樓價關係密切，r有0.97。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Regression equation顯示把自家製指標乘3.83%再加以15.625便是樓價合理值。3.83%便是scatter plot中，fittest curve的slope，而y-intercept便是15.625。（即當全港沒錢，所有人失業時，中原樓價指數應為15左右，這可能是全世界人眼中磚頭的底價？）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖四：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我以M3及失業率透過regression得出的x及y推算樓價合理值，並以藍線表示。你會發現，紅線幾乎圍繞著藍線走，即樓價不會偏離自家計算合理值太遠。細心看，1997年樓價明顯高於fair price，及後便調整。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大家常疑惑，1997年後及2007年後都是股災，但為什麼1997年樓價大跌但2007年那次樓價只調整1成？因為2007年樓價並沒有超買，仍在合理值附近。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖五：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     把樓價減去自家製合理值，便能得出溢價/讓價圖。高於0即比合理值貴，低於0即比合理值便宜。會發現曲線有mean reverting property，一代表有預測性，二代表樓價不能偏離合理值太遠。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     重點是，此刻溢價為40，以中原樓價指數計算，即現時有20%的premium。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     結語：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     筆者專項在衍生產品、程式交易，並非樓市專家，以上分析只供參考，不代表一定準確，實際樓價仍受大量factors影響，例如需求、政策、利率等等。有機會再分享更多。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   量化預測比特幣目標價
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    量化預測比特幣目標價
+   </div>
+   <div class="date">
+    2020-12-20
+   </div>
+   <div class="content">
+    <p>
+     相信有Follow我Facebook及Mewe的朋友都會知道我看好比特幣價格。原因已經在無數專欄提及過無數次，在此就不再詳述。基本上在任意一個專欄也會見過我唱好比特幣，例如Patreon、經濟一週、am730、HK Money Club、Yahoo Finace等等。我看好並非是近數月的事，早在2019年已在電視節目及專欄提及。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     很多朋友看畢我的專欄後關注的反而未必是原因，而是目標價。因為價格不斷創新高，大大遠離我寫專欄當時的價格（10000美元以下）。未上車的會心癢，但又怕現時進場會接火棒。因此，這篇專欄會以量化角度分析其目標價。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     坊間有各式各樣的目標價，由0美元至100萬美元也有，若關注較有名的KOL，例如ARK基金CEO女股神Cathie Wood，她的目標價便是50萬美元。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     好，入正題。首先要找出影響比特幣價格最明顯的因素，很多人也不知道。坊間財演只懂畫圖、畫趨勢線、數浪... 簡直在「吹水」。實際上，比特幣的Circulation amount與價格的相關性極高。以Circulation amount去factor bitcoin price後，Bitcoin price便變得有跡可尋。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你會發現Bitcoin price一直在Fair price上落浮動，變成有Mean reversion feature的Time series（圖一），亦即其Discount premium圖，藍線高於0即at Premium，低於0即at Discount。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這些統計數字都是2020年11月下旬截的。Bitcoin discount premium位於0，即剛好在Fair price。當然，以12月中的價位看，就已經不是在Fair，畢竟爆升到24000美元。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     細看DP圖，每次-1就會反彈，很明顯；但高位則一次比一次低，第1次3，第2次2.4，第3次1.7左右，如此類推，第4次應低於1.7（圖二）。這也合理，因為資產愈成熟，溢價應愈正常化。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     若要作簡單推算，坊間財演大法便大派用場 — 直接拉線。但拉線也未必知道下個頂部是多少，因為要有見頂日期才能做Extrapolation。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     作簡單假設，假設「這次見頂與2017年間距」與「2013與2017年見頂間距」一樣，下次見頂日期就是2022年中（圖三）。那input 時間，再運用簡單Linear Regression equation就會計算到下個頂將會at premium 0.88個log price，亦即68000美元。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這就是Model 1，是個不算樂觀的Model。筆者還有2個Models，賣個關子，反應好再寫。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     溫馨小提示，我不會完全排除Bitcoin會歸0的可能性，不過按Expected value來看，仍比大多股票值博。例如50%歸0，50%漲到7萬美元，按數據capture時18000美元算，上行總回報390%，即年回報260%，下行回報-100%，Calmar ratio超過2，因此我會進場。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
