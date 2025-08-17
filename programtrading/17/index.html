@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Delta hedge有什麼用？
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.png"/>
+   </div>
+   <div class="title">
+    Delta hedge有什麼用？
+   </div>
+   <div class="date">
+    2019-12-10
+   </div>
+   <div class="content">
+    <p>
+     過去3星期剛舉辦了一個大學生免費課程，反應熱烈，幾乎每個發來的cv都是dean list，又懂python，又在大行做過，好不容易才能選出20位學生。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     課堂上被問了一個問題：「Delta hedge有甚麼用？」，這是一個好問題，因為啟發了我寫這一篇。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （註：delta hedging與delta neutral hedging與dynamic delta hedging都不同，有機會再探討，此階段先不用分得那麼細）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我會以不同市場參與者角度作出發點思考及討論：炒家/對沖基金、期權炒家、莊家、經紀商、銀行。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     炒家/對沖基金
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Buy side不時會做市場中性策略，如股票Long short策略，pair trade是例子之一：買騰訊沽爸爸，然後數量上做delta hedge/beta hedge；或者選股策略：買一堆股票後沽指數等對沖策略。Hedge了delta，為的是賺差價，即博取portfolio中會有outperform市場的東西，這種excess return亦稱為alpha。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     另一種玩法是Calendar spread(跨期策略)：買近月期貨，沽遠月期貨，一長一短降低了市場風險，為的也是價差。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     期權炒家
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     因為期權除了Delta還有其他greeks，如Vega、theta、gamma。Hedge了Delta可以是作引伸波幅的博奕，即為了Vega；也可以純粹做了Short strangle想收時間值，這是為了Theta (Auto hedger用家便是例子)。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     莊家
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     每次成交後，也會於短時間內做Delta hedge，為的是賺bid ask spread以及derivative-underlying之間的差價。進階一點，他們也是為了賺取市場資訊，因為莊家站得最前，是最快收到市場參與者買賣order的人。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     經紀商/證券行
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     接了你的order，他們也要盡快發出市場中，或者對沖Delta，最終賺的是commission。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     銀行
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     與客戶做了OTC deal，hedge Delta是為了commission，同時也賺溢價(premium)。而對於窩輪發行商，賺的便是場內與場外引伸波幅的差距。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     ==========
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     投機/投資的你，可以嘗試多了解市場不同參與者的定位，絕對有助策略構思。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   歷史波幅該用多少數據計算？
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.png"/>
+   </div>
+   <div class="title">
+    歷史波幅該用多少數據計算？
+   </div>
+   <div class="date">
+    2019-11-26
+   </div>
+   <div class="content">
+    <p>
+     這次探討的是歷史波幅的參數。大家該知波幅有數種，引伸波幅(IV)、相對波幅及歷史波幅(HV)，每種都有一個參數 — IV的就是多久後到期的期權，例如1個月、3個月，或6個月，而相對波幅及歷史波幅說的就是Look back period，即用多少數據計算波幅。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這個問題經常被同學們問。引伸波幅較少問，因為大多產品即月就是最流通的月份，因此觀察即月/30日就很好了。但歷史波幅則較含糊，有些人會建議也是用30天，但歷史波幅與引伸波幅不同。前者的30天是最多人交易的合約，因此有參考性。但歷史波幅中，沒有這個概念。相反，歷史波幅中的look back period有可能愈多愈好，因為統計學中樣本數據(sample size)愈多愈好。你會發現60天的HV比30天的HV穩定，如此類推。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有些人則是結果論，認為結果最實際，全部通通拿來試，最好表現的那個就是最好。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那我就拿了一個運用HV做的策略，做了一個parameter optimization，就是附圖了。y-axis就是Sharpe ratio，愈高愈好。x-axis就是look back period。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     因為我們亂試，因此有機會overfit。為了防止overfitting，我把數據分開了兩段測試，有點像cross-validation。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你會發現兩段數據的最優結果並非一樣，橙線是90天，而灰線是30天。最慘的是，橙線最差的是30天，而灰線最差的是90天。即前後段結果完全相反。即如果你看完橙線結果後，用了90天做look back，你未來（灰線）就會做出了一個最差的結果。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你會問，是否我這個策略有問題呢？非也，這個策略過去1年平均Sharpe大約是3，一直都在real trading。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     總結，這個小實驗顯示出HV並沒有特定該使用的參考週期，30或60都好，backtest時不會令你產生太差的Sharpe就好。畢竟你會發現我亂選也會有2 Sharpe，羨慕吧！
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

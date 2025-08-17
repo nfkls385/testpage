@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   散戶指數/大戶指數/CFVID-20
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    散戶指數/大戶指數/CFVID-20
+   </div>
+   <div class="date">
+    2020-05-09
+   </div>
+   <div class="content">
+    <p>
+     相信各位朋友如果有留意小弟的Facebook都不會對散戶指數陌生。這個指標的最初其實是由耀才證券先執行，按客戶倉位，顯示市場上多人看好或看淡。若想信大眾是對的，可以跟著交易；相信大眾是愚蠢的，可以對著幹。6-7年前，這個耀才散指風行一時，討論區都有提及，於是我便開始紀錄並對其進行測試。當我開始有初步成果時，耀才便停止公佈。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     之後，這個指標就再沒人提及，我只好回歸使用牛熊街貨分佈。兩者差別在於，散指會實時更新，牛熊證一日才公佈一次；其次，散指一定是散戶，而牛熊證則有不少機構投資者參與。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     然後這幾年來的經驗告訴我，大眾都是錯的。當身邊朋友看好時，便下跌；看淡，便升，有經驗的炒家一定懂。數月前，我便「的起心肝」在Facebook搞一個每日投票，統計各位的看法。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     利申，我並沒assume我的粉絲是愚蠢的，我相信我的followers都是高質素的，因此我並不打算對著幹，而是打算待數據累積後再決定跟注還是反向操作。亦因此，我才命名其為大戶指數。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最初10天結果顯示，當比率超過46/64時，大市便向少數那邊走，regression的R明顯低於負0.5，即大眾明顯是錯的。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     到此時，一共運行了六十多天，結果顯示在附圖。藍線是open to close，燈線是open to open的equity curve。再次補充，我統計1630至翌日0915的投票，然後於0915交易。持倉至收市，就是open to close；持倉至翌日開市，就是open to open。橙線return更高，3個月25%，即年化100%；藍線則更穩定，3個月return亦有20%，年化80%。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （我知道有不少新粉絲，補充一點，我永遠計算回報都是用notional value計算，即期貨賺200點，我會算為1%；而非坊間以保證金的計算方法，以那方法，200點就已經是15%）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以這個指標的表現真的是「痴L線」地強，Sharpe ratio藍線3.4，橙線3.0。再補充，Sharpe ratio是風險調整後的回報，超過1是好，超過2是很好。長線持有SPY / 盈富基金只有0.2-0.3，巴菲特的，也是不過0.5。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     如果你問threshold是多少，即比例多懸殊才有效，我建議大家自行摸索。兩個原因：一）一個好策略，參數不是重點，我敢說，所有參數都能賺錢；二）我知有很多機構投資者也在看這個投票，所以不想直接開估，以免大家同時執行，使slippage太大。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     一直要感謝各位真的有出手投票的朋友，祝你們愈賺愈多，期開得勝，但仍有很多人不付出，只享受結果。事實上，我留意到若投票人數減少，命中率會降低，若投票人數持續低於300，恐怕策略便會漸漸失效，最後只會瓦解。我也不知道那一天何時到來，因此，只能這刻寫下一這一篇Patreon替這個指標的亮麗表現紀念一下。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     希望大家能多叫各方好友一起投票，以延續這個傳奇指標。老實說，我見過無數策略，單一指標daily frequency能有Sharpe 3.5著實極罕有。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

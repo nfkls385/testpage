@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   探討一下期權計價
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.png"/>
+   </div>
+   <div class="title">
+    探討一下期權計價
+   </div>
+   <div class="date">
+    2019-10-23
+   </div>
+   <div class="content">
+    <p>
+     上次提及到在期權世界中，引伸波幅是很重要，嚴重影響到你買的期權是否便宜；賣的期權的期權金是否豐厚；持有期權後看中方向能否賺錢等等，忽視引伸波幅基本上令你炒期權的功力大打折扣。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有朋友留言問及「IV是由期權金計算出來，甚麼時候IV升 / 跌而期權金不變呢？」。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     解答此問題首先要知IV愈高，代表期權金愈貴這關係。因為IV的確是由期權金計算出來，因此前後兩者互相引證。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     讓我舉些數字上的例子，假設恆指27000點，IV20，28000點Call值100點。如果恆指不變，IV升上25，28000點Call肯定貴於100點。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那可否出現IV仍是20，但期權金變動呢？最常見的只有可能是Underlying價格變了，例如恆指上升，280c便會升；恆指跌，280c便會跌。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那甚麼時候IV升 / 跌而期權金不變呢？ 恆指下跌了，但280c仍是100點，IV便要大於20，代表期權變貴； 恆指上升了，但280c仍是100點，IV便要小於20 ，代表期權變便宜。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     從以上例子，我們得知：IV正是影響Underlying價格與期權金之間關係的最大因素，亦帶出炒期權不可能不看IV。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （理解/學習期權時，可以假設到期日不變，利率不變，派息不變，會較簡單）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     希望以上能解答留言的問題。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     IV是個很神秘的東西，其實IV之所以會存在，因為現有的定價模型不能解釋全部期權金的變動，因此不能解釋的空間就交給IV自由發揮。時間不變，underlying不變，但期權貴了？那就解釋為很多人想要期權吧！IV升了！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     設計IV的人就是這樣想。其實現有Black Scholes model有極多缺陷，這點大家都知，其實有不少Quant fund（例如Janestreet）都已經努力在解決現有定價模型的缺陷，但發現解決方法的人在埋頭賺錢，不會走出來告訴你。待他賺夠了，才會公告世人。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （進階區） 大家如果數學好，又想在期權世界賺大錢，可以嘗試加入多些變數(Variables)進Black Scholes model中，試圖解釋IV的變動，令IV更容易預測。可以嘗試在現有模型中不切實際的assumptions上進行攻擊，作為切入點。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   選股因子模型
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    選股因子模型
+   </div>
+   <div class="date">
+    2020-06-29
+   </div>
+   <div class="content">
+    <p>
+     所有能長勝的投資炒賣都是系統化交易（Systematic trading），而系統化交易都需建基於訊號上，或稱因子（Factor）。因此，很多基金經理都會使用Factor model作分析，可以是單因子模型，例如只使用PE作選股。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     舉個簡單例子，於恆指成分股使用PE選出跑贏大市的股份，首先把股份按PE高低排行，當然PE最低排第1，PE最高則排50。你可以選擇買入首25隻，同時沽空最底25隻，形成Long short pairs，當然，25這數是任君選擇，可以是Long top 5，Short bottom 5。若不想沽空股票，可以Long top n，然後沽期貨，效果類近。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     小弟1年前出了一個FB Post，使用股息率作選股，以測試股息愈高是否表現愈好。結果使用Dividend yield選股當然是跑輸大市。有網友提出了一個問題，就是高股息可能是傳統重資本、價值型的股票；相反低股息則可能是剛掘起的成長型公司，所以策略變相是看好銀行股、地產股，而看淡騰訊等科技股。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     事實上，我Backtest時，已經使用了Sector neutral的方法，即使每個行業中的Long short都是Balance的，以防止出現Sector bias的情況。所以，很多機構投資者使用Factor model時，都會設定為Sector neutral，以驗證該Factor是否真能獲利。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     再拿剛才的例子，使用因子模型時，會把成分股劃分為不同Quintile或Decile，前者即50隻股分為5份，10隻1份；後者則把50隻股分為10份，5隻1份。然後測試便會Long short若干股分，例如Q1-Q5，即Long top 10，Short bottom 10；或者Q1+Q2-Q4-Q5，即Long top 20，Short bottom 20。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     為何要沽空底部呢？買首10/20不行？因為若一個因子真的重要時，因子極端時應該都有極端效果。例如PE真的有用時，PE低該能跑贏大市，PE高應下跌，不應該只是PE低才有啟示，而PE高則沒啟示性。所以Long top short bottom比Long top short futures較好。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以分析時，可以先把因子與t+1回報先做Regression，看看相關性數字有否啟示，最佳情況當然是接近1或-1。接近1或負1即因子極能帶來啟示，而且因子數值大小（Magnitude）與回報的關係極高。若真如此，恭喜你，你找到一個超級好因子。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     曾來上課的朋友，會學懂怎樣使用因子去預測大市走勢，其實意義類同，分別在於課堂上是預測大市，而因子選股模型做的是股票。由於大市只有一個產品，所以需時驗證因子能否獲利，例如需用上5年數據，每天1個因子數值，總共2520個數據點；但股票模型中每天已有50個因子數值，所以1個交易日已有50個數據點。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     前者就是所謂Time series analysis，而後者則為Cross sectional analysis，遲些有機會再探討此課題。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

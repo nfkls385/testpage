@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   策略大比拼！
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    策略大比拼！
+   </div>
+   <div class="date">
+    2020-04-17
+   </div>
+   <div class="content">
+    <p>
+     我在Bloomberg拿了大部分的Hedge fund index再與SPX作大比拼，看看哪一個大類策略表現更佳。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     為甚麼拿5年數據？因為過去5年包含了各種大升大跌市，2015、2018及今年包含大跌，而2016、2017及2019則屬於上升市況，對這個大比拼中的選手來說會較公平。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     為甚麼不拿10年？對沖基金策略10年前與現時的相去甚遠，不能直接相比。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大類策略包括：AI, Macro, Relative value volatility, Market neutral, Fixed income, 各地區的Long short equity, Long volatility, Short volatility, Fund of fund, Risk premia。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     篇幅有限，直接看結果。結果用Sharpe ratio計算，相信沒人反對，Sharpe一定比看Return好。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     SPX的Sharpe是0.28，跑贏大市的策略有5個，表現順序為AI, Macro, Relative value vol, Market neutral及FI，Sharpe介乎1.31至0.38。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     先簡介一下這些是幹什麼的。AI最虛無縹緲，可以是投資AI公司的PE，可以是用AI作投資，亦可以是研發AI的R&amp;D公司，賣個關子，下次再dig deep為大家研究一下這個AI Hedge fund指數內的策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Macro主要就是宏觀投資，按地區經濟及政局作投資，例如貿易戰時便沽內地買美國，例如歐洲爆發肺炎便沽歐洲，例如英國脫歐便沽英國等等。不過Hedge fund的歸類很有趣，細心研究下我發現CTA亦被歸類到Macro中，因為不少Macro fund會運用price action及技術指標作參考，決定出入市時機，因此這類的Macro包含了CTA在內。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Relative value vol則是trade volatility，例如前陣子歐洲vol比美國高，便沽歐洲vol買美國vol，博兩者的疫症爆發影響相近，兩者收窄便能賺錢，當然亦可以是指數與指數間的vol arb，亦可以是sector間或stock間的vol trading。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Market neutral，即市場中性，叫成market neutral的基金特別重調它們的long short exposure是0，即看好與看淡的exposure一樣，只要delta hedge得好，基本上指數升到10萬點或跌至1點也無傷大雅，都可以賺錢。因為除了這類以外，大多hedge fund或其他策略都應該是long bias的。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     FI非常廣闊，很難drill deep分析，可以是carry trade，可以是trade yield spread，可以是基本分析再買入公司債，亦可以是買CB再沽股票作arbitrage，亦可以trade yield curve，實在太多了。其實有更細緻的分類，不過很多都是OTC的操作，普遍投資者該不太感興趣。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     分析部分來了，數個點值得提一提：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1.	這些hedge fund index的表現很受market capacity影響，hedge fund index不是按aum weight就是按size挑基金出來作代表，因此都是一些極大型基金的表現。我經常指出對沖基金一大問題就是scalability，因為錢太多，所以策略能scale up非常重要。Macro排名前有可能是因為macro是類似event driven，受market depth的影響最少（這點在其他專欄提及過）。因為國際政經事件影響大，一件事發生或不發生可能會令指數升跌數千點，因此買入或沽空1000億也是可行的。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2.	排名靠前的都是偏向市場中性或風險偏低的，例如vol arb、market neutral、FI等。而較後的都是有long bias的long short equity及risk premia，或單頭的long vol及short vol。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3.	Trade vol的勝率很高，因為volatility的特性很強，例如long term mean reverting, short term momentum, highly auto-correlated等，所以學界與投資界一直以來皆認同vol比price更易預測，並非新鮮事。因此relative value vol排名前是有原因的。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4.	排名前的很多都是trade指數或etf，排名後的，很多都是trade equities，我經常指出炒index比炒single name更好，詳細可參考早前的Patreon文章。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     5.	China Long Short Equity表現較差也許是因為內地公司較多內幕，而且透明度偏低（假帳數目較多），加上沽空困難，否則，按道理於developing market的alpha策略表現應該不錯。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     6.	這裡無論fund與spx都有survivalship bias，因此把fund與spx放在一起比較是公平的。因為差的公司會被踢出spx，而差的fund會消失，會被踢出hedge fund index。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     不過以上提及的指數/大類策略都是一個非常broad、非常rough的分類，有機會再drill deep，例如可以把Macro及CTA拆分出來分析。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Take home message：
+    </p>
+    <p>
+     1.	AI有巨大潛力
+    </p>
+    <p>
+     2.	長短並用，保持市場中性較佳
+    </p>
+    <p>
+     3.	可多留意volatility trading
+    </p>
+    <p>
+     4.	指數比個股更好炒
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
