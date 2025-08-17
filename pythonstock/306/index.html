@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《策略止損stop loss應如何設置》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《策略止損stop loss應如何設置》
+   </div>
+   <div class="date">
+    2023-05-28
+   </div>
+   <div class="content">
+    <p>
+     《策略止損stop loss應如何設置》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺投資交易中，止損（stop loss）係一種常見嘅風險控制方法，佢可以幫助投資者喺市場波動下控制或免除不必要嘅損失，而止損嘅設置亦可以根據投資者嘅風險承受能力而定，止損貌似無敵，既能控制風險，又能減少損失，但你真係知道幾時先應該設置止損？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先，我地要明白止損嘅本質就係「賭」，同買升跌無分別，例如當你Long緊恆指期貨，而好唔好彩佢同你背道而馳，不斷下跌，決定去止損嘅你其實有以下潛台詞「我賭恆指會繼續下跌且超過我嘅止損level，短時間內唔會v彈升翻上去」，所以其實你對後市係有一個明確立場，就係「賭跌」
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     至於點解散戶經常止損後都會即刻後悔，左一巴右一巴，就係因為胡亂使用止損嘅後果，可知道止損嘅本質就係趨勢跟蹤，賭緊個價格會繼續向單一方向移動，而一d有中性回歸性質嘅資產，例如恆指，止損就好易左一巴右一巴，係一個-EV嘅trade，因為我地喺個distribution 嘅tail設此損，賭佢會繼續往tail方向移動，然而根據distribution ，越喺tail嘅data就會越傾向回歸中心
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     簡單黎講，止損唔適合用於中性回歸嘅資產或者策略，反而當數值偏離中心，更加應該加注，因為呢個trade有高嘅正EV，例如百事同可口可樂嘅股價差價（spread）屬於中性回歸，長期喺一個中間值徘徊，當spread擴大嘅時候，若果我哋相信百事同可口可樂之間冇一個好根本性嘅變化（structural break），喺數學上係應該加注賭個spread回歸中心，直至EV變負/變零
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁幾時應該用止損呢？答案係非必要都唔好set，喺algo trading 上，交易出入理應完全依靠訊號，因為該訊號先係有數學上嘅意義，當訊號出現，就代表EV為正，我地不應中途停止正EV嘅trade，直至訊號變改，而且止損set嘅數值亦無數學意義，點解係5%而唔係6%？最終只會增加不必要嘅trade，增加transaction cost
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然如此，但止損都有佢嘅必要性，例如剛才提到嘅structural break，或者一d volatility為主嘅策略，一睇錯邊就止損的確有機會避免大損失
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     本人algotrade上都有set stop loss，但好少喺每條trade上set，反而係喺strategy/ portfolio 上set，例如當某策略表現穿過maximum drawdown -5%就會sharpe cut，因為此數字係有意義的，代表該策略失效，偏離backtest時嘅assumption
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以下係簡單momentum strategy with stop loss 嘅backtest script，入面只係用左最簡單嘅package，e.g. pandas/ numpy，因為咁先可以令自己清楚所有logic，繼而去backtest更複雜嘅策略，以所有code 都係vectorized，即係冇for loop for each row 果d野，因為當dataset變大時，for loop就會極慢，所以我地要習慣用vectorized code 代替for loop
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

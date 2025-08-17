@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你用Python 分析名人Twitter對市場影響》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《教你用Python 分析名人Twitter對市場影響》
+   </div>
+   <div class="date">
+    2022-12-03
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     成日都有人講笑，話某d富豪、名人可以輕鬆喺市場賺錢，因為佢地是旦出個tweet就可以推高價格，例如Elon 出個tweet 話繼續支持狗狗幣，狗狗幣應聲反彈10%，真係彈指之間就能一買一賣獲利咁話
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     事實上又係咪真係咁呢？先唔講佢地有冇自己從中獲利，就算冇，佢地嘅tweet言論對市場價格有重大短期影響，又例如侵侵呢類政治人物，摩根大通早喺三年前建立Volfefe指數，量化侵侵喺twitter發文對市場情緒（market sentiment) 波動嘅指標
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     入正題，點用黎賺錢？首先，我地要知道對手係邊個，究竟邊個可以喺Elon出tweet嘅毫秒間出手？答案就係電腦程式，所以如果有人話自己靠睇tweet做day trade，佢一定係吹水，事關排喺你面前有幾千至幾萬個market order以毫秒甚至微秒落盤
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     小弟用Python 攞左Elon musk喺今年出過有關狗狗幣嘅Tweet做分析，分別plot左Elon 出tweet 即時買入狗狗幣嘅return 走勢同Elon 出tweet後嘅最近一分鐘買入狗狗幣嘅return 走勢；可以見到即時買入嘅return 係幾乎全部有正數，回報有5-12% 不等，即使其後繼續hold多兩小時亦有平均5%return。但若果喺出tweet後最近一分鐘買入（即若12分50秒出tweet 13分先買，模擬人手反應），回報南轅北轍，可見大部分買入點都最終得負回報，平均輸2%，差之毫釐，謬以千里
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左落盤要夠快之外，落decision都要夠快！唔可能單單睇到Elon出有關狗狗幣嘅post就買升，仲要睇埋tweet嘅內容！有時個tweet都會對相關資產有負面影響，所以程式會用NLP(natural language processing)做埋sentiment analysis去判斷個tweet屬於正面定負面，再者，對相關資產有影響嘅tweet唔一定直接提及其資產名稱，點樣即時判斷兩者關聯亦係developer嘅難點之一
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以喺呢個漸趨efficient 嘅市場，唔可能再只靠人手做trade，好多alpha都要靠速度，演化成軍備競賽，散戶唔好好了解一下就衝入去跟tweet落trade，好易慘變肉醬
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

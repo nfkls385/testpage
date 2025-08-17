@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《買強賣弱策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《買強賣弱策略》
+   </div>
+   <div class="date">
+    2023-02-26
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     買強賣弱係一種喺股票市場常見嘅交易策略，基本原則係買入表現良好嘅股票，再賣出表現唔好嘅股票。呢種策略嘅優點係可以獲得穩定嘅收益，因為表現良好嘅股票好有可能未來依然表現唔錯。而且，呢種策略相對容易實行，唔需要太多嘅技術分析或基本面分析。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     不過，買強賣弱策略亦有啲缺點。如果整個市場嘅走勢唔好，呢種策略有可能會損失。而且，經常需要調整策略，以確保所揀嘅股票仍符合買強賣弱嘅策略，交易成本亦限制咗策略嘅變化。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     傳統買強賣弱策略只喺Long Only，所以當整個市場嘅走勢唔好嘅時候，策略有可能會損失，所以有啲人會將佢改善，除咗Long強資產之外，亦會Short弱資產，咁樣就可以某程度上hedge掉市場風險，令策略回報同市場中性，呢種策略叫做Ranked Long/Short Strategy。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     之後更有啲人將佢optimise，將Long/Short嘅proportion根據佢嘅Ranking來調整，Ranking越前，Long得越多，反之亦然，呢種策略叫做weighted ranked long/short strategy。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺使用Python進行backtest嘅時候，我哋可以使用唔同嘅commodity作為例子，例如黃金、原油等等。首先，需要獲取相應嘅市場數據，再進行清洗同處理，以便後續嘅分析同回測。而呢種包含唔同資產交易嘅策略，屬於cross-sectional strategy，backtest上嚟講係比較複雜嘅，所以我習慣首先將佢嘅trading idea進行dirty backtest，即比較簡單，而且唔嚴謹嘅回測，咁樣我只需要唔到5分鐘嘅時間，就可以知道我所諗嘅策略是否有效。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     至於策略參數方面，我會以heatmap嚟visualise佢嘅sharpe/mdd，咁樣唔單止可以除去overfitting嘅機會，亦可以一眼睇出策略整體嘅表現，work唔work。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     總括嚟講，買強賣弱策略可以喺股票市場上獲得穩定嘅收益，但係需要注意市場整體嘅走勢，同埋調整策略以確保符合買強賣弱嘅原則。而且，使用Python進行backtest嘅時候，大家可以先進行簡單的回測同視像化黎快速證實同篩選策略
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

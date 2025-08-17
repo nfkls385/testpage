@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《程式Logging》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《程式Logging》
+   </div>
+   <div class="date">
+    2023-09-03
+   </div>
+   <div class="content">
+    <p>
+     《程式Logging》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     唔少新手寫程式嘅時候都唔會做logging（日志記錄），導致當程式有問題要debug嘅時候就無從入手，就算重新審視所有coding都未必搵到bug嘅所在
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所謂寫程式就只有十分一係寫，而另外十分九係debug，係絕無呃人，特別係喺Chatgpt盛行嘅年代，寫程式幾分鐘就搞掂，但AI寫出黎嘅程式合唔合乎要求？稍為複雜嘅code叫AI寫已經錯漏百出，最重要嘅係d code唔係出自自己手筆，要去debug嘅時候就更加痛苦
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以Logging 喺程式開發期甚至執行期都極其重要，好多新手都冇一套standard嘅Logging practice，只會用print 黎做console output，print 冇錯係又快又方便，但當要debug嘅時候將每句print uncomment 就會發現logging 嘅美好
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先python 有內置logging package，唔洗額外安裝，佢同print最大嘅唔同就係logging將每條log message 都分類成唔同等級，包括(DEBUG, INFO, WARNING, ERROR, CRITICAL)，喺設定logger instance嘅時候可以config 控制logger output 嘅level，例如唔想logger 顯示 debug嘅message，只需要將其level設為INFO即可，到需要debug嘅時候先轉回，省去將所有debug line umcomment 嘅時間
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Logging更加可以定義日誌格式，例如每條log都顯示時間，運行instance名，運行function名等，令每條log更traceable同standard
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而且更可以定義log嘅輸出，可以除咗將log ouput出console，亦可output到 .log file 作archive，方便日後查閱
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然內置logging package並唔難用，但有某啲細節位例如setup多過一個logger會有可能出現duplicate message嘅問題，同時output 去console同log file嘅功能等都會令到初初接觸logging嘅新手頭痛，所以patreon 入面分享左我algo system 入面用開嘅logging簡化版script同佢嘅應用，比大家參考
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

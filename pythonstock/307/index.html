@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《如何監察自動化交易系統》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+   </div>
+   <div class="title">
+    《如何監察自動化交易系統》
+   </div>
+   <div class="date">
+    2023-06-10
+   </div>
+   <div class="content">
+    <p>
+     《如何監察自動化交易系統》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     一個交易策略由構思、數據庫管理、回測、終於寫成自動化交易系統，過程十分之繁複，但捱過以上步驟嘅交易員，要做出一個合格嘅自動化交易系統仲差一大半
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     識得如何監察自動化交易系統嘅運行先係一套完整嘅系統，一個冇後續監察嘅自動化交易系統就等於一架保養嘅車，只能多藝術品觀看而已，並唔能夠安穩咁帶着我哋奔馳，因為交易嘅最終目的係賺到錢，而交易往往都係充滿未知同突發事情
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以下係綜合我咁耐以來做自動化交易系統要監察嘅東西：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     績效（Performance）
+    </p>
+    <p>
+     • 組合(Portfolio) Pnl
+    </p>
+    <p>
+     • 策略/ 資產的各自Pnl
+    </p>
+    <p>
+     • Live Pnl vs theoretical Pnl
+    </p>
+    <p>
+     “好多時實際運行交易系統同backtest有出入，要留意係咪delay/ slippage 所致”
+    </p>
+    <p>
+     • 組合槓桿 (Portfolio Net Leverage)
+    </p>
+    <p>
+     “避免爆倉風險”
+    </p>
+    <p>
+     • 最大回撤/止蝕Alert
+    </p>
+    <p>
+     • 策略/組合資產曲線（交易策略實盤metrics）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     硬件設備（Infrastructure）
+    </p>
+    <p>
+     • 交易設備memory
+    </p>
+    <p>
+     • 交易設備ping
+    </p>
+    <p>
+     • 交易設備CPU usage
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     數據庫（Database）
+    </p>
+    <p>
+     • 監察交易數據供應商狀況（有否錯誤/遺漏數據）
+    </p>
+    <p>
+     • 數據庫與交易系統的connection/latency
+    </p>
+    <p>
+     • 數據庫定期backup/ logging
+    </p>
+    <p>
+     • 數據量
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     執行（Execution）
+    </p>
+    <p>
+     • 各交易策略/資產的落盤數量 per minute
+    </p>
+    <p>
+     • 各交易策略/資產的成交量
+    </p>
+    <p>
+     • 落盤滑價（slippage）
+    </p>
+    <p>
+     “期望落盤價格vs最後成交價格”
+    </p>
+    <p>
+     • 交易成交率（trade fill rate）”落盤單成功成交百分比”
+    </p>
+    <p>
+     • 落盤到成功交易的所需時間
+    </p>
+    <p>
+     • 交易金額分佈
+    </p>
+    <p>
+     • 交易失敗率
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     市場（Market）
+    </p>
+    <p>
+     • 市場波幅（market volatility）
+    </p>
+    <p>
+     “若市場比較波動可能會更改/暫緩執行交易策略”
+    </p>
+    <p>
+     • 單一資產波幅
+    </p>
+    <p>
+     • 資產相關性 (Asset Correlations）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     交易所（Exchange）
+    </p>
+    <p>
+     • 交易所api 運作（malfunctions/ disconnections)
+    </p>
+    <p>
+     • 交易所api latency
+    </p>
+    <p>
+     • 資產於交易所的狀態
+    </p>
+    <p>
+     “若果某資產於交易所將停止交易，轉為只減倉模式”
+    </p>
+    <p>
+     • 監察交易所api 更新/停止運作公告
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左以上總總，真正交易時一定有好多你諗唔到嘅突發事情發生，所以只要我地個check list 包含越多監察項目，出事嘅機會就越細，機構級別嘅交易員除左做backend 嘅監察，更加會將佢地整成dashboard比frontend 嘅同事mon住，所以要做到一個完美嘅交易系統比我地想象嘅多功夫好多
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

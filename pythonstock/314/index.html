@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《工具模組(utils) -繪圖》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《工具模組(utils) -繪圖》
+   </div>
+   <div class="date">
+    2023-10-01
+   </div>
+   <div class="content">
+    <p>
+     《工具模組(utils) -繪圖》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上次講左寫工具模組（utils.py)嘅重要性，亦分享左能簡易處理時間/日期嘅方法，而今次講嘅topic喺開發算法交易系統中亦係非常實用，冇錯就係「繪圖」（plotting）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     開發交易系統嘅過程中好多時都要用到plotting功能，先講最簡單嘅價格可視化，大家應該耳熟能詳，一句簡單嘅df.plot()就可以，但若果要比較唔同種類嘅數據，就冇得one-liner去完成，因為唔同種類嘅數據嘅scale 唔同，並唔能夠放喺同一條axis上比較/繪畫，呢個情況須要用到twin axis去繪畫
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     另外處理time series data好多時都會對數據作出唔同嘅處理同變化，例如將數據standardise/ logarithm transform，以至將數據變為交易訊號等，若新手要將所有time series正確地可視化則需要唔少時間，而Patreon入而share 了我交易系統裡面用到嘅plotting 模組，整合左大家通常會用到嘅time series可視化方式，亦展示了其用法
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除此之外，深入分析time series數據前，我習慣繪製其季節性分解圖（seasonal decomposition），睇下呢組數據有冇季節性特徵，呢個步驟可以直接幫助大家去轉化數據成交易訊號
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次分享嘅係如何有組織同有效咁繪畫time series數據，當然量化交易中有另外一些重要嘅plot種類，例如heatmap/ boxplot等，下次有機會再詳述
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

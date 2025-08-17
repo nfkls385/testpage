@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《有冇必勝交易策略？》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《有冇必勝交易策略？》
+   </div>
+   <div class="date">
+    2022-07-02
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     有冇必勝交易策略？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有，唔實際，但可參考；當有無數資金時，呢個策略係唔會輸錢而且勝率100%，除非以下情況發生：underlying 價值變零/ 總資產變零
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我想講嘅就係Martingale Strategy，何謂martingale？Martingale 就係一列random variables，而佢嘅特性就係：Expected value of (下一個值given 上一個值)= 上一個值， 意思即係對下一個值嘅最好預測值就係上一個值，簡單黎講即係對於未來嘅事：「我唔知！」唯一知嘅係我地唔可以systematically 贏到abnormal return
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     應用到martingale 嘅condition就係coin flip，fair coin flip嘅expected outcome 永遠係零，贏/輸嘅機率永遠係1:1只要我地知道呢點，就可以喺輸嘅時候double 注碼，等到一次贏嘅時候regain所有losses
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     應用喺炒野上，martingale 嘅assumption就係random walk theory，喺我地無法預知下一步情況下，自行set 一個systematic 嘅condition，就係我地strategy 成日用到嘅stop gain/ take profit，只要喺輸嘅時候靠不停加注將兩者永遠set成一定比例，assume有無限次加注機會，總有一次outcome 會係贏錢，因為根據martingale嘅assumption，expected outcome永遠係constant
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     現實上，股市當然唔係贏/輸1:1啦，只要你統計下陽燭/陰燭比例，就可以發現大部分資產都係long biased，絕對唔係fair coin flip嘅case，雖然係咁，但martingale亦可以應用於long term expected return 接近常數/mean reverting 嘅資產例如forex，除非成個國家唔掂之外，forex都好難變零，變相martingale strategy 可以應用於此，我地可以透過注碼控制/stop loss take profit ratio/ 加上唔同filter 黎令strategy backtest起上黎好靚仔，市面上好多聲稱勝率80-90%嘅forex ea 都係martingale 嘅變種，條curve 45度咁上，只要遇上一次黑天鵝就會爆倉，只係時間嘅問題
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     另外，對於momentum 型嘅資產例如crypto/ stock，用martingale strategy 一定好快死，美股十年都開「大」，如果你買死「細」，喺等到大跌前一定好發破產，所以應該反其道而行，就係anti-martingale strategy，故名思義，就係martingale strategy 嘅相反；我地喺贏錢嘅時候加注，輸錢就走人，應用喺momentum 型資產會有唔錯回報
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以下係應用martingale strategy 喺歐元嘅backtest，可以見到分別有3個人：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     藍線：本金細嘅散戶，好快破產
+    </p>
+    <p>
+     燈線：大戶，每次加注1 unit
+    </p>
+    <p>
+     綠線：大戶，每次加注5 unit
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     從結果黎睇，綠線贏最多，因為喺2015大插其間加注加得多過燈線，最後2016回升翻嘅時候recover得比較快，但若從風險角度判斷，若2016歐元繼續跌，綠線會比燈線快爆倉
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

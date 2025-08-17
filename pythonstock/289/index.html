@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你提升Python十倍下載速度part2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你提升Python十倍下載速度part2》
+   </div>
+   <div class="date">
+    2022-11-01
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     話說有讀者整左個選股選coin嘅system，每日流程大概係喺指定時間下載唔同coin同股嘅open high low close volume 數據（ohlcv data）再依據hard rules 選出有vcp突破形態嘅coin同股
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     先唔討論形勢選股嘅成效，個讀者run左幾日就發現重新下載所有歷史數據十分之廢時，慢慢就失去測試個system嘅耐性，筆者後來教佢set schedule task，以及將「由頭到尾下載所有歷史數據」改為「只下載最後一日數據再append舊數據」，雖然所須時間加快，但仍然唔係最好最快嘅方法
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上一次介紹左asyncio嘅如何透過改變CPU執行任務嘅資源運用，從而令整個下載任務速度提升十倍至百倍，該讀者亦可以好好將其運用，只要配合ccxt (CCXT – CryptoCurrency eXchange Trading Library) ，就可以輕鬆幾秒下載所有symbol 嘅歷史ohlcv data，只要輕輕改一改coding，就可以將其數據轉換成唔同structured formats
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，唔同crypto exchange 亦有其API嘅rate limit，大家要注意call request 嘅rate，唔好被exchange block IP
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

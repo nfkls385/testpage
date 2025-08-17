@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《市場寬度分析虛擬貨幣2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《市場寬度分析虛擬貨幣2》
+   </div>
+   <div class="date">
+    2023-04-30
+   </div>
+   <div class="content">
+    <p>
+     《市場寬度分析虛擬貨幣2》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上次講左市場寬度點樣評估到股票市場/幣市嘅表現，以cross-sectional 嘅2D視野去一覽整個市場趨勢點都比只觀察單一時間資產詳細，而上一篇文章利用所有幣嘅平均回報作為指標，分析市場寬度和market regime（bitcoin season/ alt coin season），今次講嘅係比較advance 嘅topic — 「聯動性」Co-movement
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     點為之聯動性？即是一個指標去量度所有幣平均是否向同一方向移動，即數值越高，所有幣嘅走勢都相似，買乜都冇所謂，而數值越低，幣嘅走勢就有分歧，呢個時候就突出選幣模型嘅重要性，而點樣計算到co-movement?就要靠一個統計學上的方法，PCA ( Principal component analysis）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     PCA主要係一個處理數據嘅算法，佢能通過降低數據維度以達到消除多餘數據雜音嘅目標，通過PCA算法處理所有幣嘅價格數據，我地可以從中取得重要嘅features（你可以想像成將所有幣建構成一個成份指數），同時保留大部分價格資料嘅variance
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     詳細原理唔喺呢度講，大家最有興趣係賺錢而非做統計學家，總之利用一個複雜嘅統計算法PCA去分析所有幣嘅歷史價格變動率，可以計算出佢地之間嘅平均聯動性，而呢個聯動性係隨着時間而變化，大家應該都會留意到有時幣市升跌十分之分歧，得某幾個類別嘅隻幣升，好似之前咁得DEX 同gamefi 幣升，其他mainstream 幣跌，而有時候個市聯動性十分高，例如今年一二月「雞犬皆升」基本上投資喺幣市就買乜都會贏
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     詳細點由下載歷史數據到用PCA去分析市寬/聯動性就喺patreon 公布，而結果就係附件嘅圖，上面係BTC嘅歷史價格，而該顏色係根據所有幣co-movement 嘅強度，越高越聯動，越低越分歧，大家可以見到大部分高聯動性嘅時候都係幣市正值牛市嘅時候，而熊市聯動性較低，可見牛市選幣模型係冇乜用，因為買大幣同細幣嘅分別只有beta而非alpha
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

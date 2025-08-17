@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你提升Python十倍下載速度》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你提升Python十倍下載速度》
+   </div>
+   <div class="date">
+    2022-10-09
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信唔少人寫algo或者trading tools都會遇到個難題，就係點樣可以加速下載數據嘅速度，好似最簡單下載所有港股歷史ohlcv 數據，唔少人同我反映如果用for-loop loop download曬所有tickers 十分之廢時（就算yfinance 個package 容許用家input list of tickers批量下載，但所需時間都一樣），若果要下載曬所有港股歷史ohlcv數據，相信都要半小時
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     究竟點樣可以加快下載速度呢？呢度講緊嘅「下載」唔係真係講緊你上網速度，而係透過改變CPU執行任務嘅資源運用，從而令整個下載任務速度提升十倍至一百倍
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信玩過簡單web-scrapping嘅python用家都試過for-loop requests HTTP GET，例如for-loop 攞曬hktv mall 1-100頁嘅商品價格，攞過去100日嘅財經新聞頭條等等，以上使用for-loop嘅方法係線性（linear），即若果requests 一次hktv mall等佢return d 商品價格數據需時0.5秒，咁一百次就需時50秒，因為呢種寫運行方式係要求CPU喺HTTP return 到數據之前都一直等待（idle），無法執行其他工作，這造成程式感覺很慢之外，亦造成CPU閑置浪費運算資源
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     明白到for-loop requests 嘅缺點之後，Python 3.4 推出了asyncio 黎提升程式處理呢類tasks嘅效能。非同步式(asynchronous)嘅程式開發思維比普通線性(linear)思維難以掌握，簡單講，asyncio具有開始(enter)/暫停(exit)以及任意恢復(resume)執行嘅能力，譬HTTP GET 要求hktv mall return 商品價格之後，就暫停執行該函式，轉而執行其他工作，等到該 HTTP GET 要求收到伺服器return回應之後，再轉回來恢復執行剩下的工作。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     訂閱左Patreon 嘅可以參考link內例子，內文有教點樣用web-scrapping 取得Bitcoin 大戶嘅所有addresses 同相關資訊，仲比較左用for-loop下載50頁同用asyncio下載嘅速度分別，大約快左十倍有多
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Asyncio 要知嘅資訊量太豐富，無法一時三刻準確傳達比大家，所以首先展示其屈機之處，下回再詳細討論及展示其炒嘢上嘅應用
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

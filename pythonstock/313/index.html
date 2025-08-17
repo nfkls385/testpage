@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《工具模組(utils) -日期/時間》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《工具模組(utils) -日期/時間》
+   </div>
+   <div class="date">
+    2023-09-17
+   </div>
+   <div class="content">
+    <p>
+     《工具模組(utils) -日期/時間》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上次講左其中一個新手寫程式嘅時候要注意嘅嘢，今次就講一講另一個更加重要嘅寫程式習慣，就係寫工具模組（utils.py）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信有上過GitHub 睇過勁人寫嘅code都會見到有utils嘅存在，utils入面專係放一d我地程式會用到嘅實用/重用函數（methods），提高代碼可重用性（code reusability），同埋系統開發效率，亦令到整個系統更有組織同結構
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     例如交易系統經常用到z score嘅function，咁z score就可以放入utils模組重用，減少每一次使用相關function都要由底層開始編寫
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而喺交易系統入面，日期/時間嘅function 係好重要亦不停重覆使用，例如程式入面需要不停轉換timestamp 同datetime去做計算，亦需要將其轉換成date string output去console作展示，當中嘅轉換方式如果係新手都要花幾個鐘至一日去釐清，而牽涉到日期時間嘅計算就更加麻煩，例如timedelta 同relativedelta 嘅分別都另新手想放棄
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但交易系統中，例如要每隔特定時間下載價格數據計算交易訊號，就要經常用到牽涉日期時間計算嘅functions，如果每一次都有底層開始編寫，成個交易系統就會變得冗長同唔standardised，過多幾個月睇翻亦唔會記得自己寫過乜
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Patreon 入面分享左我交易系統入面關於Date and time 嘅utils，入面有基本會用到嘅methods，處理好曬唔同date types，入面亦用到一個唔錯嘅package去處理date string，比大家參考一下
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

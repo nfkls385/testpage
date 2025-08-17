@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《港股買強賣弱策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《港股買強賣弱策略》
+   </div>
+   <div class="date">
+    2023-07-16
+   </div>
+   <div class="content">
+    <p>
+     《港股買強賣弱策略》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     之前有篇文講買強賣弱交易策略(Ranked L/S)，用左commodity asset class 做backtest，喺冇transaction cost 同其他因素底下係賺到錢嘅，而相同嘅交易邏輯，可唔可以應用到港股呢？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     可知港股可以做沽空嘅股票唔多，而可沽空股票嘅歷史數據又要錢，想要免費又簡單嘅方法黎驗證套策略，就只可以從藍籌股入手
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     之前篇文章講過策略大概嘅邏輯，呢度就唔再多講，反而想分享一張圖（圖二），裡面包含嘅資訊量極高，基本上成個backtest要知嘅野都喺入面，就係用我地策略嘅lookback period 做x axis然後策略嘅sharpe ratio做y axis，而圖中最光嘅地方就係大部分lookback period達到嘅sharpe ratio range，又稱之為「參數高原」，呢個range 嘅策略係比較可信的
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而最後我地用左5日lookback做我嘅optimised 嘅參數，可見策略結果為（圖一），y axis 為策略累積回報，十幾年來八倍回報（未計交易成本），shape ratio 0.54，比較buy and hold s&amp;p還低，而且結果仲有一個極致命嘅錯誤
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     極致命嘅錯誤係咩呢？就係恆指成份股係會變嘅，甚至有機會曾經喺恆指成份嘅股票已經被delisted，而衍生嘅問題就係留得低嘅股票名單都係經得起考驗，冇被delisted 冇被恆指季檢剔除嘅強勢股票，我地稱之為「幸存者偏差」(survivorship bias)，呢個bias 導致我地嘅backtest唔準確，好可能live trading同backtest結果會完全唔同
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而點樣可以做得正確？首先我地要有咁耐以黎籃籌股嘅名單以及名單嘅歷史價格數據，整合呢樣野已經相當複雜且廢時，如果純粹對algotrading有一時半刻嘅熱度，我建議做翻non-cross-sectional嘅backtest或者及早放棄然後月供指數etf，成本效益可能較高
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

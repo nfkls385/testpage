@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《動量投資法應用於幣市》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《動量投資法應用於幣市》
+   </div>
+   <div class="date">
+    2022-06-04
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     動量投資（momentum investing）係投資策略一種，指個投資者集中於買啲近排喺度升值嘅股票，動量投資嘅觀點主張股價嘅上落好似有動量（momentum）咁，一隻股票愈升；升勢就會愈勁，一隻股票愈跌；跌勢就會愈勁
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     同樣策略應用於幣市可行？絕對可行，幣市成交比股市更為集中，資金集中炒作幾隻coin嘅情況經常出現，而且唔同幣與大市相關性不高，牛熊市中亦有逆市升嘅coin，唔似股市咁，stock picking 嘅重要性日趨式微，alpha越黎越少；另外幣市嘅價格波動率呈autocorrelation，即價格過去波動，未來波動嘅機會越大，更適合使用動量投資法
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     作為quant就緊係即刻打曲backtest下啦！策略就諗好，咁參數又會係咩呢？首先就係time interval，一個月/一日/定一個鐘？點樣先平衡到策略靈敏度同換coin頻率所付嘅手續費？第二就係lookback period，呢個參數大部份策略都會遇到，所以就唔多講，最緊要係一個解釋到/唔係curve fitting嘅結果，第三就係個portfolio 同時hold嘅coin數目，太多會經常換？太少策略波幅會太大？呢d種種問題都要考慮
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     設計好參數就完？未完，仲有好多野要考慮，首先策略係long only，幣股市return 都係thin head fat tail，意思係歷史上升多過跌，long only 嘅策略就算歷史上backtest賺錢都justify唔到策略邏輯嘅robustness，咁點算？將佢變成pair trading 亦未嘗不可（即同時short翻弱coin對沖），然後就係backtest嘅bias，最常見嘅stock picking strategy 都會犯survivorship bias （倖存者偏誤）例如你backtest時選coin嘅pool入面冇包含到被delist嘅luna就已經犯左倖存者偏誤，因為你只係喺一堆倖存者入面選緊強嘅coin，而到今時今日未被delist嘅coin係強者嘅機會一定比較大，所以唔包含delist coin/stock嘅backtest都有bias！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，backtest未必就夠做到十全十美，交易所都唔會儲存delist左嘅coin/stock嘅price data 更有d stock 嘅編號會重用，根本好難追溯，只可以以最接近方式試圖模仿策略歷史表現，講到尾，雖然backtest唔係黃金勝杯，但通過backtest嘅策略一定比冇測試過嘅好！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

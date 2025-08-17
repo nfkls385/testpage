@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用AI寫Python》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《用AI寫Python》
+   </div>
+   <div class="date">
+    2023-02-11
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     最近由OpenAI 研發嘅ChatGPT 成為全球熱話，佢除左可以用黎解答用家疑難，亦能作故事，設計圖片，而對於我地developer黎講，佢嘅「揼code」功能十分之吸引，本人試過用佢黎寫個簡單回測流程，只要不多於十行對答就能完成，雖然唔完美，但達到想要嘅目的
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     ChatGPT嘅用途故知然令人期待，但香港用戶暫時未能註冊（或用vpn），而且暫時未能針對指定數據庫依照用家要求「揼」出相應嘅code，只能夠提供框架，除了網絡上經常用到嘅數據（例如ohlcv data）暫時未能上載個人數據庫到ChatGPT分析(除非github上有)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     唔排除之後ChatGPT會完善呢個功能，因為其實已經有Open source 嘅python package 做緊呢樣野，而且使用方法好方便，只需要dataframe.ask(“your enquiry”) ，AI就會解答你對該dataframe嘅問題
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除此之外，呢個package更加可以好似ChatGPT咁generate 一段python script，而且係針對某dataframe；例如你有個dataframe 裝住牛熊嘅數據，只要問佢howto(“Plot turnover versus time by underlying”) 佢就會generate 出相對應嘅script
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最值得一提嘅係佢AI嘅特性，我試過upload 港交所CBBC牛熊數據嘅dataset（成30個columns）上去分析，冇做過任何data engineering，我叫AI generate 一個新feature - 牛熊outstanding ratio，而佢竟然識自己理解分別計算牛/熊嘅ratio(#cbbc out of the market/ #total cbbc)，而且自動detect 邊一個係時間軸，因為該dataframe同時間相關嘅columns都有數個
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後論coding 嘅準確度，個人覺得係可接受範圍內，因為有時會因為Python version 嘅差異而generate唔同嘅code，只要略加糾正即可
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

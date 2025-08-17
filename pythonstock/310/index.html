@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《一圖找出價量異動》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《一圖找出價量異動》
+   </div>
+   <div class="date">
+    2023-08-05
+   </div>
+   <div class="content">
+    <p>
+     《一圖找出價量異動》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我地炒股炒幣經常都想搵到異動股/幣，然後買入搏佢嘅動量可以持續下去，而如何量化「動量」？同埋何謂「異動」？就係今日嘅topic
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先動量如何量度？普遍大家都會認為係價格回報率(return)，或者價格波幅率(volatility)，而亦有人會計算成交量（volume）因為越多成交就等於越多人同意此刻嘅價格，所謂「量價齊升」普遍認為利好就係咁解
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     得知動量嘅量度因子後，又如何定義「異動」呢？首先唔同嘅幣會有唔同嘅beta，價格預期回報率(expected return）唔同，例如btc嘅平均日回報為1-2%而doge為3-5%，所以我地唔可以用一個hard code percentage 去代表異動，成交量亦然，market cap越高嘅幣或股成交量亦越高。除此之外，唔同時期嘅asset expected return都唔同，單單係今年年頭嘅btc同Q2嘅btc波幅都大相逕庭
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     要搵到「異動」，要首先搵到何謂「常態」，要解決以上兩個問題，我地可以用rolling z score解決，因為z score 用了平均值同標準差去將數據標準化，而rolling （即每一個datapoint lookback n 個datapoint）可以只將最近嘅數據納入計算，盡量避免market 因時間大幅改變嘅問題
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Patreon 附上了尋找異動幣嘅python code，通過計算價格與成交量嘅z score得出(圖一)嘅散點圖(scatter plot) 呢個圖可以輕易標示出價量異動嘅幣，例子中嘅threshold 為z score&gt; 2
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     延伸閱讀：識搵異動幣或股= 賺錢？呢個問題等於係問緊呢兩個量度因子係咪有自相關性(autocorrelation)，係咪t=0價格越高，t=1嘅價格都會越高？呢樣野就留比大家backtest
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     (由於binance bybit都block us ip，colab嘅server 喺us所以connect唔到，以後可能會用Jupyter notebook 代替）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

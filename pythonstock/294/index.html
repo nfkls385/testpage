@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《回測陰陽燭型態》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《回測陰陽燭型態》
+   </div>
+   <div class="date">
+    2023-01-14
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     有唔少Patreon 讀者都dm我，想我幫佢地用Python做某隻股票/某陰陽燭型態嘅回測，例如回測港交所388以早晨之星作買賣訊號嘅回報。雖然本人極鼓勵做trade前做backtest回測，但「授人以魚不如授人以漁」，求人不如求己，學識點樣自己backtest先可以踏上自動交易之路
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先利申，本人交易唔常用陰陽燭型態作為主要訊號，主要係其可解釋性低同含確認偏誤（confirmation bias），我地望到張陰陽燭chart會主觀且先入為主咁幻想後市走勢，本來就對後市有一定睇法，然後先喺陰陽燭圖中搵支持自己睇法嘅型態，早晨之星、三飛烏鴉等，但事實上唔同timeframe 都有其他代表反方向嘅型態，例如5分鐘圖穿頭破腳，但3分鐘圖出早晨之星，睇跌嘅人只會睇到穿頭破腳，睇升嘅人只會睇到早晨之星，難以有系統地歸納出買賣訊號
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     講到系統性，就要靠電腦。今次Patreon 會分享個簡單但萬用嘅陰陽燭型態回測系統，應用到Python 入面專門做技術分析嘅TA-lib package，幫你一次過分析曬所有陰陽燭型態嘅夏普比率（sharpe ratio）除此之外，系統仲會自動combine 頭N高sharpe 嘅陰陽燭策略，plot 堆組合策略嘅equity curve，全部可以1秒內做完，唔洗曬幾個鐘望住d陰陽燭
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Backtest 個framework 其實係大同小異，一里通馬國明，而且簡單嘅strategy 其實只要十行code都做到，大家與其用幾年鑽研似懂非懂嘅陰陽燭圖表，不如花幾個鐘去學實在嘅 backtesting技巧
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

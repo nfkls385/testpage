@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《星期幾炒BTC最好》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+   </div>
+   <div class="title">
+    《星期幾炒BTC最好》
+   </div>
+   <div class="date">
+    2023-03-26
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     之前喺twitter 見到張圖plot左「只有喺星期日hold btc」嘅累積回報，發現其累積回報一直持平，所以該tweet指出星期日應該enjoy the weekend 唔應該炒btc
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     作為quant，見到呢d有趣嘅統計一定會想親自驗證一下，所以我就用python下載btc歷史數據（從2018）然後plot 左只有喺星期幾（week of day) hold btc嘅累積回報圖（圖二），結果證明到確實只喺星期日hold btc 嘅話，該累積回報大概持平，但留意到其實星期二hold btc 喺累積回報比星期日更持平，而且同是weekend嘅星期六嘅累積回報並不差，所以該tweet嘅findings好可能只係noise，並不能證明其hypothesis「 應該enjoy the weekend 唔應該炒btc」
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     要睇其weekend effect，最有效嘅方法就係boxplot（圖一），圖一plot左星期一至日嘅daily return 分佈，可以見到一至日嘅回報分佈（去除outliers）大至呈normal distribution，冇positive/negative skewed，而且可見星期日同二嘅daily return 平均數（boxplot中間條綠色線）緊貼於0%，從第二個角度解釋左為何星期日同二hold btc回報持平。另外，我地從boxplot嘅長度睇到weekend effect確實存在，星期六日嘅daily return 分佈比較集中而weekday 比較分散（dispersed）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然weekend effect存在，但代唔代表星期六日炒btc就冇波幅？所以我就用python 下載左同時段內嘅btc hourly 歷史價格，同樣plot 左boxplot（圖三），但今次係以hourly return 為單位，可見weekend effect 確實存在，weekend intraday嘅回報分佈比較集中，由其係星期六，其四分差（interquartile range）最窄
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     點樣利用weekend effect搵alpha？我地知道星期六嘅hourly回佈分報集中喺某個range，所以我地會推論若我地觀察到現時hourly return 喺range 嘅出面，其回報應該偏向回歸中軸，透過python，我哋可以輕易回測其均值回歸策略用於唔同week of day 嘅結果（圖四）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     結果證明左均值回歸策略喺星期六係比其他weekday好，而且星期一回報最差，可以推論星期一比較適合趨勢跟蹤策略
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以係咪weekend炒btc就係嘥氣？非也，weekend weekday 只係一種market regime shift，調整策略邏輯即可
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，寫好algo就可以真正enjoy the weekend了
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

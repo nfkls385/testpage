@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《交易訊號》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+   </div>
+   <div class="title">
+    《交易訊號》
+   </div>
+   <div class="date">
+    2023-07-01
+   </div>
+   <div class="content">
+    <p>
+     《交易訊號》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺量化交易/程式交易嘅世界裡面，交易訊號就等於煮野食嘅timing，同一樣嘅食材、同一樣嘅煮食用具，落鑊嘅timing 稍為唔同，都會影響食物最終嘅味道，交易訊號（Trading Signal）如是，就算大家有一樣嘅data source，只要用唔同嘅filter建構唔同嘅交易訊號，最終嘅交易回報都可以截然不同
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     何謂一套完整嘅交易策略？答案就係可以executable，有計可依，即該策略可以毫無偏差地告知你何時買入平倉、何時賣出平倉，完全可以將其操作寫成一本守則，就算交比任何人操作結果都會完全一樣
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相反，唔少trader都係依據感覺交易，種種交易心法，不但唔能夠將其完全自動化，亦無計可依，輸了/贏了亦無法明白或學習輸贏嘅原因
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有d較好嘅trader會依靠數據去做交易，例如唔少人會聲稱自己睇公司盈利率，PE PB，宏觀數據cpi gdp，唔係話呢d數據冇用，但點用？cpi升買升定買跌？升幾多先買？買乜標的物？買幾多？種種問題都係決定最後製成品嘅品質，依靠咩數據黎交易只係等於食物營養標籤上嘅成份表，知道左都唔會複製到該食品
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大部分呢個專頁嘅讀者相信都比上述嘅trader好，會識建構自己嘅交易訊號，例如macd, rsi, 黃金交叉等，呢d filter 確實可以比到交易者確切嘅開倉timing，平倉timing，例如rsi&lt;20開long rsi&gt;80 平long開short ，但呢d fliter 嘅數學意義大家真係知道嗎？有幾多個真係睇過rsi嘅公式？rsi 嘅公式係100-（100/（1+x/y))，x係n日升嘅日數，y係n日跌嘅日數，說穿了就係靠數幾日升/跌黎交易，大家覺得可靠嗎？抑或同睇買大細個電腦記錄落注一樣？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁搵到有用嘅data之後，應該點樣將佢轉化為executable 嘅trading signal? 唔同嘅data類型都有唔同嘅轉換方法，我地稱之為filtering，例如一d有趨勢性嘅數據如盈利率，大型指數，另類數據如covid確診人數等，可以用大家都熟悉嘅moving average/ exponential smoothing，而一d有周期性嘅factor 例如油價煤氣價，息率等有seasonal effect嘅factor就可以用wavelet, sine curves, seasonal arima等filter將其decompose成有pattern嘅trading signal，而一d有回歸性嘅factor 例如spread data，就可以用z score，pca等將time series 變得stationary同predictive
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除此之外仲有好多唔同de-noise/ smoothing 嘅filtering tools，大家除左專注搵有alpha嘅data，不妨多留意轉換data成trading signal嘅filter，呢樣野決定左策略嘅成敗
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

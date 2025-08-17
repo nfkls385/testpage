@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《數據高效儲存》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《數據高效儲存》
+   </div>
+   <div class="date">
+    2023-08-20
+   </div>
+   <div class="content">
+    <p>
+     之前嘅文章python script一直用colab黎展示，但鑒於唔少crypto exchange ban左US ip (而colab instance ip喺US) 好多相關內容都展示唔到，而且有讀者都想我由頭寫一個algo trade 嘅framework，由於algo trade system並唔係一條script搞得掂，而係好多條負責唔同功能嘅script / function / oop 拼湊而成，所以之後嘅內容會分別以.ipynb作展示同以.py作
+    </p>
+    <p>
+     核心
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     《數據高效儲存》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     數據高效儲存同組織(data collection &amp; storage)係algo trading system好重要嘅一環，因為呢樣野係直接影響你backtest嘅速度以及最後production嘅數據運算速度，以下落黎我會講解下我用開嘅數據儲存方法
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     其實要建構一個方便有效嘅數據庫只係需要有系統嘅命名方法同充分使用資料夾，例如大家algo trading system必定會有嘅價格數據/ ohlcv數據，首先我地需要考慮我哋存取呢啲數據嘅時候會點query，例如想要2800盈富基金今年3-6月ohlcv data，呢度有3樣query element，分別係資產(2800)，時間(今年3-6月），同數據種類（ohlcv），而喺建構數據庫嘅時候我地就可以用呢3樣野黎分類，例如最出面嘅folder （parent folder）為數據種類，而入面嘅folder (subfolders）為資產名稱，最後每個file 以日期命名
+    </p>
+    <p>
+     如下：
+    </p>
+    <p>
+     ├── ohlcv
+    </p>
+    <p>
+     │ ├── 2800.HK
+    </p>
+    <p>
+     │ │ ├── 2800.HK_202301.csv
+    </p>
+    <p>
+     │ │ └── 2800.HK_202302.csv
+    </p>
+    <p>
+     │ └── 0388.HK
+    </p>
+    <p>
+     │ ├── 0388.HK_202301.csv
+    </p>
+    <p>
+     │ └── 0388.HK_202302.csv
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     呢種建構方式係最快捷最有效，當我地想查閱某個file時只需要將directory path改成不同嘅query element便可，如下
+    </p>
+    <p>
+     “./{data_type}/{asset}/{asset}_{date}.csv”
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而比較大嘅file例如trade data就可能需要用到其他data format，我自己鍾意用.parquet 代替.csv，parquet同樣可以直接用pandas存取，而讀取時間比csv快
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     點解唔用sql/ mongodb另類數據儲存軟件？首先唔計學習呢兩種新語言嘅學習同操作成本，而且mongodb需要額外嘅記憶體同處理能力來運行同管理數據庫伺服器，而且最重要嘅係數據嘅完整性，csv文件中嘅數據直接儲存喺文件中，中間唔存在數據庫系統，意味着數據嘅完整性完全依賴文件本身
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     另外如果想將algo system遷移到其他machine時，mongo/sql 需要額外考慮兼容性嘅問題，除非係經常需要share data比同team嘅人用，或者algo要求速度要好高，如果唔係就用翻最基本有效嘅數據儲存方法係最好
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《過度擬合Overfitting》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《過度擬合Overfitting》
+   </div>
+   <div class="date">
+    2023-01-29
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     利申：今次講嘅topic 比較深，建議先熟讀之前嘅文章
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     選擇策略參數時經常會抱有好多疑問，例如最簡單嘅RSI 策略都有至少三個參數，分別係用過去n 日計算嘅RSI（下稱RSI(n)），當RSI(n) 高於Long threshold (U) 就long ，當RSI(n)低卡Short threshold (L) 就Short，簡單用符號表達此策略訊號為S(RSI(n), U, L) ，以上策略為趨勢跟蹤類別（momentum），即見強買升見弱買跌，若考慮相反訊號(mean reversion)，則要考慮多一個參數Inverse （I~(1,-1))
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當參數數目少嘅時候，比如2至3個，我地可以輕鬆用Python繪畫2D/3D heatmap 黎觀察邊個參數組合有consistent 嘅+EV，而該參數並沒有過度擬合（overfitting），詳細請看之前嘅文章
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而當參數變多嘅時候，利用heatmap 去篩選策略參數就變得不太準確，一黎dimension 變得多，有更多maxima，二黎難以可視化
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次想分享嘅方法係比較通用，適合用以validate大部份策略，判斷該策略嘅robustness，係唔係statistical significant （有顯著性差異），例如我地透過bootstrapping 方法搵到一條用RSI trade TSLA 嘅long-short strategy（e.g. S(RSI(3),60,30)），發現策略backtest點報唔錯，而且equity curve 持續向上，但我地想喺live trading前測試該結果係咪過度擬合/有顯著性，我地可以做以下步驟：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 將TSLA嘅回報次序隨機重組，模擬TSLA嘅所有價格軌跡
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 將步驟1重複&gt;500次，從而得到TSLA 有可能嘅價格分佈
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 將要測試嘅策略backtest落所有摸擬TSLA嘅價格數據，從而得到摸擬策略有可能嘅回報曲線分佈
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 計算回報曲線分佈嘅95% Confidence interval （信賴區間）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我地喺圖中可以得出兩個結論，第一，該RSI策略對TSLA價格並沒有很大的預測能力，第二，由於真實數據嘅回報曲線喺95% CI 之中，所以該策略並唔robust，且不statistical significant，該結果大機會只係隨機得出嘅好結果，簡單講即係「符碌」
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Backtest搵到靚equity curve 高return/ sharpe 只係第一步，真正能放落live trade嘅係萬中無一
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《DCA定All in?》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《DCA定All in?》
+   </div>
+   <div class="date">
+    2022-11-13
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     幣圈大地震，第二大交易所FTX因被揭挪用客戶資金借款旗下投資公司而導致一連串事件，最後直接宣布破產，所謂幣圈一日人間三年，成件事三日內發生，普通人根本反應唔切，「與其每分每炒mon住，不如DCA啦！」
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次唔係想講幣，更加唔係想講FTX，而係想同大家以量化角度討論一下當確定一個好投資標的物時，應該以咩方法進行投資
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Dollar Cost Averaging (下稱DCA) 即定期定額，簡單黎講就好似Mpf咁，每隔固定時間就用固定金額投資標的物，唔少基金廣告都會推廣用呢種方式黎投資，原意透過定期定額投資方式獲得市場上嘅平均成本，若果投資喺高點都唔洗咁傷，因為每當市場價格再下跌時固定金額就能夠買更多shares，藉此降低整體投資成本，概念有少少似martingale 但風險同金額都比較低（圖一 source, Binance Twitter)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     DCA咁神，點解我Mpf買恆指又輸咁多錢？何不一開始以Lump-sum 買入，All in 恆指，反正恆指都跌到十年前價位，或者all in 北美基金，洗鬼DCA
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信DCA值得推崇嘅地方都係佢嘅Risk reduction characteristic，小弟用左頭十隻ETFs做simulation，分別模擬十年前lump-sum買入或者DCA買入，再將佢地回報嘅分佈plot 出黎（圖二）可以見到lump-sum買入嘅return 完全outperform DCA買入，但值得留意嘅係DCA買入嘅deviation但細過lump-sum買入好多，即DCA嘅容錯度比較高，始終將買入金額平均分散，大大降低公司風險/市場風險對portfolio嘅影響
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有d人會話，用十年前黎比，緊係lump-sum outperform 啦，鬼唔知幾年前1000蚊all in Bitcoin咩！有見及此，小弟將所有開始投資嘅時間點都模擬一次，分別熊市同牛市都進行DCA同Lump-sum買入ETFs，結果發現，大部分時間以Lump-sum買嘅final return入都會比DCA買入嘅好，只有好少數時間DCA會較好，例如爆發Covid前嘅一兩個月(2020-01)，可見（圖三）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     結論：DCA係比極度risk-averse嘅投資者嘅冇腦投資方法，有唔少research paper 都指出基金推崇DCA投資方法可能比Lump sum方法仲差，DCA唯一優點只係當你入錯喺市場見頂嘅時間點時，可以輸少d，但同時你亦要放棄其upside potential，而且當DCA總金額接近Lump sum金額時，市場一有大drawdown 都係一樣會仆直，所以除左完全唔想用腦投資嘅師奶們，不妨留意多d市場訊號，寫自己嘅策略，以自己實力避開大跌市
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

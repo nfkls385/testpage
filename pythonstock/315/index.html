@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《數據轉換 data transformation》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《數據轉換 data transformation》
+   </div>
+   <div class="date">
+    2023-10-15
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     呢個系列唔經唔覺寫左五篇，目的係比指引大家點樣由零開始建構一整套自動交易系統(algo trading system)，相信有一套框架後去寫交易系統就能夠更有效同省卻左有啲不必要嘅trials and errors，因為呢套框架都係經過我無數改良而得出嘅製成品
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     翻翻正題，一套交易系統中一定會經常處理到時間序列數據(time series data)，例如最簡單嘅價格數據，經濟指標數據等，我哋要有系統咁分析呢啲時間序列數據嘅時候，就需要一套有系統嘅數據轉換(data transformation)標準，令我哋可以好好了解同分析市場走勢同測試交易策略
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     先唔講一啲內幕數據，公開數據，基本上人人都可以查閱或下載，但點解同一份嘅數據有人可以開發成賺錢嘅交易策略，而有人卻輸錢呢？當中嘅原因就係佢哋將原始數據(raw data)轉化成交易訊號(trading signal)嘅方法唔同，而當中嘅轉化過程第一步就係數據轉換(data transformation)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     金融市場上最常用嘅數據轉換方式就係logarithm transformation，通常係用喺價格上，呢種數據轉換方式可以有效消除數據嘅非線性趨勢(non-linear pattern)，捕捉數據嘅百分比變化，而非絕對變化，分析一d non-linear trending 嘅股票例如TSLA就最佳不過
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左log transformation，仲有differencing/ smoothing/ scaling等數據轉換嘅technique，呢度就唔一日詳述，有興趣可以自己Google或者join Patreon 睇我最常用嘅數據轉換方法同佢嘅 coding
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     例子入面用brownian motion模擬股票價格數據，在利用數據轉換嘅Python模組去轉換其價格數據
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

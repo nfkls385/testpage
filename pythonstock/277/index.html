@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用另類數據開發交易策略：期權》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《用另類數據開發交易策略：期權》
+   </div>
+   <div class="date">
+    2022-05-02
+   </div>
+   <div class="content">
+    <p>
+     《用另類數據開發交易策略：期權》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     炒野唔可以淨係用price data，正如打仗都唔可以淨係帶刀槍，因為當對家變陣升級用箭嘅時候，就會被打得遍體鱗傷；市場都係一樣，每秒都變緊，要時刻開發新策略，而我地面對嘅對手唔係npc，而係真實玩家，當你變陣嘅時候其他人都可以以更快速度變陣黎賺取alpha，而你仲只係揸住price data黎做TA/畫圖嘅時候，就好似喺星球大戰用石器時代嘅兵器，生存到都要拜一拜神
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     傳統金融市場上嘅另類數據（alternative data）好多都要錢，唔似虛擬市場中鏈上數據垂手可得，普通人要喺傳統金融市場上搵到有用且免費且可信嘅數據源係難上加難，除非你本身喺金融機構做trader做quant先可以「免費」access到database
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左之前介紹嘅牛熊數據，港交所其實有一定程度嘅免費數據公開比大家，但data嘅format好蝦普通人，並唔係普通csv/xlsx檔，而係比較難readable 嘅圖象檔同Report file，就算有csv檔提供，入面嘅format都唔係輕鬆比大家儲藏同做分析，冇工具幫手auto處理嘅話，普通人都好難有恆心每日手動操作
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     係時候講下係咩data，相信大部分人都同意散戶多數係玩牛熊多於期權，因為期權玩法種類多，option greeks又複雜，ticker symbol又唔係number，trade落比較唔方便。所以策略嘅hypothesis 就係，跟期權玩家=跟專業投資者；跟牛熊玩家=跟散戶
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     可能有人會話好多機構會用option 做hedging，並唔能夠反映真實情況，但其實大部分機構都會做short side多於long side，一黎有雄厚保證金提高勝率，二黎market exposure 冇咁大
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而港交所公開嘅option call put ratio係計算當日option long call volume/ option long call+long put volume，數值高於1代表市場比較睇好，我地就可以於下日跟隨做long，反之數值低於1就代表市場比較睇淡，我地就可以於下日跟隨做short，用騰訊700做例子，近一年得到一倍以上return
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     優化策略方面，我並唔想增加任何parameter以增加curve fitting嘅風險，畢竟data point只有一年daily，所以instead of 用1做牛熊分界，為求處理某d long bias/ short bias 嘅ticker（即股票長期處於看多&gt;看空嘅情況)，我會用call put ratio嘅mean做分界，ratio大於mean就做long，細於就做short，可大增年回報到140%，sharpe&gt;2.8
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，策略會有佢嘅壽命，呢一年work唔代表下5年會work，所以要不斷開發新策略以應對不停變陣嘅市場
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
