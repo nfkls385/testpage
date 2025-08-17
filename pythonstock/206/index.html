@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《陰陽燭型態究竟有冇助預測後市？》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《陰陽燭型態究竟有冇助預測後市？》
+   </div>
+   <div class="date">
+    2021-03-06
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     射擊之星／倒轉錘頭／吊頸／錘頭......聽就聽得多人講，但大家係咪真係識點用呢？抑或其實反向操作仲賺錢呢？（即bullish pattern後市反而向bearish發展）究竟呢d陰陽燭形態有冇助預測後市呢，下面就教大家點用Python快速為咁多種陰陽燭型態做五至十年回測（backtest）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python 有個好方便嘅package for 炒股一派用，就係Ta-Lib，呢個package入面有曬普遍技術分析嘅formula（RSI, MACD 等）同埋陰陽燭型態辨識（Candlestick pattern recognition）嘅功能（暫時&gt;60種型態），包括曬bearish/ bullish嘅signal，只要apply條formula 落任何有OHLC嘅股票data都可以辨識對應嘅陰陽燭型態
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次分享嘅project係比大家一次過做曬60種型態嘅backtest，再plot埋pnl curve，揀選對應該股票/指數最profitable嘅陰陽燭形態策略（當然揀策略唔可以淨係睇final profit and loss，如果個策略得兩三個data point都冇意思，或者先插5成之後先開始賺都冇用）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大家亦可以更改想backtest嘅股票/指數或者出現signal後hold position嘅日數，（例如出十字星就short，睇5日後表現）當然要小心有d pattern只有long only嘅signal，可能會因為long only bias 而對評估策略表現有所偏頗（例如騰訊0700呢d過去一直升嘅股票好有可能表現最好嘅係long only嘅策略）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當現所有結果都係for reference only，如果要用呢個結果做真實trading strategy 就要考慮更多嘅野（例如transaction cost，sharpe，mdd，仲有隻野有冇得short，tradable asset?等等）不過如果要用黎反駁某d坊間以陰陽燭形態做買入賣出理由嘅說話，呢d數據都綽綽有餘，data speaks louder！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

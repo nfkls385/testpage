@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《自動上港交所下載期權數據part 1》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《自動上港交所下載期權數據part 1》
+   </div>
+   <div class="date">
+    2021-03-20
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     港交所個網站其實每日都會有好多免費data公開，而唔少歷年data都要向港交所買，幾百至幾千不等，除非你好確定自己策略會用到咩data做研究/run backtest啦，如果唔係嘅話要買曬所有data做研究都幾貴
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     散戶黎講又想研究咁可以點做？我自己都有每日用python 自動scrape低港交所公佈唔同類型嘅data，因為唔知幾時策略會需要用到（類如牛熊cbbc data，期貨data等等），一直keep住儲database，慢慢就可以知道自己需要用到咩data
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次分享嘅係下載香港嘅指數期權data，包括唔同行使價（strike）call put嘅未平倉合約（oi），成交量，引伸波幅（iv）等等......更可以一口氣下載所有指數合約(underlying index)同合約月份(contract month)嘅數據，可讓大家多角度以期權分析市場參與者對後市嘅睇法
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     HKEX 恆指期權
+    </p>
+    <p>
+     <a href="https://www.hkex.com.hk/Market-Data/Futures-and-Options-Prices/Equity-Index/Hang-Seng-Index-Futures-and-Options?sc_lang=zh-HK" rel="nofollow noopener" target="_blank">
+      https://www.hkex.com.hk/Market-Data/Futures-and-Options-Prices/Equity-Index/Hang-Seng-Index-Futures-and-Options?sc_lang=zh-HK
+     </a>
+     #&amp;product=HSI
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Python code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

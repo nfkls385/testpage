@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《Backtest交易策略後要點決定策略好壞？》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《Backtest交易策略後要點決定策略好壞？》
+   </div>
+   <div class="date">
+    2021-03-14
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     上篇文章分享左點用Python package  — Ta-Lib 黎backtest 某資產適合用邊種陰陽燭形態黎預測之後價格走勢，亦發現到某d陰陽燭形態根本不能夠預測價格走勢，甚至反向操作反而更加賺錢
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而上次分享嘅python script入面測試左～60種陰陽燭形態apply落恆生指數，發現出現大陽燭/大陰燭（long line candle)之後（例如大陽燭：即開市價非常接近全日最低，而收市價非常接近全日最高），競價時段以收市價買入/賣出hsi，hold 3日後以收市價平倉，策略成績都唔差，可以初步留意呢個trading logic可唔可以apply on 其他資產上
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，上面做嘅所有野都只係搵策略嘅第一步甚至係rough draft，因為一條交易策略work唔work，好定差，其實仲需要好多步驟去assess，而今次就用翻大陽陰燭嘅交易策略做例子，apply on 所有恒生指數成份股（有得shortsell），再觀察下策略apply on邊隻成份股成績最好，然後specific 為佢做一大堆trading strategy assessment，例如：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. Annualised sharpe ratio/ rolling sharpe ratio (SR)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     年化夏普比率：在承受1%的風險下，能得到多少報酬？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Rolling Sharpe: 測試策略robustness ，睇吓策略係咪穩定
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. Maximum Drawdown (mdd) / Drawdown (dd)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     MDD: 指帳戶淨值從最高點的滑落程度，用作風險承受能力指標
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. Benchmark Comparisons
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     港股策略用恆指做比較，若恆指不差於策略表現，代表策略只能capture market return
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. Long Short bias testing
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     歷史上long exposure to market 係有優勢，因為股市不斷上升，若策略long position 多於short position，雖然係升市中bet the market ，但一回調策略就或失效
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今篇嘅python script會比較長，因為牽涉嘅知識比較多，而前半部份好多都喺以前嘅post入面分享過
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Python Code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
