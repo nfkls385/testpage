@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   談Crypto LP
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+    <img src="m7.jpg"/>
+    <img src="m8.jpg"/>
+    <img src="m9.jpg"/>
+   </div>
+   <div class="title">
+    談Crypto LP
+   </div>
+   <div class="date">
+    2022-03-04
+   </div>
+   <div class="content">
+    <p>
+     上一次專欄提到Crypto玩法有極多，我只是隨意舉了8種，有一種沒提及到玩法有不少朋友都有參與，但我並未入坑，就是LP。LP 意思是Liquidity provider，即參與Liquidity mining，中文為流動性挖礦。簡單意思就是借出兩隻幣，然後收取利息。背後原理在於，不少去中心化交易所都在提供流動性給投資者，不過交易所們未必有足夠流動性，而且也不想take太多inventory risk，因而讓大家也能擔當流通性提供者的角色，換來就是不錯yield。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （詳細介紹不多講，因為這些都可以google，我最不喜歡在Patreon寫那些google都有的東西。如果google就能看到，那為什麼要subscribe我？）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     LP的yield動輒數十%，有些更有過百、過200%的yield。看似很吸引，但問題在於，假設你提供A和B兩隻幣，如果其中一隻幣大升或大跌，你便會錄得虧損。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     LP的Pay-off curve如下：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （圖一 &amp; 圖二）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     是否想起某種工具？對，就是期權的Short strangle或Short straddle，如果價格不變，就能贏錢；如果價格大變，就會輸錢。因此，LP是在賭A和B兩幣價格相近。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那怎麼知道兩幣價格會維持關係呢？首先，兩幣相關性要高。以下就拿來三隻我正在Staking的幣：ATOM、OSMO、JUNO。由於他們Staking利率高，但LP利率也高，因此引起我好奇，到底是Staking還是LP更划算。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     三者Scattered plot如下：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （圖三、圖四、圖五）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     會發現三者相關性都高，理論上是LP的好材料。不過，correlation高，只證明兩者同向，不代表價格表現相近。要看價格表現，還是要看Spread。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     三者Spread如下：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （圖六）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     會發現，3條spread並不如預期中走range，因為它們各自的Beta並非1。因此，做LP有機會會虧損。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     可以更量化一點嗎？當然可以，觀察Spread的volatility便可以知道其穩定性。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     （圖七）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     三者Spread的volatility如圖七顯示，HV就是它的波動性。由於LP是在賭幣價停滯，HV愈低愈好。LP yield就似期權的IV，IV與HV差距愈大愈好。IV-HV亦稱為Volatility risk premium，即冒險而獲得的收益。多舉一個例子，IV即保險公司的保費，HV即發生事故的機會。以上數據就計算了VRP，即LP yield減HV。結果發現JUNO-OSMO的LP最划算，而JUNO-ATOM的LP最不值做。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     看到這裡，希望大家不要再盲目看到高回報便「狗衝」，坊間很多KOL只懂看yield，yield高便拍片推介給散戶，可惜卻從不懂從量化角度驗證。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，分享一則趣事給大家，大約一年前，我出post介紹幣圈不同玩法，例如大幣Staking可以達致20%年回報。可是，卻換來一個有趣的comment：「死廢老，食屎啦，Bunny lp都300%一年啦，仲叫人staking咁L outdate」。一星期後，Bunny跌了99%…
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
