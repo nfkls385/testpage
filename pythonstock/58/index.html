@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《介紹一個Python快速backtest策略嘅方法 part 1》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《介紹一個Python快速backtest策略嘅方法 part 1》
+   </div>
+   <div class="date">
+    2020-08-15
+   </div>
+   <div class="content">
+    <p>
+     《介紹一個Python快速backtest策略嘅方法 part 1》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺講個python backtest方法同code之前，有需要講講我個人backtest策略嘅流程
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Backtest 一條Strategy 個人認為主要要經過以下呢幾個steps
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. Set up一個null hypothesis (H0)：例如我認為a,b,c 三個factors 能夠預測Stock Price （例如我覺得每次裂口高開果日就會升，相反就跌）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2.Formulate 個hypothesis： set up個trading logic, 例如幾時Buy幾時Sell幾時Hold（裂口高開幾多先買呢？）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3.Test the hypothesis: 通常用historical data去test, 再利用quantitative reasons 去prove / disapprove 個strategy (例如sharpe ratio - 識stat嘅人會知道sharpe ratio個formula (E[R]-Rf)/std 其實係t-statistics嘅化身，足夠大嘅sharpe ratio可以證明條strategy 係statistically significant *當然#of trades要夠大, 姐係mainly by skill but not luck)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 如果個hypothesis 係正確，就可以做optimisation: Optimisation通常都會有Objective同Constraint, 例如想minimise 個MDD同時要constraint number of trade&gt;100, Python就會幫你試曬parameter 嘅所有possible values 再return 一條符合你input條件嘅一set parameters
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     5. 第4步之後如果你得到一條好靚嘅strategy，唔好咁開心住，因為呢個時候條strat都有機會overfitted/over-optimised/curve-fitting, 姐係個strategy only work well with historical data, 所以就要做forward testing, 姐係用模擬倉實際行個strategy say 一個月
+    </p>
+    <p>
+     但除左呢種曬時間嘅方法之外，forward test前都可以試下將parameter 做n+1嘅動作再睇下條equity curve 有冇大變化：
+    </p>
+    <p>
+     例如我optimise左條24 天sma cross 55天sma 嘅strategy, 賺200%，但我將24改做25天，55改做56天之後，條strategy 變成-100%，咁好明顯條strategy 就over optimised
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻👇🏻Python code (Patreon Only)
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然仲有好多野要考慮到，例如唔同asset class 嘅strategy performance 會唔同，commission/slippages 嘅計算，data source quality, backtest 用幾耐嘅historical data等等
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     下個post就會share Python嘅快速backtest方法同code比大家～stay tuned
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

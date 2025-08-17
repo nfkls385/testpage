@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《介紹一個Python快速backtest策略嘅方法part 2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《介紹一個Python快速backtest策略嘅方法part 2》
+   </div>
+   <div class="date">
+    2020-08-22
+   </div>
+   <div class="content">
+    <p>
+     ❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️
+    </p>
+    <p>
+     未睇part 1 嘅可以喺最底條link度睇翻～
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     黎緊會介紹嘅Python backtest package 係出名夠快同簡單嘅，除左容易上手之外，最好嘅地方就係佢有Interactive visualisations，可以比用家好似plotly 咁喺張圖上面戶動，例如zoom大某個做trade嘅位分析點解個trade會贏/輸
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     承接翻part 1 講backtest strategy 嘅步驟，呢個package 可以一條龍fulfill曬所有steps
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 首先set 好你地嘅null hypothesis，即係你認為咩trading logic 可以賺到錢，例如呢度我用2800.HK盈富基金做例子，我認為保力加通道（BBand)可以幫我set up 一條賺錢strategy，咁我就喺Python define BBand 嘅定義 （n日平均+/- 2個n日standard deviations)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 第二步就set trading rules（i.e. 我地點運用我哋define左嘅trading logic 去做trade呢？）例如我想試下trend following 嘅策略，即股價升穿通道頂就買入，相反股價跌穿通道底就賣出，parameter 方面我用50天平均線。咁我就喺Python set 一個class 去話比電腦知我想backtest嘅rule
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 然後當然係用2800.HK嘅歷史股價去做回測(backtest)，result就會plot 到下面嘅圖，張圖有4個部分，最頂係equity curve走勢，第二係每個trade 嘅pnl，第三係股價陰陽燭，最底係Volume
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 睇Trading Statistics：
+    </p>
+    <p>
+     a) 2014到呢家return 有60% vs buy and hold 得6%，好似都還好啦
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     b) Maximum Drawdown -22%，即係你個equity curve 由最高位最多要承受22%嘅loss，匯豐都唔止啦
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     c) Win Rate 72% 但#Trades得65次所以冇意思
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     d) Sharpe Ratio 0.14 成績明顯麻麻但總算賺錢
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     5. Assume 我認為上面嘅statistics 係reasonable，就可以用個package 做optimisation，去試曬所有parameter 嘅數值，除左n日平均之外，我仲放埋n個standard derivation去做optimisation（Objective: 最大化Sharpe Ratio) ，結果最好果set parameter 就係55日平均&amp;2個standard derivations ，sharpe 都係0.14，都唔係好好多
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     6. 當我好滿意呢個結果，好過匯豐就得嘅話，呢個package都可以幫我拼好啱啱optimisation 嘅所有combination 做個heatmap，睇下唔同parameters 嘅結果，咁下圖可見其實所有set都係sharpe ratio within -0.2 到 +0.2 冇咩氣息，而且見到heatmap 顏色好散亂，而唔係漸變色，即係某set parameters 就算賺到錢都好可能係by luck 而唔係個trading logic work
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     p.s. 其實仲有好多功能可以用，例如view trade record, set trailing stop loss, stop gain 等等，呢d可以自己發掘下～
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我自己就比較少用呢個package做backtest，特別係一啲用non price data 嘅strategy
+    </p>
+    <p>
+     Python Link 👇🏻 (Patreon Only)
+    </p>
+    <p>
+    </p>
+    <p>
+     🔓《介紹一個Python快速backtest策略嘅方法part 1》
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     #Python #量化交易
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
