@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   一年一度幣圈大戶的聚會（二）之Market maker篇
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+    <img src="m7.jpg"/>
+   </div>
+   <div class="title">
+    一年一度幣圈大戶的聚會（二）之Market maker篇
+   </div>
+   <div class="date">
+    2023-09-30
+   </div>
+   <div class="content">
+    <p>
+     上回提到在幣圈大戶的世界中，可以用策略去區分，並主要可以分為Market maker、Market neutral、CTA等。當然，如果談及一級市場的buy side，不只這三種，不過一級市場中的那些，主要都是Venture Capital或Private Equity Fund，入場門檻較高。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     與散戶不同的是，buy side大戶大多喜愛低風險、極穩定的策略，market making、market neutral就是穩定且低風險策略；散戶則10個有9個都是在做方向性策略，即行內所稱的CTA類策略。有這個分別也很合理，大戶資金多，我看到的，大多平均aum為50-100m usd。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有著100m usd size的，一年賺個20-30%也有20-30m usd，對機構來說已足夠；相反100m usd如果拿去賭方向，一旦回撤個20%，很難去作預算，很難讓股東有信心繼續投資。因為機構投資者成本不少，要交租、要租server、要出人工，因此revenue最好是能提供穩定的cash flow，那market making及market neutral等相對高win rate、高sharpe的策略就很適合。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相反，散戶假設只有100k usd（80萬hkd左右），一年即使賺個30%，也只有30k usd，即每個月多2萬hkd，並不是什麼大錢。因此，大戶愛做低風險策略，而散戶愛做高風險策略合理得很。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     奈何很多散戶連market making、market neutral、CTA都不懂分辨，卻想找一些每天或每周都能賺錢的策略，簡直是緣木求魚。要每天都賺，幾乎只有market making / arb類策略能做到；要每周都賺，幾乎只有market neutral才做到；做CTA的，每月都能賺的，已經是頂級了。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     談完屬性後，可以再深入些探討這3大類策略的做法（以往只有在課程中被問才提及，Patreon讀者有福了）。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Market making（MM）亦被稱為liquidity provider，即市場莊家或流通性提供者，目標在於同時擺出買賣盤於市場中，提供報價，讓其他市場參與者可以及時買賣。他們目標大多是增加速度，收窄買賣差價，以搶佔市場量的份額。那他們賺什麼錢？最主要當然是買賣差價（bid ask spread）了。擺出$102的ask，以及$100的bid，最完美當然是散戶A直接在$102買，同時散戶B直接在$100賣，那market maker便能瞬間無風險賺取$2。若每天有50次這樣的交易，那market maker便能賺取$100。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，有時候，散戶A及B不會同時買賣，那market maker便要找地方對沖。例如散戶A在$102買了後，MM便要看看有沒有其他交易所有一個$101的ask，如果有，就可以到交易所B對沖，從中也能賺取$1的差價。因為MM剛以$102賣貨給散戶，但在交易所B只以$101買貨對沖。因此，MM除了做MM策略外，或多或少也會做arb類的策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     MM好賺嗎？能否賺錢，非常取決於執行速度及algo寫得好與否。在這個winner takes most的世界，如果執行速度慢，algo寫得差，回報就不足以cover燈油火蠟，很快只會被淘汰。因此，極難以一個回報數字去說MM有多賺錢，不過年化10-30%也是個合理範圍；sharpe則沒有太大意義，因為MM/arb不賭方向，因此幾乎無回撤，sharpe可以高達10-30。相反，各MM比拼的，是市佔率，例如成交額佔市場成交5/10%以上，就是tier 1的MM了。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     打個比喻，惠康及百佳就是日用品MM，兩者出售的產品一定能賺，惠康倒不會$10入貨然後$5賣出吧。因此，不涉及回報穩定性問題，但重點是，市佔率有多少；若果市民瘋狂搶貨，誰會有更高營業額。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而幣圈交易所就是最清楚MM市佔率的角色，哪一個MM量提升了，就代表其更利害，更能賺錢；哪一個MM量縮，就代表其技術落後，或不太賺錢。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     接下來，會討論Market neutral類策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     下回續。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

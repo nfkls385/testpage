@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   期權搬倉鎖倉拆倉救倉有用嗎？
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    期權搬倉鎖倉拆倉救倉有用嗎？
+   </div>
+   <div class="date">
+    2023-06-30
+   </div>
+   <div class="content">
+    <p>
+     坊間教期權的人常會提及這些期權招式 — 搬倉、鎖倉、拆倉、救倉等等，到底這些招式是什麼，有用嗎？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     搬倉分行使價（strikes）的搬近搬遠，亦分為期限（tenor/terms）的搬近搬遠。一般期權大師會教你，如果short put了，市場大跌至近行使價後，就可以搬到較低行使價；若價格及後反彈，就可以贏了。或者到期了，市場靠近至你short的行使價，就可以搬到下月合約；若價格及後反彈，就一定會贏了。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     鎖倉某程度上即對沖，例如手上有long call，價格上升超過行使價後，期權大師會教你加short call去鎖倉，把利潤鎖住；就算價格跌回行使價以下，利潤也不會消失。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     拆倉即把期權組合拆除，例如做了debit put spread後，若市場下跌至long put行使價以下，便可以把long put平倉，留下short put；若市場反彈，short put也就可以賺錢，吃兩家茶禮。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     救倉某程度上即加倉，例如做了short strangle後，市場爆邊，short strangle虧錢，這時期權大師會教你，因為IV升高，因此可以再外加short straddle；只要IV下跌一些，後來的short staddle的利潤可以補償short strangle的損失云云。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     //
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     期權大師的教學就是如上，有用嗎？我可以說，我前後做過幾家機構投資者公司，例如prop trading、hedge fund、market maker等等，都從未聽過這4個字。重點是，有否留意上述的教學都有很大假設？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     例如搬倉的case要贏，一定要市場反彈，只要不反彈，你只會繼續虧損下去，期權大師完全沒有考慮波幅的auto-correlation，亦沒有考慮市場的momentum algo。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     又例如鎖倉的case要贏，也一定要加short call後市場下跌才有用；否則，若市場繼續上升，便完全不能獲利。期權大師也沒有考慮大市上升後，vol curve skewness會變平，後加short call根本不划算。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     再例如拆倉case要贏，一定要在平倉long put後，市場要反彈，否則若市場大跌，short put隨時可以把long put的利潤通通輸掉。這邊期權大師完全沒有考慮流動性的問題。例如long put入價後，莊家往往減少開價，或者把bid ask spread拉闊；若覺得價格會反彈，有可能long futures會比平掉沒流動性的long put好。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後救倉的case要贏，一定要在加入short straddle後，市場價格不動，再加IV下跌，否則繼續爆邊就會玩完。期權大師完全不懂greeks，沒看gamma risk、vega risk會否超出risk limit，同時也ignore爆IV的高度自我相關性。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     //
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那做期權時，該怎麼決定該做哪些動作呢？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     舊專欄有約略提過，絕對值得翻看。但簡單說，就是一定要懂greeks，要知道delta、gamma、vega、theta是什麼，然後外加這些greeks的判斷訊號，例如想short delta，但對gamma及vega沒看法的人大可以只short futures，而不用付10萬給期權大師學些錯誤東西。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     希望能幫到大家。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有什麼topic想在未來patreon看到大可以告訴我，有求必應！
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

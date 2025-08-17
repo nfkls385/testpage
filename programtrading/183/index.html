@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   一年一度幣圈大戶的聚會（三）之Market neutral 篇
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    一年一度幣圈大戶的聚會（三）之Market neutral 篇
+   </div>
+   <div class="date">
+    2023-09-30
+   </div>
+   <div class="content">
+    <p>
+     上回主要覆蓋Market maker的策略及回報，下一個探討的策略大類為Market neutral策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Market neutral中文為市場中性，雖然Market making及arb也是市場中性，但MM及arb是盡快把倉位對沖掉，盡快達到市場中性；但market neutral則是同時買A及賣B去保持市場中性的狀態，並從中獲利。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     原則上，由於沒MM及arb般追求立即對沖，而是主動持有不同產品以維持delta neutral / beta neutral，所以風險比MM及arb高。但當然，金融市場很公平，風險高，回報也自然更高。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     幣圈中進行market neutral的機構極多，最多機構進行的，一定要數funding rate arb及basis spread arb。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Funding rate arb是幣圈獨有的，因為只有永續合約才有funding rate，傳統市場是沒有用。Funding rate用於平衡買賣力量，如果買方力量過強，交易所便會向買方收取利息，並獎勵賣方，vice versa。因此，如果某contract出現正funding，炒家大可出手沽空該合約，以賺取funding rate，同時買入現貨進行對沖，vice versa。這個策略中，由於已有現貨作對沖，因此沒有價格風險，所以回報較穩定。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     此外，basis spread arb亦有人稱為future spot arb，或cash and carry strategy。顧名思義，future spot arb即期貨與現貨套利。與funding rate一樣，若市場有較多買方力量，期貨會高水；相反，若市場較悲觀，期貨會低水。在2021年5月19日的大跌市中，BTC現貨在30000美元左右，而BTC期貨在23000美元。若果見狀立刻long期貨，並short現貨，瞬間就能賺取7000美元，即5萬港元。這策略幾乎沒風險，唯二風險：一來提防交易所例閉，二來提防basis spread繼續放大，導致虧損或斬倉。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了上述兩種極常見的arb外，也有long short token策略。Pair trade大家也認識，即同時買入A並沽空B，只要A跑贏B，就能獲利。股市大戶會進行多組的pair trade，俗稱long short equity。股市有，幣圈當然也有。不少機構投資者會買入10-20隻看好的幣，並同時沽空10-20隻看淡的幣，重點是要維持dollar neutral或beta neutral。只要long的那10-20隻跑贏short的那10-20隻token，就能成功。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然long及short的版塊最好一樣，才能確保相關性高，同時價格會收斂，出現reversion的狀態。例如我上年4月在Twitter介紹的long LUNA及short ANC。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信大家也很想知道Market neutral的年回報。Market neutral策略年化約為20-50%，sharpe ratio超過3是等閒事。但由於Market neutral的回報較小，sharpe ratio較高也是合理的。由於sharpe高，即策略穩定，因而也成為幣圈大戶喜愛的策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     不要小看這20-50%的回報，一旦牛市像2021年般來臨，market neutral將達到50-100%回報！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Market neutral整體回報與MM差不多，都是愈多散戶亂按，就會愈賺錢。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     想知大家最關心的CTA類策略？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     下回分解。
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
