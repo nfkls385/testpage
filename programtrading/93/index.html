@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   跟著大戶走的結果
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+   </div>
+   <div class="title">
+    跟著大戶走的結果
+   </div>
+   <div class="date">
+    2021-09-14
+   </div>
+   <div class="content">
+    <p>
+     繼8月中推介SOL、FTT後，早前在Facebook也指SRM、RAY將會追落後，無錯，若SOL搞得起，整個相關生態將會受惠，因為每一隻token都有相應負責的部分，例如SOL是條高效能公鏈，而SRM則是Defi exchange，RAY則是automated market maker（AMM）以負責match order。SOL打進市值前十排行榜，絕對有機會引起世人注意，變相受惠相關的token。當然，這亦是SBF的目的 — 先把其中一員打上前十，而慢慢帶挈其他「兄弟」。留意，SOL TVL雖然爆升，但TVL仍然只是10% of ETH的TVL；而且RAY、SRM市值排行仍然深埋100位以後，可想而知，若搞得起，爆發力不容小覷。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     收到幾百個inbox，都是在問「下一隻會爆升係咩？」，我1200%絕不鼓勵聽tips炒賣，而是應該Do your own research（DYOR），自己進行Backtest，才能穩定賺錢。我寫專欄也不會寫一世，反而我鼓勵你儘快學懂Quant trading，不用再聽tips。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     關於SOL、FTT、SRM、RAY，方法已分享，要不就用TVL建構策略（上一篇Patreon），要不就是DCA它們。前者適合懂Backtest的朋友，後者適合想buy and hold的朋友。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     DCA是Dollar cost averaging，例如你想買入10萬，分20天，那就每天定時買入5千元的那隻coin。當然總金額以及時間長度可以按需要調節。千萬不要用槓桿，因為每當莊家留意到合約量太高就會殺倉。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     標題的「跟著大戶走」就是跟著我？當然不是，相比之下筆者只是小散，這裡的大戶是Microstrategy的Michael Saylor。Microstrategy是全球持有最多比特幣的企業，共持有超過10萬粒，而其CEO Michael則是比特幣大好友，每次大跌也會出來發Tweet派定心丸。留意，他不是9 up，而是每次大跌他也會真金白銀出手掃貨。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     很多人都會指他是瘋子，但你可以看看他在Youtube及Twitter上的訪問，會發現他不是只「得把口」的KOL，而是對比特幣有深度研究的Crypto專家。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     令我這Quant trader感興趣的，當然是可以量化的部分 — 就是他購入比特幣的時機及數量。他不定期買入不定量的比特幣，時間及數字看似random，很多人亦覺得是random，那我們就來Backtest一下，看看Michael是否「random的瘋子」。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     拿來MSTR  16次買入比特幣的data，會發現真的很不定時，亦不定量。我的構思是，他買入多少，我們就按比例買入，但我不想從頭到尾都一直持有，而是設一個moving average on他最近的買入數量。因為我認為他不是瘋子的其中一個evidence是，他在4月到5月的高位很少加倉，到了6月底才重新加注。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Backtest參數只有一個，以減低overfitting的機會，就是moving average的日數。優化的結果發現，46天moving average on 他買入數量的結果最好，即他最近46天平均買入多少，我們就持有多少。別緊張，我們不是買20000粒，我在Backtest時乘萬分之一以調整至合理size，即46 days ma顯示20000粒時，我們就跟2粒。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     策略Sharpe Ratio為2.6，同期buy and hold sharpe為2.0。以max position為2粒bitcoin計算，不消一年，總回報為80000美元，約60萬港元。而且，結果顯示若以此策略執行，你的資產曲線早在7月底已經創新高，即使比特幣仍未突破65000美元，證明Michael Saylor不是「瘋子」，而可能是一位Crypto quant trader。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     別人笑我太瘋癲，我笑他人看不穿。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     圖一：MSTR買入時機及買入量
+    </p>
+    <p>
+     圖二：我們的策略的持倉時序
+    </p>
+    <p>
+     圖三：策略資產曲線
+    </p>
+    <p>
+     圖四：MSTR的買入table
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

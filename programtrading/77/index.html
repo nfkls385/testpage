@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   比特幣期貨結算異象
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    比特幣期貨結算異象
+   </div>
+   <div class="date">
+    2021-04-07
+   </div>
+   <div class="content">
+    <p>
+     比特幣除了現貨外，也有期貨。算是比較官方的期貨，就要數CME的Bitcoin futures，不過份額較大，1張就已是5粒，即約200萬hkd貨值。要到5月3日，CME才會再推出微型BTC期貨。所以，現時大多數人也未必會玩CME那張，而是玩其他交易所的期貨，例如Binance futures。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Binance bitcoin futures每3個月結算一次，因此現時同時會有Perpetual futures、6月以及9月期貨。3月25日為比特幣期貨結算日，當天Binance期貨市場出現了有趣的事情。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你可能想，我又不會炒期貨，告訴我幹嗎？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     要知道，若果你能找到並解釋這些異象背後的Rationale，你便能在下一次發生前部署並且Replicate profit，而且，這種策略大多是屬於Structural alpha，利潤大多穩定，甚至乎Risk free / low risk。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     給大家一點背景資料：
+    </p>
+    <p>
+     3月25當天1600 hkt，3月份期貨會到期；9月份期貨會於1600 hkt後接上。而3月份期貨的結算價則是1500-1600 hkt的time weighted average。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     簡單一點，為了增加易讀性，我把可以賺錢的異象分為3個：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 於結算那1小時中，比特幣普遍上升
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     根據上述背景資料，1500-1600 hkt為3月（即月）期貨結算時間，我Backtest發現，無論是去年9月，抑或去年12月，即月期貨結算時，下月期貨於那1小時都會上漲；即在3月25日的case中，2021年6月份期貨會升。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     背後Rationale不難，應為大多數炒家都會在那結算的1小時中把3月期貨Roll over到6月期貨去。而現時Speculator大多看漲，因此主動賣3月買6月，因而推高6月（下月）期貨。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，的而且確6月期貨於那1小時穩定並持續上漲了2%左右。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 即月期貨最後1分鐘會爆升
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後1分鐘即1559-1600那1min bar。可以看看圖1，3月（即月）期貨最後一刻由53000美元以下爆上最高56781美元，即大約7.6%，非常瘋狂。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     背後原因應為大多Market maker於最後時間同時縮盤，因為MM大多不想冒險，特別是Short side，因此MM turn off market making algo時，市場變薄，再加上有些炒家的algo仍然turn on，所以才會出現不斷掃上/推上的異象。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     若想「執死雞」的朋友，可以考慮下一次結算時在低位擺買盤，並在高位擺出賣盤。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 新合約一出現時極奇波動
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     9月份合約於1600當刻出現，可以留意圖2。當刻最高點為67452美元，最低為49856美元，即高低差超過35%，比第2點的7.6%更誇張。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     背後原因與第2點相近，不過第2點是MM退場，而新合約波動則是因為MM未進場，因此市場深度不足，同時有大量Speculator take away liquidity。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     若想「執死雞」的朋友，可以考慮下一次結算時在新合約低位擺買盤，並在高位擺出賣盤。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，若細心觀察，異象不只3個，不過其他異象較複雜，涉及Calendar spread及Futures pricing，在這先賣個關子，有機會再在未來Patreon提及。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     後話：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     近半年發現很多獨家內容被抄襲，包括課堂內容、文章、專欄、FB Post等等，我免費分享為的是想推廣Quant trade、Program trade，可惜卻被轉化成自私者的利潤，實在非常可悲，因此，打算Patreon會於下月開始收費
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

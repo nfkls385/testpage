@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   一個躲開美股大跌的量化指標
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    一個躲開美股大跌的量化指標
+   </div>
+   <div class="date">
+    2021-07-21
+   </div>
+   <div class="content">
+    <p>
+     之前曾經分享過不少避開美股大跌的方法，的確成功避開2020年3月的大跌，當時有反應的指標包括Fed rate、Credit spread、Yield curve、VIX term structure等等，從而讓我完全避過大股災，甚至可以反手沽空。由於美股現時處於高位，因此打算再多給大家一個，用來炒賣也好，用來旁身也OK，或者當作學習更佳。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有追開Post的朋友應該都知我常常看Spread，各式各樣的Spread，例如恒指與恒生科技指數的Spread、油價與油股的Spread、期貨與現貨的Spread等等，因為Spread透露大量資訊同時，你亦可以trade spread，博spread收窄，玩法極多，千奇百種。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     詳細一點講，例如恒指跑贏科指時，我們會知道市場資金開始由新經濟轉到舊經濟股去；同時，若你不認同此看法，大可以沽恒指買科指，博Spread的回歸（Reversion）。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     美股的Spread有超級超級多，最易想起的當然是指數間的Spread，如標普500/納指、道指/納指，也有人會看標普500/羅素2000的spread。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     策略已經出現了！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     標普500與羅素2000不時會出現背馳的情況… 看到這裡是否發現我甚少會提及「背馳」這個字。因為看圖表找背馳絕對是有害而無益。背馳會令你墮進圖表陷阱，學術一點叫作Confirmation Bias（確認偏誤）。若你有試過看圖表炒背馳，你就會知道背馳會令你常常中伏。因為背馳可以是無限背馳，令你不斷捱價。例如RSI與股價背馳的情況中，兩者可以不斷背著走。這個Topic很大，有排寫，有機會在Patreon再詳寫。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那可以怎樣運用背馳而又不墮進陷阱？背馳量化後，就是Spread！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     把SPX除羅素2000指數（RTY Index），就會得出price spread。最近SPX上升但RTY沒有上升，分子升，分母不變，因此Price Spread會升。那出現後該Long還是Short？不同市場習慣不同，有些市場的大型股是領頭羊，有些卻是Fake，美股情況是後者。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     SPX升，RTY不升，即市場Risk off，市寬差，資金只集中到大股身上，所以啟示是Bearish的。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     每次出現這情況就不持有美股，10年Backtest顯示，能避過不少大跌，包括2011、2015、2016、2018、2020以及最近一個調整。雖然回報可能比Buy and hold少，但Sharpe則由0.75 boost up至1.2。Sharpe高即冒相同風險下可享有更高回報，因此你可以輕微槓桿，在有限風險下，以達致比Buy and hold更亮麗的回報！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     SPX、RTY的數據基本上上網「一街都係」，再配合Excel就可以Backtest。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     希望大家多Backtest，發掘更多alpha，其實賺錢不難，可以非常簡單。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     ps. 計算spread，再量化地找出入手時機，就會避免出現背馳再背馳而捱價的現象，因為歷史數據告訴你spread到達甚麼水平就會回歸 / 就會出現啟示
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
