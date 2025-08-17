@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Quant trader的daily routine
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    Quant trader的daily routine
+   </div>
+   <div class="date">
+    2023-04-23
+   </div>
+   <div class="content">
+    <p>
+     每次做個人專訪時，記者都會問道「可否分享一下你的daily routine呢？」，我對於這問題是很樂意分享的，畢竟KOL中很少正職真是個quant trader或者portfolio manager。因此，大眾對quant trader的daily routine都很陌生。不要說trader的routine了，大眾連buy side是甚麼也不是很懂。想了解甚麼是buy side、甚麼是prop trading的，請翻看舊專欄文章。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這次就來細說一下quant trader的日程。要留意，我寫quant trader而非trader是有原因的。非quant的trader大多是人手交易，即朝9晚5坐在電腦面前click click click，非常厭悶。因此，我在入行時已決定踏上全自動/系統化交易的道路上，而非人手click click click。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先，要知quant trader/portfolio manager的責任就是要在二級市場中賺錢。要賺錢，就必須有策略。因此，作為一個quant trader，第一步就是要先想策略。想策略可以有n個方法，可以是參考市場上有的策略，可以是參考academic paper，可以是透過觀察市場，亦可以天馬行空，總之能賺錢就ok。我最常用來brainstorm策略的時間是搭車、上廁所、洗澡時。這些碎片時間最好就是用來動腦筋，用來思考策略。小數怕長計，久而久之，這些碎片時間加起來可以讓我想到極多策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     有策略後，便是拿取數據的時間。食神滔滔也有說，「打邊爐最緊要係個爐」，做量化最重要的是數據。例如我的策略是，濕度高於80%便看淡市場，那我要拿取的數據便是相對濕度。網上有相對濕度數據的地方肯定就是天文台。先看有否歷史數據拿來（backfill），若沒有，則慢慢儲存，待數據量足夠後，才再來用。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     數據拿取足夠後，下一步便是clean data、整理data，確保資訊沒有錯漏，並把其轉化為方便讀取及分析的模樣。這步很重要，錯了便GG。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     數據整理好後，便是Backtesting，即把策略放到歷史數據中，驗證一下策略是否能賺錢。例如在過去5年歷史上，如果當天早上9時相對濕度為80%以上，便在09:15沽出恒指期貨，背後假設是，天氣潮濕，交易員心情不好，傾向沽貨，vice versa。然後在收市時間16:30平倉。Backtest過程要不用excel，就是用Python。Backtest結果不外乎幾個指標，年化回報率、Sharpe ratio、Calmar ratio、MDD等等。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Backtest後大多需要優化（Optimization），以找出最佳參數。優化完後，理論上，結果好的話，就可以進行Paper trade了！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Paper trade即紙交易/模擬交易，以真實數據真實時間作測試，純粹沒使用真錢。一段日子過去後，若成果不錯，便可以小注碼真錢測試。小注碼實盤測試成功後，便可以慢慢加大注碼交易了！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     因此，以上述步驟來看，我要做的就是想策略、拿數據、backtest、optimization、paper trade、pilot trade、production。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這些工作全都是同步的，例如A策略在production，B策略在pilot trade、C策略在paper trade、D策略在backtest、E策略在拿取數據，我每天就是維繫A策略的運作；同時把B、C、D、E策略盡快推去下一步，直至production。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     維護策略需要做甚麼？確保倉位正確、注碼正確、execution algo正常、交易速度正常、server沒斷線。倉位及注碼需要你對數字敏感，出問題時能及時發現。你可能會問，系統方面的東西不是會有programmer/developer support嗎？大多數機構會有，但也有部分機構沒有。筆者上一份工作便沒有，需要一個人完成所有步驟 — 從想策略到backtesting到搞系統。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了把策略從Backtesting推向production外，也有些策略需要從production回收，重回backtesting及optimization的階段，例如一些實盤表現明顯比backtest差的策略。此外，implementation shortfall也需要被留意，即backtest與production的不同，包括買賣差價、滑點、網絡延時等因素的影響。若果shortfall大，那就要重新backtest，或者優化execution algo。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以上便是一個正常quant trader朝9晚5要做的事，要不mon盤，就是做策略，或者跟developer溝通。當然，crypto quant trader就沒了9/5的限制，畢竟crypto是24/7。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     要做一個成功trader，倒不能一面倒輸出，如果只是不斷想策略，終有一日會用光idea。因此，必須找方法保持學習曲線（learning curve）。學習曲線要向上，要不透過閱讀，就是透過聊天。閱讀甚麼？所有關於交易的東西，例如網站、財經專欄、學術文獻、財經雜誌、討論區等等。跟誰聊天？同事、同行、朋友、banker、account manager、headhunter等等。因此，我每天會抽時間閱讀不同東西，以保持行業知識及資訊；抽時間跟不同人討論、交流。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我為了優化每天能用的時間，特別留意自己每天的時間分布。比較費時又沒有直接productivity的為回覆whatsapp及telegram message，平均每天有1-2小時。事實上，我的回覆已盡量有效率，每天仍有過百個message要回覆；這絕對是我在時間管理上需要努力優化的部分。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了回訊息外，不時也會有zoom call、google meet會議要attend，有些是data vendor，有些是exchange，有些是investor’s meeting，總之就是各種各樣的會議。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了自己的事情，當時也要管理social media。每一、兩天都會逼自己在Facebook、Twitter出出post，與大家分享不同的quant trade資訊，平均每日需時15-30分鐘。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了social media外，對外engagement還有專欄，如經濟一周、am730、Patreon等等。高峰時期我共有6-7個專欄，及後真的感到太忙，因而都推掉，主力只寫經一及Patreon。過去7年一共寫了200萬字左右，未閱畢的，建議花點時間看看，絕對有益。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了寫文字外，還有節目、專訪等mass media engagement。事實上，我已盡力推掉節目，尤其是問number的節目，完全零教育意義，我在2018年做過一次後便沒有再接；非問number的，我盡量把次數減少。主持大多數想我每星期做一次，我都把其推到一季做一次。少數極有質素的節目，我就有求必應，不會「托手踭」。因此，我會做甚麼節目，取決於那節目是否有助投資者教育。無助教育的，多少薪酬也不接；富有教育意義的，就算有薪酬，我也拒收照做。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了交易及對外engagement，作為一個投資者，我也是會花時間去找好的投資機遇。例如早一星期的web3 event中，我在不同地方問得最多的問題是，有否好的團隊/項目可以投資。聊了數十個團隊，要不只做自營交易不接錢，就是表現未算「標青」。找好的項目還是很費時間的，畢竟市場有reverse selection，非常好的大多會隱藏自己；不太賺錢的，則到處跑錢。因此，若大家有認識到好的quant trading 團隊/基金（Sharpe 3+），歡迎pm！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，熱愛教學的我，除了出post、寫專欄、做節目、做訪問、教班外，也有負責mentoring，即幫助大學生，或者剛畢業的年青人踏上quant trade之路。看到年輕人成功的那種滿足感真的沒有任何東西能取締。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以上便是我大部分時間的日程了，希望有助大家更了解quant trader的生活！
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

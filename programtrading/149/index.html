@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   賭波賭馬
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    賭波賭馬
+   </div>
+   <div class="date">
+    2022-12-09
+   </div>
+   <div class="content">
+    <p>
+     有朋友叫我寫寫這個topic。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除了在二級市場投資炒賣外，我也曾經花了不少時間研究賭馬和賭波。因為炒股與賭博都非常近似，都是數學遊戲，都是燒腦的活動。如果要再數下去，我初中也有花了一整個暑假研究六合彩。當然，用常識判斷，六合彩是全random，開出1、2、3、4、5、6的機會與開出17、19、35、39、44、46是一樣的。純粹當時真的太窮太壓迫，所以才決心研究六合彩。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     那時其中一個研究方法為backtest六合彩專欄。不知大家有否留意過六合彩報，當你走到街角的報紙攤去，會發現有幾份報紙整份都是圍繞下期六合彩而編寫的，內裡有大量專欄預測攪珠結果。年紀小小的我期期買光報攤全部六合彩報，並回家替所有專欄backtest。兩三個月過去，結果當然是失敗，沒有一個專欄穩贏，全部專欄都是亂估；如果成功，那我現在便不是在分享quant trade了。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     研究完六合彩後，我便專心炒股。到大學畢業時已成功在股市賺了第一個100萬，便身痕想重新研究賭博，但非六合彩，而是波馬。老實講，賭波理論上較難，因為賠率是精算師跟據球隊往績數據開出來的。要賭贏波，就要算得比精算師準，這接近沒可能，因為莊擁有的數據一定比我們多，除非你在賭博機構做，否則不會有edge。再者，即使你有的資訊與莊家一樣，預測與莊差不多準確，也是會輸，因為食水太深。在馬會賭波縱觀不同投注方式的食水為5-20%不等，即未見官先打30大打，每投注$1000，expected return就是負$50-200。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     OK，所以我重新研究賭博時，就是研究賭馬。馬的賠率異常浮動，開盤到開閘的賠率可以是天壤之別。與賭波不同的是，馬的賠率是賭仔決定的，多人買，賠率便會變熱；少人買，賠率便冷，因此，你的對手方由精算師變成賭仔，整個勝率看起來大些。當年朋友的一句說話刺激了我，「你去馬會出面睇下啲廢老，你唔係輸俾佢下話？」
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     於是，我便開始研究。賭馬的策略主要兩種，一是factor model，二是資金流。前者與股市一樣，看因子然後買入。股市因子可以是PE、PB、PS、股息率、市值等等，而賭馬的因子便是馬匹、檔位、負磅、騎師、練馬師、往績等等。因子模型非常實在，新聞上有兩個賭馬非常成功的人，一個是中了3T也不拿的Bill Benter，另一個是賺了1億的中大教授顧嗚高，傳說他們都是用factor model，他們的故事很值得一看。不過我則沒有走這條路，因為同樣地，需要收集大量數據，而我則沒有這方面的edge，所以決定走第二條路 — 看資金流。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     不知大家有否聽過「落飛黨」，意即在最後一刻才大量下注，然後大大影響馬匹賠率的人。那些人大多都有內幕消息，或者是賭馬機構，為了不讓其他賭仔跟買，只好在最後一刻下注。賭仔都對落飛黨很不滿，因為大幅影響賠率，冷馬通通都變熱馬，which is 賠率出現「啡格」、「綠格」的時候。由於落飛黨命中率異常高，於是我決定跟落飛黨下注，就好像在股市跟大戶資金流一樣。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     你可能會想，落飛黨在最後一刻才下注，那我可以怎樣跟注呢？當然是用我的優勢 — program trade。我的第一階段模型，是以program webscrape馬會網站賠率。一旦留意到有哪隻馬匹賠率急跌某%，便跟注，下注當然是用program啦。有沒有Backtest？當然有。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我拿來了2-3個馬季賠率數據，並backtest幾個參數，包括最後多少秒下注、賠率下跌多少、投注多少隻馬、投注方式（W/P/Q/QP）。Backtest結果顯示，sharpe ratio超過2！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     奈何，執行後發現，implementation shortfall挺大，有時候馬會網站會block我；有時候賠率更新太慢，下注時已開閘。賽後發現，成功下注的都剛好是輸掉的bet，而不成功下注的都是會贏的bet，這個selection非常有趣。解決前者的方法只能webscrape多個戶口，以減少per account webscrapping的密度；解決後者的方法就是加速賠率讀取。告訴大家，網站賠率更新時間異常濟後，大約比實時慢30秒左右；更快更新賠率的地方為電視。但電視也非實時，比實時慢5秒左右。最realtime的，是收音機。奈何收音機主持不會同一刻口報所有馬匹賠率，所以只能退而求其次，用電視機。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     可以怎樣拿取電視機賠率呢？這就是我第二階段模型。我到了深水埗鴨記，買了個analogy to digital的訊號轉換器，試圖把電視機天線接收的訊號接到電腦去。（留意，網上串流電視是最慢，比實時慢90秒，所以用不了網上串流電視，否則整個操作很簡單，完全用不上訊號轉換器。）然後用machine learning image recognize去辨認電視屏幕中的賠率數字。由於電視屏幕的數字位置是固定的，而且字體字型也是固定，理應簡單。可惜當年太忙，操作上又不時遇到困難，同時又忙於管理基金，於是最終我這個賭博計劃無了期暫緩了。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Anyway，賭馬前前後後用了兩、三年時間，有3個take home messages：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 明顯有莊的遊戲，很難贏，因為遊戲是對家開出來的，他有一切控制權。除了block ip，馬會亦不時更改網站api
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 圈外人沒有多大edge，除非你做馬會，或者賭博集團，否則普通人的edge一定會輸給極深的食水
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 不少賭馬集團一個馬季盈利才7位數，因為賽馬彩池比金融市場小得多，賭馬的scalability很有限，大注碼些已經會大幅推動賠率。以同一分努力花在金融市場中，比花在賭馬上來得更efficient、更scalable。（本來以為賭博未有api，亦不像股市有bloomberg，應該很inefficient，可惜整個市場size也因此而比股市小很多）
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
