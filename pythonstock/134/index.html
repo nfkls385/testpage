@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《不同指數的相關系數/熱力圖》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《不同指數的相關系數/熱力圖》
+   </div>
+   <div class="date">
+    2020-12-03
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     熱力圖/熱圖 （heatmap）係一個以顏色變化/深淺黎顯示數據嘅矩陣（matrix），能夠輕易簡潔展示出數據之間的關系和重點
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     基本heatmap製作會用上其中一個package: matplotlib / seaborn，因為seaborn 唔係內置要另外install，所以以上例子用了matplotlib
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺股票世界之中，heatmap 可以用於尋找不同資產之間的關係，不同資產的強弱等等
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以上例子就係想搵下唔同指數之間嘅關係（i.e. 人仔升道指升？油升道指升？）
+    </p>
+    <p>
+     而我地要可示化（visualise）嘅數據就係相關系數（correlation coefficient），相信有讀過statistics都會知道相關系數嘅應用，係一個由-1至1嘅數值，越負代表兩者movement likely相反，越正代表兩者movement likely 相同，要留意correlation coefficient 只顯示其相關性，而不是因果關係
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上面條link展示左唔同指數之間嘅關系，下一次會分享heatmap喺股票上嘅第二種用途
+    </p>
+    <p>
+     👇🏻👇🏻Python Code Patrons Only👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
