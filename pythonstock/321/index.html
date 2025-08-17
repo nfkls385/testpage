@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《一個經常被忽視的交易風險》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpeg"/>
+    <img src="m4.jpeg"/>
+    <img src="m5.jpeg"/>
+    <img src="m6.jpeg"/>
+   </div>
+   <div class="title">
+    《一個經常被忽視的交易風險》
+   </div>
+   <div class="date">
+    2024-03-07
+   </div>
+   <div class="content">
+    <p>
+     最近幣市爆升，市場十分之熾熱，群組不時見到散友「貼倉」，而本人algo都表現唔錯
+    </p>
+    <p>
+     但另一邊箱，亦有唔少人爆倉，捱唔住近來幣市極大嘅波幅，倉位被liquidate，而之後嘅反彈已經唔關佢事，一邊輸錢一邊fomo，可以講係雙重打擊
+    </p>
+    <p>
+     呢件事令我反思，當然liquidate嘅原因之一係倉位槓桿過大，但仲有咩野係令佢輸錢嘅原因呢？
+    </p>
+    <p>
+     我回想起佢一向嘅交易取態係偏向以小博大，經常參與高風險高回報嘅交易，賭altcoin 爆升，以固定百分比止蝕，佢地回報曲線係有好多條loss trade然後有一條贏好多嘅profit trade，聽落其實唔差，有set固定止蝕止賺，有交易邏輯，就似venture capital 一樣去投一大堆有機會升幾倍嘅project
+    </p>
+    <p>
+     大家可以想像為轉輪盤，喺冇賭場抽水/中零重轉嘅情況下，賭大/細嘅贏嘅機率為1/2，利潤為1倍，而賭固定數字嘅機率為1/36，利潤為35倍，可見兩者嘅expected return都一樣，理論上長遠黎講其中一人只賭大細同另外一人只賭固定數字嘅return 會一樣；可惜，結果並唔係咁，賭固定數字嘅人好快就破產離場而只賭大細嘅人就可以繼續
+    </p>
+    <p>
+     呢度想講嘅就係survival rate，雖然大家嘅expected return都一樣，但基於本金並唔係無限嘅關係，賭profit ratio越大嘅人就越容易先破產，survival rate 比細profit ratio嘅人細好多
+    </p>
+    <p>
+     用python 做左個simulation，可以輕易見到喺回報風險比一樣嘅情況下，風險大回報大嘅strategy 較難survive，而同survive rate嘅關係為exponential decay (見圖)
+    </p>
+    <p>
+     所以交易策略性質都十分重要，喺一個平衡嘅portfolio裡面需要有唔同性質嘅策略增加survival rate
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

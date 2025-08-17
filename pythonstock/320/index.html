@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《分享一個曾經年化過百嘅交易策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m4.jpeg"/>
+   </div>
+   <div class="title">
+    《分享一個曾經年化過百嘅交易策略》
+   </div>
+   <div class="date">
+    2024-02-21
+   </div>
+   <div class="content">
+    <p>
+     喺crypto 嘅交易領域上，年化收益率過百係十分之普遍，因為benchmark，即buy and hold bitcoin嘅回報率可以以倍計，交易策略若果回測結果低於bitcoin都不值考慮
+    </p>
+    <p>
+     但若然係講緊年化收益率過百嘅市場中性策略，就完全唔同了，機構投資者/fund house最鍾意嘅策略就係市場中性策略，大戶都唔似大家想像咁，將市場舞高弄低，佢地多數係risk averse，唔鍾意賭方向，所以佢地大多會投資arbitrage strategy
+    </p>
+    <p>
+     曾經喺2020-2021年，資費套利（funding arbitrage strategy）可以讓唔少人賺過百年化收益率，而且係八位數嘅return，但隨着crypto進入熊市寒冬同埋開始多人套利，資費套利嘅回報開始降至10-30%，但最近牛市重臨，呢個strategy或者可以翻生，就算唔得大家都可以有個知字，知道所謂大戶嘅操作
+    </p>
+    <p>
+     最基本嘅資費套利最主要有兩種，spot/perpetual同perpetual/perpetual，最基本嘅spot/perp fund arb就係透過買入spot賣出概同標的物嘅perp去賺取資金費率（funding rate），而前提係perpetual contract嘅資金費率係正數，而牛市中大部分perp嘅資金費率都係正數，甚至年化可過百，所以呢個strategy 雖然係市場中性，但實際回報都會被不同market regime所影響
+    </p>
+    <p>
+     而spot/perp fund arb都有其他版本，若果想capture 負資金費率，就需要先long perp後short sell spot，但此舉需要margin short spot，即借貨沽空現貨，一來交易所未必有貨借比你沽，二黎要額外支付沽空利率，最後可能扭盈為虧；而另一版本為cross exchange spot/perp fund arb，此舉透過多過一間交易所進行spot arb套利，藉此最大化資費套利收益，但cross exchange 嘅風險就係fund allocation risk，資金分散喺唔同嘅交易所，能作為margin嘅資金就會少左，若果perp果邊嘅position 太波動就有機會被斬倉
+    </p>
+    <p>
+     而perp/perp fund arb 就係通過short 資金費率較高嘅perp再喺另一間交易所long資金費率較低嘅perp賺取其資金費率差，perp/perp fund arb嘅好處就係可以輕易leverage，而且可進行套利嘅pairs亦比spot多，market depth 亦比spot厚，capital size可以更大，但風險亦同上，perp嘅倉位有機會被大波幅liquidate
+    </p>
+    <p>
+     除左以上嘅考慮因素，funding rate arbitrage 要有系統咁運行都需要consider唔同參數，例如預期持倉時間，資費套利唔同於期現套利（carry trade）會exactly 比你知預期持倉時間，例如想賺取BTC季期同現貨嘅premium，我地會預期持倉至季期結算日平倉即可，但funding rate arbitrage 就難以預計，我地要自行設計好decision making model去決定倉位去留，以確保盈利，通過最簡單嘅方法就係當套利有趨向減少嘅時候就要平倉以保利潤
+    </p>
+    <p>
+     另外，entry exit timing都好重要，因為策略需要牽涉兩種product，雖同屬一個標的物，但唔同exchange/ 期貨現貨嘅價格都會有絲毫差異，可以係因為唔同交易所特性/market maker/甚至open interest嘅不同而產生大大小小嘅price premium，而通常某幣大升嘅時候，prep嘅price premium 可以好大，若果其後價格回歸平均值，最後嘅funding rate利潤可能會全部輸掉甚至倒輸，所以我地嘅decision making model要盡可能避免price premium spike，而且確保我地開倉嘅時機係接近價格嘅平均值，避免最後為了賺funding而輸溢價，賠了夫人又折兵
+    </p>
+    <p>
+     最後就係交易所嘅tail risk，通常一d細交易所嘅arbitrage 空間會較大，但其倒閉風險亦較大，例如Huobi (HTX)，若果存錢入去做套利就要承受交易所被hack/ manipulate嘅風險，除左CEX，DEX亦有機會被hack
+    </p>
+    <p>
+     最後分享一下FTX仲在生時候嘅套利方法，就係利用兩間exchange唔同funding interval作套利，FTX計算funding rate嘅interval為每1小時，而其他exchange例如Binance為每八小時，我地可透過兩間exchange long short perp去賺取FTX嘅funding rate，然後喺8小時deadline前平倉，從而最大化funding payment，可惜FTX嘅美好日子已結束，呢家餘下每1小時計一次funding嘅exchange只有幾間，kraken 同dydx，但論pair數同market depth一定唔夠當時嘅FTX大
+    </p>
+    <p>
+     最後Patreon會分享點樣一鍵獲取唔同交易所所有交易對嘅funding rate，而且即時計算funding rate arbitrage opportunity，相信coding寫得淺白易明
+    </p>
+   </div>
+   <div class="attachment">
+    <div>
+     <span>
+      <a href="fundarb.ipynb">
+       <svg height="20" viewbox="0,0,24,24" width="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="m9.01 17.952 3.964-3.963 3.963-3.964c.618-.618.927-1.237.927-1.856s-.309-1.238-.927-1.856c-.618-.618-1.237-.927-1.856-.927-.62 0-1.238.309-1.856.927L10.63 8.907l-2.594 2.595c-.318.317-.557.476-.796.476s-.477-.159-.795-.476c-.318-.318-.477-.557-.477-.796s.16-.478.477-.795l2.594-2.595 2.595-2.594C12.782 3.574 13.93 3 15.08 3s2.299.574 3.447 1.722C19.676 5.87 20.25 7.02 20.25 8.169c0 1.15-.574 2.3-1.722 3.447l-3.963 3.963-3.964 3.964C9.63 20.514 8.657 21 7.684 21c-.972 0-1.945-.486-2.916-1.457-.972-.972-1.458-1.944-1.458-2.917 0-.973.486-1.946 1.458-2.917L6.9 11.576l2.134-2.134c.794-.795 1.59-1.192 2.386-1.192s1.592.397 2.387 1.192c.794.795 1.192 1.59 1.192 2.387 0 .795-.398 1.591-1.192 2.386l-.765.765-.764.764c-.318.318-.557.477-.796.477s-.478-.16-.795-.477c-.318-.318-.477-.557-.477-.796 0-.238.159-.477.477-.795l.764-.764.765-.765c.265-.265.397-.53.397-.796 0-.265-.132-.53-.397-.795s-.53-.397-.796-.397c-.265 0-.53.132-.795.397l-2.134 2.133L6.36 15.3c-.442.442-.663.884-.663 1.326 0 .442.221.884.663 1.326.441.441.883.662 1.325.662.443 0 .885-.22 1.326-.662">
+        </path>
+       </svg>
+       fundarb.ipynb
+      </a>
+     </span>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

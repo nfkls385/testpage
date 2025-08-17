@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《回測交易策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《回測交易策略》
+   </div>
+   <div class="date">
+    2023-11-12
+   </div>
+   <div class="content">
+    <p>
+     《回測交易策略》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     交易策略回測（strategy backtesting）喺交易系統中差唔多係最重要嘅一環，一個寫得好嘅交易策略回測框架，可以直接影響到production 同execution 嘅部分，最完美嘅框架係backtesting 入面signal generation果part可以直接用卡execution 中，以確保回測同execution 嘅操作一致，同埋可以做到有快速test and run，唔洗由頭寫一次
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     至於backtest嘅框架就因策略性質而定，最基本就係交易頻率，mid frequency 嘅策略對orderbook/slippage要求唔高，基本agg trade/ ohlcv data已足夠，但high frequency d 嘅策略例如market making就要用到book嘅depth，回測框架亦不同，另外交易策略本身都會影響回測框架，例如arbitrage/ multi-asset/ cross exchange 嘅策略都好可能要有唔一樣嘅回測框架，但佢地嘅核心係大致一樣的，就係價格數據，交易訊號因子（features/ factors）同埋策略參數（parameters）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     攞最基本嘅移動平均線策略做例，價格數據就係標的物（underlying）嘅收市價（close price)，交易訊號因子就係（收市價嘅移動平均值，而策略參數就係移動平均值嘅移動日數，亦可以加上止賺/蝕參數，只要交易策略回測系統可以應付到以上嘅組合，基本上大部分散戶CTA strategy 都可以backtest到
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     至於回測系統一定要快，因為要應付以上組合，唔同參數，唔同因子同標的物嘅策略組合可以上百萬個，若果交易timeframe 為分鐘級別，回測所需運行時間就十分之長，所以我習慣將所有backtest 都vectorized（唔知咩係vectorized programming 可以google 下）代替single element 嘅for loop，省略大部分運作時間
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

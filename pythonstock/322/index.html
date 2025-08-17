@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《淨值曲線交易》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《淨值曲線交易》
+   </div>
+   <div class="date">
+    2024-05-06
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     淨值曲線交易就是所謂的equity curve trading，意思是隨著淨值曲線equity curve的變化來決定交易策略的開/關，這個交易知識是較設計單一策略更高層面的，基本上可應用於所有交易策略之上
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖說可以應用於所有交易策略上，但equity curve trading 會否對交易策略的回報有正面影響才是我們想探討的問題
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Equity curve trading 是一把雙面刃，基本是透過犧牲潛在回報來獲取策略的穩定性
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     優點：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 風險管理：當交易策略面臨失效/大drawdown的時候，我們可以決定開/關策略以保住本金/利潤，最簡單的指標為從資產淨值最高到最低超過某個固定百分比（i.e. drawdown &gt; 30%) 便停止策略，把策略關掉，在適當時機重新開啟
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 回測最佳化：把本來的交易策略加上equity curve trading的決策可以用程式回測，而我們可以透過回測計算出最佳化的equity curve trading 參數，令策略穩定性更高
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 了解交易策略特性：不是所有交易策略加上equity curve trading都會有正面效果的，若果我們能清楚交易策略的特性，何時賺錢何時蝕錢，那麼我們只要在策略蝕錢前把策略關掉便可以，舉個例，若策略是利用market sentiment 做趨勢跟蹤策略，那麼策略曲線很有可能會在短時期爆發然後一直緩慢下降再爆發，而增加一個「連續n次虧損後便停策略」的trading rule便能有效提升策略穩定性
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     短點：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 放棄潛在回報：止蝕是風險管理的方法但同時是負ev 的行為，當策略drawdown時止蝕，有可能會出現「左一巴右一巴」的情況，因為策略能夠維持一斷時間沒有破mdd一定有它的原因（overfit的不算），而策略回報越離開平均值理論上會回歸平均值，所以排除風險管理是應該加倉的
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. Overfitting：增加trading rule即是增加交易策略的參數，例如以資產淨值曲線的移動平均線來決定策略開關，便將本來策略增加一個交易參數(平均線的rolling window)，一些更複雜的trading rule更大大增加overfitting 的風險，而且策略開關次數不能太多亦不能太少，太多便會完全改變了本來策略的交易邏輯，而太少便沒有sample size，不能知道其trading rule 是否在統計上significant
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     總括黎講，equity curve trading 係交易策略中一定要了解的一項，因為我們做自動化交易的，要連將策略開/關這一項決策都自動化，這才不會讓個人情緒放入交易系統中，我見過有曾經有trader 雖然有一套自動交易系統，但因個人情緒私自決定關掉交易系統，在策略資產曲線最低位關掉，完全避過之後的回升，這是manual trade 不是algo trade
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     另外，要完整運用equity curve trading去增加策略表現，要先徹底了解其交易策略的邏輯，特性，策略究竟是以均值回歸，還是趨勢跟蹤去賺錢？只要能夠找到其regime shift便能輕鬆提高策略穩定性
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

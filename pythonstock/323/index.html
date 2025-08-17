@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《何謂一條好的量化交易策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《何謂一條好的量化交易策略》
+   </div>
+   <div class="date">
+    2024-05-11
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     交易策略有好多種，而每種交易策略都截然不同，如何判斷策略是好策略？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先定義一條交易策略要有的元素：買入賣出條件（可量化的），買入賣出價格，止賺蝕，如果連這些基本元素都未能說出來，那只是在賭錢，不能說是在執行交易策略
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     就算符合以上所有元素，亦未能說就是一條好的交易策略，以下將會說明一下一條好的交易策略應該要有什麼標準？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 能夠回測的：做量化的人經常說策略要回測，那是必然的，一條不經回測的交易策略就等於沒有做好功課然後free solo （即無繩攀爬），就算係 Alex honnold 當年free solo 爬el capitan 前都有做足功課，在有繩有安全裝備下爬同一條route幾百次才真實free solo，交易策略如是，el capitan 即是market，安全裝備即是backtest，回測就是在戴上安全裝備的情況下爬山，若果連有安全裝備下都失敗，那遑論無繩攀爬？若alex honnold 當年在有安全裝備下也未能完攀整座el capitan，我相信他也不會夠膽free solo它
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 策略邏輯清晰：這個對比回測更重要，因為我們交易是為了賺錢，而錢從何來？若果你不能回答，那錢就從你銀包來，一套交易策略回測賺到錢，不代表中間有因果關係（correlation =\= causation) ，例如回測到港股陰天買跌會賺錢，不代表當中有因果關係，就算有關，其關係是直接或間接都會影響策略的壽命，相反，一些邏輯十分明確的策略未必要回測也能賺錢，例如幾年前虛擬貨幣尚未盛行前，所謂「搬磚套利」亦能發達
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 能評估的：即能量化交易策略的表現，例如sharpe, calmar ratio, mdd等，讓我們可以做portfolio 層面的決策，因為能計算這些量化指標，我們才能計算到應該放多少資金在這個策略上，亦能決定策略是否失效，以及其去留
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 能預測的，一條好的交易策略，它的回報曲線應該是能被預測的，這也與第二點「策略邏輯清晰」不謀而合，一套策略邏輯清晰的交易策略，其回報曲線應該是有pattern的，例如一套靠跟蹤大波幅趨勢的交易策略，可以預計到它在大波幅時會賺錢，細波幅時蝕錢，而不應像martingale 策略般難以預測，隨時大單邊市令策略歸零
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以上四點便是我認為一套好的交易策略要有的元素
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
