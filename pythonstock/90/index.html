@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《如何用Python自動取得股票新聞》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《如何用Python自動取得股票新聞》
+   </div>
+   <div class="date">
+    2020-10-02
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     股票嘅新聞往往對股價有一定影響，雖然新聞較股價反應滯後，但新聞多少往往都能夠反映隻股票嘅熱度，係咪熱門股票等，亦都可以分析隻股票普遍係咪被睇好
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     散戶都多數睇etnet/aastock/富途嘅股票新聞，所以呢次教學都係用翻etnet做例子，自動去攞某股票嘅新聞內容
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然實戰上有冇用就睇大家點運用，有人會統計某股票新聞多少判斷該股票係咪市場熱門，從而篩選出熱門股票，利害d嘅可以做sentiment analysis，即係用Machine learning 方式判斷該新聞為正/反面嘅新聞，再統計一段時間嘅新聞，從而計算出該股票嘅分數（普遍睇好/唔好）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Webscraping make requests 基本上有兩種:
+    </p>
+    <p>
+     GET: simply fetching a webpage
+    </p>
+    <p>
+     POST: sending information to the server e.g. submit a form
+    </p>
+    <p>
+     而今次etnet 嘅例子係要填一張form先攞到股票新聞data，所以係用POST requests
+    </p>
+    <p>
+     Python code (Patrons Only)👇🏻
+    </p>
+    <p>
+    </p>
+    <p>
+     🔓《4個Python免費自動下載港股歷史數據方法》
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     🔓《介紹一個Python快速backtest策略嘅方法part 2》
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     🔒《如何用Python 攞即時創新高股票list》Patrons Only
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     🔒《如何用Python Plot陰陽燭》
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     🔒《用Python從HKEX取得當日/夜期貨股票分鐘data》
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

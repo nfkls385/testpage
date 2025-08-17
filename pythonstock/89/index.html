@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用Python從HKEX取得當日/夜期貨股票分鐘data》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《用Python從HKEX取得當日/夜期貨股票分鐘data》
+   </div>
+   <div class="date">
+    2020-09-24
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次分享嘅web crawling技巧比較advance，因為當中牽涉到破解對方網站反爬蟲(anti-scraping)工具，如果唔明白嘅可以靠trials and errors
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     反爬蟲手法有好多種，並唔係種種都能破解，例如Google 出嘅「請選擇所有含有紅綠燈的圖」就十分難破解，若果你破解到嘅話就可以去Google 做😂
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而HKEX嘅反爬蟲手法唔太難，係用了cookies同token去阻止web scraper 用非正常途徑進入網站，免得佢哋Server不勝負荷。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而token同cookies會不時改變，而且係藏於主頁html code 入面嘅不明顯地方，要花時間喺主頁html code 入面search 段token嘅位置
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而今次分享嘅分鐘data其實係HKEX用黎plot分鐘圖嘅data source黎，因為web developer喺寫網站嘅時候唔會咁蠢每隔一分鐘就改個網站，所以通常都會從第二個server/api 去feed data比個main website去更新，而只要我地搵到個server/api嘅link然後直接攞佢嘅data就可以（詳細請看link)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻👇🏻👇🏻(Patrons Only)
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

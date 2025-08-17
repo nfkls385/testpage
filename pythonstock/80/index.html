@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《4個Python免費自動下載港股歷史數據方法》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《4個Python免費自動下載港股歷史數據方法》
+   </div>
+   <div class="date">
+    2020-08-29
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     作為一個量化交易嘅散戶，當然要用盡身邊所有免費嘅Data Source去分析買咩股，預測股市表現。但係每次好有衝勁想Test下自己嘅策略work唔work都要上網㩒download 股票歷史data，自不然就會放棄。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺講自己scrape之前其實Python 有好多open source 嘅package 比大家
+    </p>
+    <p>
+     automatically+periodically+massively咁去做data scraping / web crawling，最後整合成自己嘅stock database。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. yfinance
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     係一個自動scrape Yahoo Finance Data 嘅package，自從Yahoo Finance 個Api 幾年前唔再work之後，好多舊有依賴佢嘅program 都唔再work，而yfinance 呢個package 就可以幫我地攞到每隻stock 嘅歷史數據，派息記錄等等，而最重要係yfinance 嘅Stock data除左有最基本嘅OHLCV 之外仲有Adjusted Close幫我地修正返派息拆股等對股價有影響嘅Action
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. easyquotation
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     係一個獲取新浪/騰訊財經嘅免費港股數據，亦有A股資訊。呢個package 用法都簡單，而且下戴速度快
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. Futu Open Api
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     富途api 可以透過Python 連去FutuOpenD 再連去富途嘅server 攞股票歷史數據，但免費版每月只能夠攞300次股票Data Request，而且美股數據更加要比錢，所以如果想一文不花，又只想攞Daily data嘅話， Futu Api唔係好選擇
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 其他需要register/有每日限制嘅api
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     a) AlphaVantage
+    </p>
+    <p>
+     - 需要register api key/ request html and read json as dataframe
+    </p>
+    <p>
+     - 限制data只能攞200rows
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     b) STOOQ
+    </p>
+    <p>
+     - 波蘭某programmer 寫嘅網站，api已作廢，只能用selenium 下載股票歷史數據，但data嘅資產種類非常多
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     《總結》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上面嘅package 幫到你download massive 嘅stock data，但如果想efficient d 咁update 曬所有港股嘅data做分析，最好每日只係append 最新果日嘅OHLCV data 而唔需要全部data download 一次，慳返好多時間！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code Link👇🏻(Patreon Only)
+    </p>
+    <p>
+    </p>
+    <p>
+     🔓《介紹一個Python快速backtest策略嘅方法part 2》
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     🔓《介紹一個Python快速backtest策略嘅方法part 1》
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

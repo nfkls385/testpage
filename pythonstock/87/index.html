@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《如何用Python 攞即時創新高股票list》🔒Patrons Only
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《如何用Python 攞即時創新高股票list》🔒Patrons Only
+   </div>
+   <div class="date">
+    2020-09-05
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     做即市/day close 嘅股票突破策略好多時都需要用到52週新高股票list，以前唔識Python 嘅時候，要每日自己用app save低d股票number，十分麻煩，呢家分享Python code, 唔洗5秒就可以download 成個list落黎
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     創新高股票list好多股票報價網站都會有，e.g. etnet/ AASTOCKS, 而我個example 就用AASTOCKS 做例
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然colab入面都有教大家步驟，但呢度都用文字直述一下：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 用python send requests 去aastocks server (by link)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. aastocks response html code
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 用beautifulsoup 簡化html code (soup)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     4. 喺html code入面用control f 搵翻相對應想scrape 嘅data 位置
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     5. 用beautifulsoup function “find/find_all”extract 對應data
+    </p>
+    <p>
+     e.g.
+    </p>
+    <p>
+     &lt;soup.find&gt;: return 第一個 html code start with “table”嘅dataline&lt;/soup.find&gt;
+    </p>
+    <p>
+     &lt;soup.find_all&gt;: return 所有html code start with “tr” 而且class =“abc”嘅dataline&lt;/soup.find_all&gt;
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     6.將每項data塞返入DataFrame 入面save as csv
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     7. 完成
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     呢個例子雖然有用但對於新手而言需要一d時間理解，如果想睇簡單d嘅example可以睇翻：
+    </p>
+    <p>
+     Python code👇🏻 (Patrons Only)
+    </p>
+    <p>
+    </p>
+    <p>
+     🔒《如何用Python自動擷取即時恆指期貨數據》
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

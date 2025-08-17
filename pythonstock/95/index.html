@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用Python backtest 配對交易策略part1》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《用Python backtest 配對交易策略part1》
+   </div>
+   <div class="date">
+    2020-10-10
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次分享嘅python code有d複雜，需要分開唔同part介紹
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     配對交易(Pair Trade)係一種統計套利，即係對兩個有相關性走勢嘅商品做一pair嘅trades（long A short B)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     通常有相關性嘅商品都係同行業，倒如中海油/中石化，建行/工行等等。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Pair Trade背後嘅交易邏輯係均值回歸(mean reversion)，即交易者相信如果兩樣商品價格走勢係同步的話，若果其中一方升太多/跌太多的話，兩者價格長遠一定會回歸同步
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     簡單講，我地發現A同B嘅價格走勢係相似/同步，平均A升$1，B升$2，而如果某一日A升$1而B升$3的話，代表一係A升太少（所以long A)，一係B升太多（所以short B)，所以就出現左1 pair trade出黎（long A short B)
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而我地第一步要搵出相關性高嘅股票pair，而最好方法就係用統計學上嘅correlation 計算，（1代表完全同步，0代表兩者完全無關）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Link 入面嘅Correlation scatter plot 入面見到939 同1398嘅correlation 大約～0.9，算係高嘅同步率，可以做pair trade
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Part 2 繼續講
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code (Patrons Only)👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
