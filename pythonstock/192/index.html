@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你喺investing.com攞data - Part 2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《教你喺investing.com攞data - Part 2》
+   </div>
+   <div class="date">
+    2021-02-12
+   </div>
+   <div class="content">
+    <p>
+     上回講到點樣用Python做到喺investing.com 做到Search嘅功能，同埋點樣輸入keyword攞到相關新聞標題/連結，今次就入正題，會教大家點樣用Python上investing.com 下載歷史數據
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大家都知道investing.com 攞到嘅歷史數據會比yahoo finance齊好多，除咗有唔同地區嘅股票數據之外，仲有Indices/Futures/Cryptos/Currency/ETFs/Commodities......等等嘅歷史數據，所以唔似yahoo finance咁易用symbol做unique key lookup到相對應嘅assets，例如你想睇Tesla嘅歷史數據，輸入TSLA入investing.com已經有9個雖然同symbol（都係TSLA）但唔同assets嘅records，有USA嘅Tesla有Germany嘅Tesla亦有Mexico嘅Tesla......
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     雖然係咁，但investing.com背後其實有條unique key去認每隻distinct assets，叫”pair id”，所以part 1 嘅分享就係教大家點樣攞到我地想要果隻assets嘅pair id，然後part 2 就教大家點樣用個pair id 去下載對應資產嘅歷史數據
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然，其實investing.com 有個掣可以下載data as excel format，但有d data例如Futures係要你登入左先，而part 2 有詳細方法教你唔洗登入都攞到想要嘅data
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，為左展示俾大家睇，所以我逐步逐步咁教大家寫download data嘅function，如果大家想批量咁下載data，可以試下自己簡化下d steps
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Python code (Patrons Only)👇🏻👇🏻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <blockquote>
+    </blockquote>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
