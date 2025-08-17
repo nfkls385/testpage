@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《點樣set python schedule task?》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <div>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="title">
+    《點樣set python schedule task?》
+   </div>
+   <div class="date">
+    2021-04-11
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     之前分享左好多爬蟲webscraping python script，包括HKEX下載option data, 南北水，恆指期貨，daily market report......等等，雖然已經寫咗段script十幾秒就可以自動download，而言要每日人手撳python個run掣都仲係有d煩，而且download漏幾日data就會令data整體可分析度減低
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信唔少人都知電腦可以set schedule task排程要做嘅task，例如一至五8:00am下載琴日嘅北水數據再用 email/tg send 交易signal比自己，但電腦default嘅schedule task tools係要你保持電腦喺非休眠狀態，而且需要上網下載data嘅task更加需要有網絡供應
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     如果想閂左部電腦都run到schedule job，其中一個最好嘅方法就係用Cloud Computer，上Google Cloud 申請Virtual Machine，基本上等於擁有一部永遠唔會閂機嘅電腦比你run schedule task，雖然佢係計你流量收費，但如果你只係用黎run 低流量嘅script （即係非machine learning)而且用非window嘅os，例如上網下載data，係完全唔會收費（本人每日run緊廿幾條script，一年來一蚊都冇收過）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而schedule job tools我會建議用crontab（通常用Linux OS)，除左可以處理例行性嘅task，仲可以記錄task log，睇翻run task 時候嘅所有資訊，而crontab 有自己嘅格式（* * * * * command）詳情可以睇返crontab wiki
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後想玩algo trading嘅朋友基本上最好學識點用cloud computer 黎run strategy，除非你租server去run
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Crontab/ 有用scheduler package👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Script Automation Using Task Scheduler (Windows)
+    </p>
+    <p>
+     <a href="https://www.jcchouinard.com/python-automation-using-task-scheduler/" rel="nofollow noopener" target="_blank">
+      https://www.jcchouinard.com/python-automation-using-task-scheduler/
+     </a>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Script Automation Using CRON on Mac (Using Terminal, Mac)
+    </p>
+    <p>
+     <a href="https://web.archive.org/web/20210131042424/https://www.jcchouinard.com/python-automation-with-cron-on-mac/" rel="nofollow noopener" target="_blank">
+      https://web.archive.org/web/20210131042424/https://www.jcchouinard.com/python-automation-with-cron-on-mac/
+     </a>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Google Cloud Virtual Machine (Pay for how much you used, probably free if you run simple scripts)
+    </p>
+    <p>
+     <a href="https://cloud.google.com/compute/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=japac-AU-all-en-dr-bkws-all-super-trial-e-dr-1009882&amp;utm_content=ims_text-ad-none-none-DEV_c-CRE_496275324434-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20" rel="nofollow noopener" target="_blank">
+      https://cloud.google.com/compute/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=japac-AU-all-en-dr-bkws-all-super-trial-e-dr-1009882&amp;utm_content=ims_text-ad-none-none-DEV_c-CRE_496275324434-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20
+     </a>
+     ~%20Compute%20~%20Compute%20Engine_Business%20Services%20-%20VM%20-%20google%20cloud%20virtual%20machine-KWID_43700060575409900-kwd-101618173977&amp;userloc_9061628-network_g&amp;utm_term=KW_google%20cloud%20virtual%20machine&amp;gclid=Cj0KCQjwmcWDBhCOARIsALgJ2QfTwqYV6w4fDlqO_wazH3lwYY6bObiU2QXt4AM9J42Wqzp2DiuGIGwaAg3aEALw_wcB&amp;gclsrc=aw.ds
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

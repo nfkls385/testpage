@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《用程式幫你畫圖？》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《用程式幫你畫圖？》
+   </div>
+   <div class="date">
+    2021-04-04
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左技術分析，基本分析之外，大部分市場參與者，包括散戶，財演，上電視嘅分析師，甚至大行trader都會唔多唔少有依靠畫圖去搵支持阻力位，同止賺止蝕位
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     好多電視上嘅財演分析一隻股票入唔入得嘅時候都會首先輕輕講解嗰隻股票嘅基本面，然後就不外乎係開陰陽燭圖去畫線而決定果隻股票嘅買入時機
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但係股票有咁多隻，要日日喺度自己畫圖做功課其實真係慘過返工，呢啲咁煩嘅嘢點解唔加俾電腦程式（Python）做呢
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     用程式畫圖好處：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 可以一次過畫好多張股票圖
+    </p>
+    <p>
+     2. 有固定嘅規矩搵支持阻力線，完全理性，唔會牽涉人性理解，免得自圓其說
+    </p>
+    <p>
+     3. 可以畫唔同嘅timeframe
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     講左咁耐，咁要點樣寫程式去畫？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先，坊間畫支持阻力線嘅方法都係不外乎先搵出股價走勢嘅extrema，即係高低點（peak and through），然後再將3-5點高或低點連埋做best fitted line，盡量搵到一條可以連曬果幾點高/低點，最後就將呢條線延長（extend）去搵出未來阻力支持位
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     翻譯至數學同程式嘅話，大概步驟就係：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 數學方法搵local minimum/ maximum
+    </p>
+    <p>
+     （relative extrema/ turning point）
+    </p>
+    <p>
+     2. Generate 所有turning point 嘅 possible combination
+    </p>
+    <p>
+     3. 每set combination 做linear regression（線性迴歸）搵 ordinary least square regressor (OLS) 即係所謂best fitted line
+    </p>
+    <p>
+     4. 以R square value 排序(R square決定
+    </p>
+    <p>
+     迴歸模型嘅解釋力）
+    </p>
+    <p>
+     5. 做prediction，即係extend 條regression line
+    </p>
+    <p>
+     6. 用python plot出黎
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上面講嘅knowledge 未必個個都會明，但係不同於沉悶嘅數學公式，直接俾個寫好咗嘅程式你玩，根據你嘅input顯示相對嘅結果俾你睇，絕對比解釋點derive regression model 有趣：-）邊玩邊學先最易吸收
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     👇🏻👇🏻Python Code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

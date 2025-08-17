@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《本多係咪終勝？》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《本多係咪終勝？》
+   </div>
+   <div class="date">
+    2021-04-25
+   </div>
+   <div class="content">
+    <p>
+     《本多係咪終勝？》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     成日聽人講大戶點解會喺市場贏錢而散戶係是想輸錢嘅原因，其一就係大戶掌握嘅資訊俾散戶快而準，其二就係大戶本金多於散戶幾百至幾萬倍，就算大戶輸錢，只要不斷撈底就總有一日會升翻，而散戶就冇咁嘅能耐，因為散戶嘅本金不足以分拆成更多嘅注碼，往往撈兩三次底就用曬本金，最後心態上承受唔到咁大嘅虧損，將所有注碼止蝕，賠了夫人又折兵
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁究竟大戶坐擁散戶幾萬倍嘅本金，係咪可以成為股市長勝軍呢，相信玩過股票嘅人（或者比股票玩）都有答案，但係點樣可以用數學證明呢件事呢，或者散戶可以點樣可以利用到分注嘅優勢呢，咁就要很大介介紹一下阿丁格爾策略（Martingale Strategy）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所謂嘅馬丁格爾策略其實係一種古舊賭博策略（Betting Strategy)，簡單嚟講，即係每次輸錢嘅時候就以兩倍嘅注碼（bet size)下注，直至贏錢為止。例如先下注$10，如果贏錢嘅話下一次再玩$10，但係如果$10輸咗，下次就賭$20，務求將之前輸咗嘅贏返嚟，如果再輸埋嗰$20下鋪就用$40，如此類推，直到最後有一鋪贏錢為止（例如到咗5次先贏，最後嘅profit and loss 係：-10，-20，-40，-80，+160，即係最後贏10蚊）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     就咁睇係咪已經搵到「黃金聖杯」呢，但係，唔好忘記當你一直輸落去，落住嘅bet size會幾何級上升，直到bet size大於你嘅本金，就無法再執行呢個策略，亦都要宣告認輸，之前賺落嘅profit都要一次過還清
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     既然個風險咁大，喺trading上有冇用㗎？
+    </p>
+    <p>
+     首先要了解到，賭場賭大細同股市嘅分表係: 股市嘅bet amount喺會不斷轉變，而賭場係固定嘅，舉個例，如果你想利用martingale strategy 落買股票，一開始價格係$100，bet size 係1手，然後價格下跌至$90，bet size 係2手，呢個時候你嘅成本價係(100*1+90*2)/3=93.333 即係如果隻股票升返3.333蚊就breakeven，而相對於注碼值一樣嘅賭場，你嘅平均成本價永遠都係$100
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     上面引伸到一樣事，就係利用martingale落股市交易資金控制上，係絕對能提高交易勝率，而散戶最後要面對嘅問題就係點樣可以增加可以落注嘅數量，喺python script嘅圖入面可以見到可以分拆嘅注碼數量越多，平均來講martingale策略嘅possible return 同duration係越高，即係越大機會贏錢，所以散戶係要搵一個俾你分注嘅交易市場，明顯港股要一手一手買係明顯蝦散戶
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，martingale 用落邊個市場最好呢，成日聽人講股票會向下撈貨，越撈越低，好似思捷環球咁，公司有風險會走下坡，股價未必重回成本價。而Forex（currencies market）唔同於股票，唔會有bankrupt嘅公司風險，唔會股價drop to zero，係一個能夠好好應用martingale嘅市場
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code👇🏻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《虛擬貨幣相關性》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《虛擬貨幣相關性》
+   </div>
+   <div class="date">
+    2021-05-09
+   </div>
+   <div class="content">
+    <p>
+     《虛擬貨幣相關性》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     虛擬貨幣(Cryptocurrency)其實好幾年前已經開始hit，2016年bitcoin由幾百usd升到可以買到一部iphone嘅價錢嘅時候，吸引左普遍人注目，直到2017大牛市上到兩萬usd，再到今年升到六萬usd（相等於一架Tesla model X)，幣市開始進入白熱化階段，唔同幣商開始上市，好多新幣上架坐順風車，例如早兩日有elon musk撐腰嘅Shiba inu coin兩日升了600%，老散都開始紛紛入場
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Cryptos嘅fundament呢度唔講，只講市場定價(market price)，無論劣幣良幣，幫你賺到錢嘅就係好幣，但係淨係講可以喺binance trade到嘅幣已經有千幾隻，眼花撩亂，應該買邊隻好？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     要setup一個crypto portfolio，就先要有crypto價格嘅big picture，睇下唔同幣嘅相關性，因為即使portfolio 裡面有多種幣，若果幣與幣之間相關性高，都會令portfolio exposed to excessive risks
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     作為第一次講cryptos嘅intro，今次分享大家利用Python Seaborn package繪製虛擬貨幣相關系數熱能圖（Cryptocurrency Correlation Heatmap），比大家以鳥瞰角度觀察一下幣與幣之間嘅相關性（Correlation Coefficient 由-1至1，數值越大越相關，0為無關，負數為負相關性，heatmap圖中每格顏色深淺代表兩種唔同幣嘅相關系數，越紅越正數，越藍越負數）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     從圖中可輕易見到BTC同ETH相關系數高（+0.79），即BTC升1%，ETH大概升0.79%，呢個事實可以應用喺pair trade之上，若然ETH升唔過0.79%，可以同時買入ETH和沽出BTC以賺取中間理論上差額，相反亦然
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     p.s. 為展示目的，數據來源自coinmetrics.io（daily data），若求更精準數據及higher frequency，請自行connect 幣商api, e.g. Binance api
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code (Colab)👇🏻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
