@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   更多賺錢的因子
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    更多賺錢的因子
+   </div>
+   <div class="date">
+    2022-08-02
+   </div>
+   <div class="content">
+    <p>
+     繼上回跟大家分享過不少領先與濟後因子，這次專欄會為讀者們帶來更多！事實上，每篇所蘊藏的alpha都多不勝數。有讀者看畢後便不斷backtest，成功後與我分享，看到那些Sharpe &gt;2的equity curve簡直是老懷安慰。留意一點，看我Patreon並不是花10分鐘看畢就算；重點是，看完後，從中抽取alpha，並且backtest驗證。前後者差距無限大，有親手backtest的讀者絕對獲益良多。我不時收到留言，主分兩種。一種是「你啲專欄一個number都無，完全無用，我會unsubscribe」，另一種為「謝謝你，真係痴左線，你每篇講啲因子兩三個都過sharpe 2，癲到你」… 可見，認知決定一切。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     回歸正傳，繼續分享多3個因子。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     技術分析常指需要價量配合，因為成交量是真金白銀交易出來的產物，並不能做假，因此提出「大成交大陽燭就會升」、「成交縮少就會爆邊」。但問題是，大戶們大部分時間看的跟本不是成交量，而是Orderbook！
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     成交是過往發生的交易，大成交上升很多人解讀為大成交買入，但問題是這並不代表未來會繼續有大成交買入。相反，orderbook代表現時正打算買入或賣出的排盤，完完全全地顯示潛在買賣力量，純粹是未曾發生。有經驗的人都知道，炒賣是炒未來，並非買過去。告訴大家，所有market maker或高頻公司都會盯著orderbook做所有買賣。因此，成交是滯後指標，而orderbook才是領先指標。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     第二，隨了方向性因子外，市場波幅的判斷都很重要。例如你知道月波幅極限是20%，而假設現時市場已單邊衝了20%，統計學上回頭的機會很大；又例如你知道月波幅下限是3%，而假設現時市場來到月尾只走了1.5%，統計學上博爆邊的勝率很大。奈何，很多不懂期權的人只懂留意歷史波幅。可惜只看歷史波幅是不折不扣的「考古」。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相反，引伸波幅（IV）有更大參考價值。引伸波幅計算自期權金，愈多大戶認為後市大波幅，就會買入期權，推高期推金，繼而推高IV。所以IV是大戶對未來的判斷，更重要是，那是真金白銀trade出來的結果。因此，歷史波幅是滯後指標，引伸波幅才是領先指標。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     第三，談到期權，再分享多點鮮為人知的alpha。很多財演愛看期權倉位，例如看到25000 call有10000張加倉，再配合升市，就說那是long call。這已經是大錯特錯，要知道，期權每一個未平倉是由一long一short組成，所以10000個倉位增加意即10000個long call與10000個short call同時成交。奈何，坊間充斥這種騙子財演，每月每位學生收3萬學費，每年幾千萬袋袋平安地教授你1+1=3的「秘技」。再來，就算是long side主動成交，大多也是ibank的對沖盤。騙子財演連buy side工作經驗也沒有，所以不懂ibank每天有多少對沖活動。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相反，volatility curve才是alpha所在。例如call iv skew up more than put iv，就證明long call及short put力量較short call及long put大。這才是真正期權分析。因此，倉位是滯後指標，vol curve才是領先指標。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     這篇文章主旨有三個：
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 坊間很多散戶都被騙，媒體提及的指標都是聲東擊西；真的alpha才其他地方隱藏著。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. 看我patreon的價值不是那10分鐘，而是中間蘊含著大量sharpe&gt;2的策略。
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 不要再被財演KOL所騙
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
