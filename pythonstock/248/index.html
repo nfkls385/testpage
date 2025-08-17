@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《簡單見頂底指標》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《簡單見頂底指標》
+   </div>
+   <div class="date">
+    2021-05-30
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     股市係有佢嘅週期性，估值太高會調整，估值太低會回中，但何謂太高太低只睇價格（Price）係難以定義，就算睇所謂趨勢線其實都冇一個特定標準去量度，好多時都只係以結果來推測返趨勢線係咪準確
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     股市價格嘅不可預測性係黎自佢嘅non-stationarity，即係唔係我地幻想嘅走勢咁，波浪形，周而復始，好似條sine curve咁可以輕易預測到下一個頂同下一個底喺邊
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以好多技術分析指標（TA indicator）例如RSI, MACD等都係希望將不平穩（non-stationary）嘅時間序列（time series）變成平穩（stationary），去定義乜野叫「太高」同「太低」，從而制定相對策略——太高就sell太低就buy
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而去normalized 一條non-stationary嘅time series 例如價格，就可以用到高中學過嘅Z-score normalization，當然，要避免look-ahead bias （即避免用到未來嘅data去計算過去嘅參數）就需要用到rolling z score，即每隔一個特定嘅range去計算一次z score
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而經normalized 嘅time series 未必係stationary 嘅（即有分明高低），所以未必個個市場都用得著，因為stationary嘅time series需要一個平穩嘅mean同variance，一啲波動嘅市場，例如虛擬貨幣市場就未能以z score 進行time series平穩化
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而check一條time series係唔係stationary 就可以用到Augmented Dickey-Fuller test （即ADF test），背後邏輯簡單講就係計下條time series係唔係unit root process，即知道上一個data point係唔係predict到下個data point 嘅change，總之如果計到個值係&lt;=critical value就有理由相信條time series係stationary，相反就係non-stationary
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     炒股搵一條stationary嘅time series係好重要，因為會影響你嘅交易策略平唔平穩，同埋有冇預測性，例如pair trading 都唔係求其搵兩隻股票就可以，要睇佢地係咪cointegrated同個spread係咪stationary
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然仲有好多transform time series from non-stationary to stationary嘅方法，例如differencing, seasonal differencing, log transform, power transform 等等，不能盡錄
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

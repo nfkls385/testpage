@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《配對交易pair trading part2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《配對交易pair trading part2》
+   </div>
+   <div class="date">
+    2021-06-06
+   </div>
+   <div class="content">
+    <p>
+     《配對交易pair trading part2》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     配對交易策略（pair trading strategy）係一種常見嘅市場中性策略（market neutral strategy），其好處就係不在乎市場方向，並唔似傳統投資需要take position，策略成績跟漲跌無關，反而跟波動性、相關性有關
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     配對交易嘅交易邏輯大概係：當配對嘅股票（trading pairs）價格差（spread）偏離歷史均值時，則做空股價較高嘅股票同時買進股價較低嘅股票，Assume 佢哋會回歸到長期均衡嘅水平（mean reversion），藉此賺取兩隻股票價格收斂嘅報酬
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Assume trading pairs嘅價格差（spread）係follow 常態分佈（normal distribution），我地就可以計算z score從易標準化（standardised）價格差，目的係試圖將non-stationary嘅spread 轉化成stationary/predicable嘅z score
+    </p>
+    <p>
+     （test stationary 嘅方法可以參考翻之前篇文）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     然後我地就可以setup個backtest environment 同logic，大概z score 越高，代表股票一平均而言overpriced，而股票二平均而言underpriced，所以當z score&gt; threshold 就買股票二賣股票一，反之z score
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     下圖可以見到百事（PEP.US）同可口可樂（KO.US）嘅配對交易例子，揀選佢哋嘅原因都非常明顯，這兩間公司嘅業務相近，expect股價走勢仍會相近，下圖可以見到equity curve雖然return唔高，但非常平穩（未計算手續費，唔好咁開心）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然揀選配對交易pairs除咗睇業務相關外，更可以以統計方法量度，例如相關性（correlation）同協整關係（cointegration），下次會再講
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code👇🏻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

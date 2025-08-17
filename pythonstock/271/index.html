@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《資金費率對大市啟示》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《資金費率對大市啟示》
+   </div>
+   <div class="date">
+    2022-02-19
+   </div>
+   <div class="content">
+    <p>
+     《資金費率對大市啟示》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     資金費率（funding rate）係幣市獨有嘅機制，原因係永續合約（perpetual contract）嘅存在，大部分Cex 嘅資金計算都係固定8個小時計算一次，而計算formula都係由利率+期現溢價指數組成
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     1. 市況波動時，資金費率亦會波動，因為永續合約同標記價格會出現分差，溢價指數亦會相應上升下降，而Market depth 同交投低嘅Cex /幣，funding rate 亦會較波動
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     2. Funding rate 某程度反映當刻市場情緒，當funding rate持續高漲，代表long side願意支付short side 昂貴利息，或long side 槓桿率高，市場當刻屬亢奮，相反，亦funding rate 持續走低，則市場當刻屬低迷，過去而言幣市情緒都係long-dominated，所以funding rate 大部分時間都係正嘅
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     3. 另外，資金費率套利嘅盛行，亦縮窄溢價指數，喺2020年頭市場套利未咁盛行之時，淨係做大幣嘅資金費率套利已經可以達到200%年化
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     根據以上funding rate 嘅特性，我地可以整一個指數既能反映市場情緒又唔會被市場漸趨成熟所影響，就係去睇翻過去CEX嘅coin有正數funding rate嘅proportion，簡稱”funding index”即下圖紅線
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     若紅線&gt;0.8，則市面上8成coin funding rate 正數，市場屬於亢奮，宜減槓桿
+    </p>
+    <p>
+     若紅線&lt;0.2，則市面上8成coin funding rate 負數，市場屬於低迷，宜buy the dips
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     p.s. 只用了ftx嘅funding rate history 計算，因為ftx funding rate每一小時計算一次，有更多data point
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

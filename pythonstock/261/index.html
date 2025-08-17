@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你用Binance API Part1》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你用Binance API Part1》
+   </div>
+   <div class="date">
+    2021-07-31
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     執筆時bitcoin 已經上翻42000水平，transactions 都開始多翻，代表開始多人留意翻crypto market，BTC會唔會上翻60000水平我唔知，但係如果你想喺crypto 市場搵食，除非你可以24/7唔瞓睇住個市，如果唔係crypto 一晚個波幅都玩食曬d手動trader，瞓都瞓得唔安樂
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁點玩？唔洗唔瞓嘅，autotrade 咪得，set好trading rules，stop loss stop gain，就算你玩高風險d嘅margin, perpetual contract 都好，都唔怕爆倉風險
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁點autotrade?第一步要認識咩係API（Application Programming Interface），簡單d講，API就係兩個程式之間嘅溝通橋樑，你可以call request ，叫API轉達背後嘅程式做野，完成後再將結果轉交比你，你亦可以subscribe 佢，咁佢就會主動發佈你想要嘅資訊比你，例如，你可以request binance api 喺背後程式download BTCUSDT 2個月, frequency 1個鐘嘅歷史數據比你，亦可以subscribe 佢，叫api每10秒send BTCUSDT嘅最新價格比你（前者主要為REST API，後者為WebSocket API）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     點申請Binance API? 如果你要落trade 嘅話，就一定要先喺Binance開戶，再create API key（詳情自己睇Binance 教學），但如果你首先想儲下data嘅話，就可以用REST API，REST API 有唔同嘅endpoint（即url），每個endpoint都會回應你唔同嘅request，例如你想攞Binance可以trade到嘅現貨列表，就可以request “
+     <a href="http://api.binance.com/api/v1/exchangeInfo" rel="nofollow noopener" target="_blank">
+      http://api.binance.com/api/v1/exchangeInfo
+     </a>
+     ” 而個endpoint 就會return 你想要嘅列表，通常都係in json format，最後再用python convert翻做readable嘅format 就大功告成（link 有code同教學）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Colab link入面有教大家點用REST API去攞唔同資料，點樣download crypto historical data同點樣track Spot btc同futures btc嘅spread，要首先訂閱patreon~
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

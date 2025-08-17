@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《配對交易 pair trading part3》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《配對交易 pair trading part3》
+   </div>
+   <div class="date">
+    2021-06-20
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     上次講左點樣去trade個spread同點樣用z score去將time series 變得standardised 同stationary，但最麻嘅步驟唔係點樣去做pair trade，而係從一片股海之中搵到一對tradable and profitable嘅trading pairs，就好似要喺人海中搵到一對天長地久嘅情侶一樣，個spread最好仲係constant啦
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而一對天長地久嘅trading pairs需要具備咩條件呢，首先，佢哋要有足夠嘅基本面相關度，例如大家都係同一行業同一sector，從而避免左Multiple comparisons bias （當你比較好多唔同股票嘅時候 ，有一定機率會錯誤地generate a significant p-value, which is meaningless），第二，就係需要significant 嘅協整關係（cointegrated），因為現實中，絕大部份嘅股票都係非平穩（non-stationary），但係如果兩組time series雖然係非平穩嘅，但係佢哋嘅線性組合可以得到一個平穩（stationary time series）嘅序列的話，咁統計學上佢哋就係有協整關係（不等於Correlation）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     咁通常要大量咁做唔同stock comparison 就需要用到好嘅data visualisation tools - Heatmap，首先將同sector每組股票進行cointegration test，再將個Test result呈現喺Heatmap上面，邊pair可以有潛質做trading pairs就一目了然
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     最後，就算我哋搵到貌似嘅機trading pairs，都唔可以咁開心住，因為我哋所計嘅一切，都係based on historical data，而去進一步證實個result 嘅robustness，就需要再做out of sample test（可能預留一兩年data去做），睇吓呢pair喺out-of-sample嘅data入面係咪都係有相似嘅cointegration score
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

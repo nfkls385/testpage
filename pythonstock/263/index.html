@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你用Binance API Part 2》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你用Binance API Part 2》
+   </div>
+   <div class="date">
+    2021-08-22
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     Crypto 市場嘅特性就係去中心化(decentralisation)，「開放性」同「獨立性」，系統信息非常透明，而交易者層面而言，亦可以有所得益，唔同去中心化交易所都免費開放level 2，(market depth up to 5-10 best bid ask)，甚至level 3 (market depth up to 20 best bid ask)嘅trading data比一般交易者，相對港股嘅BMP基礎報價（香港投資者），仲廢過level 1，一般港股行情延遲15分鐘，或者需要手動刷新，簡直係小巫見大巫
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     好多crypto 交易所，例如Binance都會有api 提供websocket stream嘅連接，簡單講就係喺Client同Server之間連一條線，去做雙向溝通，例如你想整個bot去做「當ETH &gt;3000 就通知我」嘅功能，如果只係透過client actively咁request 個server，say 「5 秒refresh一次ETH價格再判斷佢係咪大過3000，如果係就通知我」，呢個做法一黎有機會因為短時間make太多request而比server ban，二黎個通知會有delay，如果用黎做trading signal就會唔準確。所以我地須要server 當ETH出現最新成交價格嘅時候就主動stream比有關data比client
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以下例子並唔須要申請Binance account就可以用到streaming 功能，用家可以直接subscribe ETH 1 minute 嘅kline 即k線stream data，api 就會以2000ms update speed持續feed 即時嘅open high low close比你，儲呢類data，會更類似tick by tick data，可以比你做到更有信服力嘅Backtest，因為現實中我地唔會喺每一分鐘嘅close先做買賣，亦都未必會買賣到
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

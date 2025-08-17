@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《介紹一個加密貨幣程式交易嘅Package》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《介紹一個加密貨幣程式交易嘅Package》
+   </div>
+   <div class="date">
+    2021-10-31
+   </div>
+   <div class="content">
+    <p>
+     《介紹一個加密貨幣程式交易嘅Package》
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     相信做開程式交易嘅developer都同樣面對一個難題，就係每當轉換交易所嘅時候就要苦讀嗰個交易所嘅api document，例如今個月Binance唔再開放合約交易比香港虛擬貨幣投資者，大家紛紛轉會到二三線交易所，例如ftx(PI only), bybit 等等，要將本來喺Binance嘅algo script原封不動翻譯做其他exchange workable嘅script都有d困難，所以今日想介紹呢個一個打10個嘅training Library  - CCXT
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     CCXT- CryptoCurrency eXchange Trading Library 係一個用於加密貨幣程式交易嘅JavaScript/ Python / PHP 庫，佢支援好多林林總總嘅虛幣交易所，大至Binance, ftx到bitmex, okex等等都係兼容，ccxt 提供快速訪問市場數據 market data 嘅途徑，例如簡單嘅ohlc historical data，orderbook, bid ask depth等等，或者data streaming/ websocket 都可以快速到，當然都支援大部份交易所以ccxt api 做order execution
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     我自己都有用開CCXT去儲存唔同exhange嘅數據，去搵arbitrage，開發程式交易策略同做backtesting，而且ccxt可以下載到嘅歷史數據比大部份交易所API容許下載嘅最長時期為長，例如deribit嘅quarterly/weekly contract 喺contract expired左之後就唔可以再喺deribit offical api download到，但ccxt就可以
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Package 同source code喺github已經公開，python coding嘅話簡單一句pip install ccxt 就可以安裝到，快學快用
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

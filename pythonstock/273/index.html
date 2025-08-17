@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《虛幣季節性效應》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+    <img src="m6.jpg"/>
+   </div>
+   <div class="title">
+    《虛幣季節性效應》
+   </div>
+   <div class="date">
+    2022-03-19
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     虛幣同商品一樣都有季節性效應，當然商品嘅季節性效應比較明顯同易明，屬簡單供需關係，例如冬季煤炭需求上升，或者屬經濟政策影響，例如qe下大宗商品嘅價格亦會上漲，但虛幣嘅週期比較難想像，究竟有定冇呢？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     統計學上嘅seasonality 可以用最簡單嘅boxplot搵出黎，boxplot（箱形圖）大家中學一定有學過，係用鳥瞰角度去顯示一組或多組數據分散情況的統計圖，從boxplot可以得知其數據組嘅minimum, median, maximum, lower quartile, upper quartile同outliers，當燭身越長，代表數據越離散，燭身越短，代表數據越密集
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     虛幣亦都有其季節性效應，例如過去9年間，只有1，3，9月平均係下跌，有人話係節日效應，節日其間虛幣合約交投亦會較少，事實上又真係，星期六日嘅價格分布係比較密集穩定（圖一）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     除左節日效應外，虛幣亦受地區性影響，從hourly boxplot可見（圖二），歐洲trading hours (16:00-00:30 HKT)虛幣嘅價格係較離散，而美國trading hours（21:30-05:00 HKT)嘅虛幣價格走勢都係明顯比中國trading hours（9:30-15:00 HKT)為好，特別係上午（10:00-11:00 HKT)虛幣價格特別差，呢段時間就係中國剛開市嘅時間，關唔關China’s ban on cry土事呢，咁就自行分析啦
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     簡單嘅策略就出爐啦，聰明嘅你應該發現，如果US trading hours long btc, China trading hours short btc，回報點都好過buy and hold，sharpe ratio亦由1變成2.2（圖三），至於eth 效果再為好，有2.7（圖四）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     當然金融商品有好多hidden seasonality，但記得要有合理嘅market interpretation 先好apply落真實交易當中，如果唔係一切都只係流於幻想嘅黃金聖杯
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

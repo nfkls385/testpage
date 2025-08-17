@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你用Binance API part 4》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你用Binance API part 4》
+   </div>
+   <div class="date">
+    2021-10-03
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     上幾次講完點樣connect 幣商同點儲data，今次講下真係落手炒有咩方向或者最常見嘅策略
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     首先幣市算係一個新開發嘅市場，唔少投資者/fund都係呢一兩年先加入，個市場仲係有好多水位甚至係arbitrage，想要capture佢地有d咩方向呢？
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     策略主要分兩階段種，directional同market neutral，前者係對某隻underlying asset take一個stance，例如我見到ETH成交量激增100%，所以我買ETH升；呢種策略100%資金都處於market risk之內，market嘅變動同你嘅收益嘅關聯性係100%，而market neutral 嘅策略旨在降低或完全避免資金處於市場風險之中，做法就係要令自己portfolio 嘅net exposure 係0，即short and long 同時進行
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而spot-future arbitrage就係其中一種crypto市場最常見嘅market neutral strategy，future嘅價格一般對比spot嘅為高，因為future嘅trading fee 同入場費比spot便宜，所以future-spot嘅spread，即premium多數時間都係正數，只有當市況波動或極差時候，投資者紛紛槓桿做空先會有negative premium嘅出現，但出現時間唔會長，好快就會回歸於零。醒目嘅大家應該可以發現future-spot spread係mean reverting，當spread高於threshold就long spot put future相反spread低於-threshold就put spot long future，就可以賺到future-spot gap
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     喺crypto世界嘅期貨唔一定同股市期貨一樣，有明確結算日，如果你trade緊嘅係永續合約（perpetual contracts）就唔會有結算日，而perp嘅世界有樣野叫funding rate，去ensure翻spot同future嘅價格唔同偏離得太遠，簡單黎講就係懲罰令spread拉闊嘅人（每8個鐘收取funding rate），而獎勵令spread回歸嘅人（每8個鐘賺取funding rate），所以剛才做spot-future arb仲可以賺取埋大約0.01%嘅funding rate，因為我地係幫緊個spread回歸中值嘅人
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Binance嘅spot-future arb backtest可以睇下下面（未計算transaction fee嘅）大家可以試試其他冇咁liquid嘅幣商，個差價越大越profitable
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《簡單買賣恆指期貨策略》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+   </div>
+   <div class="title">
+    《簡單買賣恆指期貨策略》
+   </div>
+   <div class="date">
+    2021-08-08
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     唔少人覺得買賣期貨好危險，但事實上只要處理好資金管理同過夜風險，買賣期貨比buy and hold 股票更穩定易控制，因為指數期貨嘅underlying 係指數，指數本身涵蓋50-100隻股票不等，所以已具備分散投資作用，反之只買賣一隻股票，面臨嘅single stock risk/ idiosyncratic risk 就更加大，例如騰訊日前受中國政策影響大跌10%，避都避唔到
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     港股指數同美股指數有咩特性？要玩策略點解唔用美股指數期貨？首先論market efficiency 同機械式交易嘅參與，美股一定比港股高，意味住喺美股賺到abnormal return 嘅機會比港股低，第二就係論過夜風險，當你嘗試只計算美股指數嘅日內走勢，會發現美股日內升（陽燭）比跌（陰燭）多，而調整幅度快而急且集中（機械式交易嘅參與），散戶易言要跑贏美股，不如唔好浪費時間，直接買入美股指數etf再leverage就好了
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     反之港股指數（恆指）唔計過夜交易時段，只計開市到收市日市時段（open to close）就可以發現陽燭陰燭比例相若，易且會見到唔少pattern，若果做long short strategy能夠跑贏指數嘅機會比較大，搵到嘅策略亦唔會咁易跌入long short bias，唔似美股指數咁，以為搵到條靚仔strategy，但原來就係教你係咁做long，到大跌市/市況一變策略就自然收皮
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     港股係甚少以daily frequency都搵到賺錢策略嘅市場（除A股），可以話對程式應用嘅要求比高frequency嘅低好多（用Excel亦得），而且daily可以用競價時段進出，排除左spread同slippage，相對啱啱加印花稅嘅股票交易，期貨交易相對便宜添
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     所以大家不妨多用想象力，搵唔同alternative data 去support 唔同strategy
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以下呢個策略好簡單：
+    </p>
+    <p>
+     背後邏輯：呢幾年美股（特別納指）日內走勢同港股日內走勢反轉，通常納指琴晚升，日市時段就會跌翻，到港股收市又會升翻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     交易策略：QQQ琴晚日內升X%，第二日競價時段沽FHSI 收市平倉，反之亦然
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python Code👇🏻👇🏻
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

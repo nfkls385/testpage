@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《教你用Binance API part 3》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+   </div>
+   <div class="title">
+    《教你用Binance API part 3》
+   </div>
+   <div class="date">
+    2021-09-04
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     上次講左websocket streaming data嘅連接，同點樣儲kline data，但淨係kline   level 嘅data又點夠大戶打呢？平時玩港股，大戶都會有證券商free比佢地嘅level 3 data，睇到real-time trade book 入面嘅bid ask 50-100檔，就連基本tick data（逐筆交易數據）散戶都要比幾千蚊一個月，點會夠大戶揪
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但crypto世界唔同，呢d data 係free比大家，什至唔洗喺果間交易所申請account都可以任攞唔嬲，仲可以stream tick data比大家，對於整real time trading bot好有幫助
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     大戶/機構都好鍾意market neutral strategy （市場中立策略），即投資人同時買入同賣空，令投資組合唔會咁易受市場突發事件影響，整個策略嘅重點在於搵到獲利機會alpha同時消除市場風險beta，最常見嘅市場中立策略例如MM (Market maker: 例如街邊貨幣兌換店，旨在賺取賣出價同買入價中間差價（spread）)，同statistical arbitrage （收益來自market inefficiency，例如A店枝裝水$7，B店同一枝枝裝水$10，收益來源=喺A店以$7買枝裝水再喺B店以$10賣出，淨賺$3）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但係要運行到呢d策略一定要有好快嘅報價來源同埋設備，通常大行會有DMA，喺最新定價公佈市場前大行已經首先知道，所以市場短期嘅market inefficiency 可以話係0或者係一迅即逝
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     但係一d新興市場，例如虛擬貨幣市場就唔同，market inefficiency 處處都係，亦代表機會處處，例如唔同exchange嘅btc報價都唔同，大可以寫個bot去capture中間嘅spread（錯誤報價）
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     今次colab入面會教大家點fetch tick data落黎再real time save 落sql engine，然後再call個database出黎用，當中會用到兩個重要package，分別係sqlalchemy同multiprocessing，用黎快速存取tick data 同時攞d data黎generate signal
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python code👇🏻
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>

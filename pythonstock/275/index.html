@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   《講講點用python做portfolio management 》
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <style>
+   body{
+        background-color: #F5F5F5;
+      }
+      .container{
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: ABC Oracle Plus Variable,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+        background-color: #FFFFFF;
+      }
+      a{
+        color: #0B69B7;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover{
+        color: #0D7CD8;
+      }
+      .media{
+        padding: 24px;
+      }
+      .media img{
+        width: 100%;
+        height: auto;
+    }
+      .title{
+        padding: 24px 24px 0px 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .date{
+        padding-left: 24px;
+        border: none;
+        background: none;
+        color: rgba(0,0,0,0.6);
+      }
+      .content{
+        padding: 24px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content img{
+        width: 100%;
+        height: auto;
+    }
+      .attachment{
+        padding: 24px;
+        font-size: 14px;
+      }
+      .attachment a, svg{
+        color: #0B69B7;
+        fill: #0B69B7;
+      }
+      .attachment a:hover{
+        color: #0D7CD8;
+        fill: #0D7CD8;
+      }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="media" style="text-align: center;">
+    <img src="m3.jpg"/>
+    <img src="m4.jpg"/>
+    <img src="m5.jpg"/>
+   </div>
+   <div class="title">
+    《講講點用python做portfolio management 》
+   </div>
+   <div class="date">
+    2022-04-10
+   </div>
+   <div class="content">
+    <p>
+     <br/>
+    </p>
+    <p>
+     某日Backtest緊唔同strategy 嘅時候，要計到multi-strategy 嘅weighting分配，果刻就諗起其實同stock portfolio management 果套係同出一轍，只係當每條strategy 係stock，再用stats方法計算每隻stock嘅metrics，再決定投放幾多%資金落每隻stock度
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     基本上，構成一個投資組合都只係mainly考慮兩樣野：風險/回報，而去assess呢兩樣野嘅metrics有好多，最常見嘅係用beta 去measure 某隻stock相對市場嘅risk，大過1就高於市場，細過1就低於市場；而去評估某隻stock相對市場嘅risk-adjusted rewards 嘅表表者就係alpha，一隻正alpha嘅stock（或strategy）先代表跑贏大市
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     而今次介紹嘅python package就係ffn (Financial Functions for Python)，呢個package 十分建議大家使用，從data download (可惜ffn 背後yahoo finance 嘅downloader 未update，所以要另外自己download），data cleansing，到data visualisation 同analysis都係幾行code就搞掂
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     以上圖表都係用ffn generate 出黎，係用左top 10隻etf做分析，從2019年起，只有兩隻etf跑贏S&amp;P!
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+     Python link:
+    </p>
+    <p>
+     <br/>
+    </p>
+    <p>
+    </p>
+   </div>
+   <div class="attachment">
+   </div>
+  </div>
+ </body>
+</html>
